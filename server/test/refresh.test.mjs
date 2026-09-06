@@ -1,0 +1,79 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {once} from 'node:events';
+import {randomUUID} from 'node:crypto';
+import {selectHomes,isActive,bikeNearby,localCrime} from '../../catalog-view.mjs';
+import {meters,pointSegmentMeters,nearestBike,crimeWithin,validNYCPoint} from '../../scripts/geo.mjs';
+import {createApp} from '../server.mjs';
+import {buildProfile} from '../../taste-engine.mjs';
+const load=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'utf8'));
+const homes=await load('../homes.json'),summary=await load('../../data/refresh-summary.json');
+test('533 unique records preserve original 45 and mirror the browser catalogue exactly',async()=>{
+  assert.equal(homes.length,533);assert.equal(new Set(homes.map(h=>h.id)).size,533);
+  for(const prefix of ['c','h','t'])for(let i=1;i<=15;i++)assert.ok(homes.some(h=>h.id===prefix+String(i).padStart(2,'0')&&h.legacy));
+  const html=await readFile(new URL('../../index.html',import.meta.url),'utf8');
+  assert.deepEqual(JSON.parse(html.match(/const HOMES=(\[.*?\]);\nwindow.homeHuntCatalog=HOMES;/s)[1]),homes);
+  assert.equal(homes.filter(isActive).length,500);assert.equal(homes.filter(h=>h.status==='Not reverified').length,32);
+  const active=homes.filter(isActive);assert.ok(active.every(h=>h.price>0&&h.price<=1200000&&h.beds>=2&&h.refreshedAt==='2026-09-06'));
+  assert.ok(active.every(h=>h.source.listingId&&h.url===h.source.url&&new URL(h.url).protocol==='https:'&&['onekeymls.com','www.onekeymls.com'].includes(new URL(h.url).hostname)));
+  assert.ok(active.every(h=>h.landLease===null),'No silent lease-free assumption');
+  assert.equal(active.filter(h=>h.hoa!==null).length,452);
+  assert.equal(active.filter(h=>h.tax!==null).length,493);
+  assert.ok(active.every(h=>!h.name.includes('Undisclosed Address')&&h.id!=='ok5ee9b67de2cf9d'),'Ambiguous or undisclosed locations are excluded');
+  assert.ok(active.every(h=>Object.values(h.schools).every(v=>!/^contact agent$/i.test(v))));
+  assert.equal(active.filter(h=>Object.keys(h.schools).some(k=>!k.endsWith('District'))).length,463);
+  assert.equal(active.filter(localCrime).length,359);
+  assert.equal(active.filter(h=>h.crime.scope==='Nassau County').length,141);
+  assert.deepEqual(Object.fromEntries(['Condo','Single-family','Townhouse / attached'].map(c=>[c,active.filter(h=>h.category===c).length])),summary.categories);
+  for(const h of active){assert.ok(Number.isFinite(h.station_mi));assert.ok(h.reviewNotes.some(n=>n.startsWith('Land lease:')));assert.ok(!JSON.stringify(h).includes('NaN'));if(!h.legacy){assert.equal(h.school,null);assert.equal(h.city_min,null);assert.equal(h.score,null);}}
+});
+test('categories, original homes, age, schools, query, local indicators and liked views compose',()=>{
+  assert.equal(selectHomes(homes,[],{availability:'active'}).length,500);
+  assert.equal(selectHomes(homes,[],{availability:'original'}).length,45);
+  assert.equal(selectHomes(homes,[],{filter:'Condo',availability:'active'}).length,151);
+  assert.ok(selectHomes(homes,[],{filter:'newer'}).every(h=>h.year>=2000));
+  assert.ok(selectHomes(homes,[],{filter:'schools'}).every(h=>h.legacy&&h.school>=4));
+  const q=selectHomes(homes,[],{query:'woodside queens'});assert.ok(q.length>0);assert.ok(q.every(h=>(h.name+' '+h.area+' '+h.station+' '+Object.values(h.schools)).toLowerCase().includes('woodside')));
+  const biking=selectHomes(homes,[],{bike:true});assert.ok(biking.length>0&&biking.every(bikeNearby));
+  assert.ok(selectHomes(homes,[],{crime:true}).every(localCrime));
+  const records=[{homeId:'c01',member:'Kartik',liked:true},{homeId:'c01',member:'Minoli',liked:true},{homeId:'c02',member:'Minoli',liked:true}];
+  assert.equal(selectHomes(homes,records,{filter:'liked',availability:'active'}).length,2,'Inactive original likes remain visible');
+  assert.deepEqual(selectHomes(homes,records,{filter:'both'}).map(h=>h.id),['c01']);
+});
+test('numeric sorts put unknown values last, never equating unknown costs with zero',()=>{
+  const xs=[{id:'unknown',hoa:null,tax:0,station_mi:null,sqft:null},{id:'high',price:20,hoa:200,tax:300,station_mi:2,sqft:200,bike:{protectedMiles:1}},{id:'low',price:10,hoa:0,tax:100,station_mi:.1,sqft:100,bike:{mappedPathMiles:.2}}];
+  for(const sort of ['price','rail','carrying','bike'])assert.deepEqual(selectHomes(xs,[],{sort}).map(h=>h.id),['low','high','unknown']);
+  assert.deepEqual(selectHomes(xs,[],{sort:'space'}).map(h=>h.id),['high','low','unknown']);
+  assert.equal(bikeNearby(xs[0]),false);assert.equal(localCrime({crime:{scope:'Nassau County',total:0}}),false);
+});
+test('geographic calculations reject unusable crime points, respect radius and offense groups',()=>{
+  const p={lat:40.75,lon:-73.9};assert.equal(meters(p,p),0);assert.ok(Math.abs(meters(p,{...p,lat:p.lat+.01})-1112)<2);
+  assert.equal(pointSegmentMeters(p,[-74,40.75],[-73.8,40.75]),0);
+  assert.equal(validNYCPoint({lat:0,lon:0}),false);
+  const rows=[{latitude:'40.75',longitude:'-73.9',ky_cd:'101'},{latitude:'40.75',longitude:'-73.9',ky_cd:'110'},{latitude:'40.75',longitude:'-73.9',ky_cd:'341'},{latitude:'40.77',longitude:'-73.9',ky_cd:'105'},{latitude:'0',longitude:'0',ky_cd:'104'}];
+  assert.deepEqual(crimeWithin(p,rows),{violent:1,property:1,total:2});
+  const routes=[{street:'paint only',facilitycl:'II',the_geom:{coordinates:[[[-74,40.75],[-73.8,40.75]]]}},{street:'protected',facilitycl:'I',the_geom:{coordinates:[[[-74,40.751],[-73.8,40.751]]]}}];
+  assert.equal(nearestBike(p,routes,true).street,'protected');assert.equal(nearestBike(p,routes,false).street,'paint only');assert.equal(nearestBike(p,[],true),null);
+});
+test('new source IDs accept synchronized bike/safety feedback without changing existing likes',async t=>{
+  const data=new Map(),store={all:async()=>[...data.values()],get:async(m,id)=>data.get(m+id)||null,put:async(r,b)=>{if((data.get(r.member+r.homeId)?.version||0)!==b)return false;data.set(r.member+r.homeId,r);return true;}};
+  const token='refresh-test-only-connection-token-1234567890',server=createApp({store,homes,token});server.listen(0,'127.0.0.1');await once(server,'listening');t.after(()=>server.close());
+  const id=homes.find(h=>!h.legacy).id,base='http://127.0.0.1:'+server.address().port;
+  const op={member:'Kartik',liked:true,reasons:['Bikeability','Crime safety'],note:'Check crossings on a visit',baseVersion:0,operationId:randomUUID()};
+  const put=(homeId,body)=>fetch(base+'/likes/'+homeId,{method:'PUT',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(body)});
+  assert.equal((await put('c01',{...op,reasons:[],operationId:randomUUID()})).status,200);
+  assert.equal((await put(id,op)).status,200);assert.equal((await put(id,op)).status,200);
+  assert.equal((await put(id,{...op,member:'Minoli',operationId:randomUUID()})).status,200);
+  assert.equal((await put(id,{...op,liked:false,operationId:randomUUID()})).status,409);
+  const state=await(await fetch(base+'/state',{headers:{Authorization:'Bearer '+token}})).json();assert.equal(state.records.length,3);assert.ok(state.records.find(r=>r.homeId==='c01').liked);
+  assert.equal(selectHomes(homes,state.records,{filter:'both'})[0].id,id);
+  const profile=buildProfile(homes,state.records);assert.ok(profile.searchBrief.explicitReasons.includes('Bikeability'));assert.ok(profile.recommendations.every(r=>homes.find(h=>h.id===r.id).eligible!==false));
+});
+test('crime counts never influence similarity scores and explicit bike feedback does',()=>{
+  const base={category:'Condo',area:'A',price:800000,sqft:1000,year:2007,eligible:true};
+  const sample=[{...base,id:'a',bike:{protectedMiles:.1}},{...base,id:'b',bike:{protectedMiles:.1}},{...base,id:'near',bike:{protectedMiles:.1},crime:{total:900}},{...base,id:'far',bike:{protectedMiles:2},crime:{total:0}}];
+  const likes=['a','b'].map(homeId=>({homeId,member:'Kartik',liked:true,reasons:['Crime safety']}));
+  const plain=buildProfile(sample,likes);assert.equal(plain.recommendations[0].score,plain.recommendations[1].score);
+  const tagged=buildProfile(sample,likes.map(r=>({...r,reasons:['Bikeability']})));assert.equal(tagged.recommendations[0].id,'near');assert.ok(tagged.recommendations[0].score>tagged.recommendations[1].score);
+});

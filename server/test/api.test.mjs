@@ -31,7 +31,7 @@ test('auth, isolated members, durable state interface, conflict protection, retr
   const snapshot=await store.all();assert.equal(snapshot.find(r=>r.member==='Kartik').liked,false);assert.equal(snapshot.find(r=>r.member==='Minoli').liked,true);
 });
 test('catalog preservation, common threads, both likes, unknown values, explained recommendations',()=>{
-  assert.equal(homes.length,45);assert.equal(new Set(homes.map(h=>h.id)).size,45);
+  assert.equal(homes.filter(h=>h.legacy).length,45);assert.equal(new Set(homes.map(h=>h.id)).size,homes.length);
   const likes=[{member:'Kartik',homeId:'c01',liked:true,reasons:['Natural light'],note:'Large windows'},{member:'Minoli',homeId:'c01',liked:true,reasons:['Layout']},{member:'Kartik',homeId:'c05',liked:true,reasons:['Natural light']}];
   const p=buildProfile(homes,likes);assert.equal(p.count,2);assert.equal(p.bothLiked.length,1);assert.equal(p.recommendations.length,6);assert.ok(p.threads.some(t=>t.label==='Woodside, Queens'));assert.ok(p.threads.some(t=>t.label==='Natural light'&&t.source==='your feedback'));assert.equal(p.searchBrief.notes.length,1);
   assert.ok(p.recommendations.every(r=>!['c01','c05'].includes(r.id)&&Number.isFinite(r.score)&&r.reasons.length>0));

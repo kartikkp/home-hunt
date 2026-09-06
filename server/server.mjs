@@ -3,10 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {createHash,timingSafeEqual} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {dynamoStore} from './store.mjs';
-import {buildProfile} from '../taste-engine.mjs';
-
-export const MEMBERS=['Kartik','Minoli'];
-export const REASONS=['Layout','Natural light','Outdoor space','Updated interiors','Architecture','Location','Space','Price','Schools','Commute','Newer build'];
+import {buildProfile,MEMBERS,REASONS} from '../taste-engine.mjs';
+export {MEMBERS,REASONS};
 const digest=s=>createHash('sha256').update(s).digest();
 const publicRecord=r=>r;
 
@@ -32,7 +30,7 @@ export function createApp({store,homes,token,origins=['https://kartikkp.github.i
       if(!timingSafeEqual(digest(supplied),digest(token)))return respond(res,401,{error:'Enter your household connection code'});
       if(path==='/state'&&req.method==='GET')return respond(res,200,{schemaVersion:1,members:MEMBERS,records:(await store.all()).map(publicRecord),serverTime:new Date().toISOString()});
       if(path==='/profile'&&req.method==='GET') {
-        const records=await store.all();return respond(res,200,{schemaVersion:1,generatedAt:new Date().toISOString(),catalogDate:'2026-09-05',records,profile:buildProfile(homes,records),homes:homes.filter(h=>records.some(r=>r.homeId===h.id&&r.liked))});
+        const records=await store.all();return respond(res,200,{schemaVersion:1,generatedAt:new Date().toISOString(),catalogDate:'2026-09-06',records,profile:buildProfile(homes,records),homes:homes.filter(h=>records.some(r=>r.homeId===h.id&&r.liked))});
       }
       const match=path.match(/^\/likes\/([a-z0-9]+)$/);
       if(match&&req.method==='PUT') {

@@ -1,0 +1,72 @@
+{
+  "refreshedAt": "2026-09-06",
+  "targetActive": 500,
+  "screened": 3569,
+  "searchPages": 132,
+  "total": 533,
+  "active": 500,
+  "originals": 45,
+  "originalsRefreshed": 13,
+  "originalsNotReverified": 32,
+  "comingSoon": 1,
+  "categories": {
+    "Condo": 151,
+    "Single-family": 269,
+    "Townhouse / attached": 80
+  },
+  "coverage": {
+    "localCrime": 359,
+    "countyCrime": 141,
+    "bikeNYC": 359,
+    "bikeNassau": 141,
+    "year": 499,
+    "tax": 493,
+    "hoa": 452,
+    "schoolsNamed": 463,
+    "schoolsOrDistrict": 467,
+    "landLeaseVerifiedNo": 0
+  },
+  "nycCrime": {
+    "periodStart": "2026-01-01T00:00:00.000",
+    "periodEnd": "2026-06-30T00:00:00.000",
+    "reports": 55275,
+    "usableLocations": 55274,
+    "omittedLocations": 1,
+    "codes": [
+      "101",
+      "104",
+      "105",
+      "106",
+      "107",
+      "109",
+      "110"
+    ]
+  },
+  "screening": "First result page per ZIP; not an exhaustive MLS feed or random sample. Deduplicated by source property ID, normalized original addresses. Active, 2+ beds, price at most $1.2M, condo/single-family/attached single-family, NYC/western Nassau (east cutoff -73.49). All eligible discovered condos prioritized, then remaining houses by straight-line rail distance. Land lease remains unverified; none are certified lease-free. The original 45 persist even when not active/reverified.",
+  "detailExclusions": [
+    {
+      "url": "https://onekeymls.com/home-details/84-39-apt-4l-153-ave-avenue-unit-4l-howard-beach-ny-11230/hz146rmxdH1",
+      "reason": "Address undisclosed or geocoded address conflicts with listing; local indicators cannot be trusted"
+    },
+    {
+      "url": "https://onekeymls.com/home-details/439-forbell-st-brooklyn-ny-11208/2SJUdxw9TT",
+      "reason": "Pending / detail screening failed"
+    },
+    {
+      "url": "https://onekeymls.com/home-details/9051-201st-st-hollis-ny-11423/1Hwoduspr7X",
+      "reason": "Pending / detail screening failed"
+    },
+    {
+      "url": "https://onekeymls.com/home-details/undisclosed-address-east-elmhurst-ny-11369/cDF8VsXzGkX",
+      "reason": "Address undisclosed or geocoded address conflicts with listing; local indicators cannot be trusted"
+    },
+    {
+      "url": "https://onekeymls.com/home-details/undisclosed-address-hempstead-ny-11550/cvuaqq5vcoK",
+      "reason": "Address undisclosed or geocoded address conflicts with listing; local indicators cannot be trusted"
+    },
+    {
+      "url": "https://onekeymls.com/home-details/11433-121st-st-south-ozone-park-ny-11420/iJ5JMNteN3g",
+      "reason": "Hold / detail screening failed"
+    }
+  ]
+}
