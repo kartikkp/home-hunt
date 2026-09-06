@@ -1,0 +1,9 @@
+{
+  "name": "home-hunt-sync",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"start": "node server.mjs", "test": "node --test test/*.test.mjs", "export": "node export-profile.mjs"},
+  "dependencies": {"@aws-sdk/client-dynamodb": "^3.0.0", "@aws-sdk/lib-dynamodb": "^3.0.0"},
+  "engines": {"node": ">=22"}
+}
