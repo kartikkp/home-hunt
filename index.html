@@ -1,263 +1,38 @@
 <!DOCTYPE html>
-
-<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>NYC Home Market Deep Scan</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f5fb;color:#151720;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.wrap{max-width:1200px;margin:auto;padding:12px 10px 50px}.hero{background:linear-gradient(135deg,#17142d,#654ced 58%,#a177ff);color:#fff;border-radius:25px;padding:24px}.hero h1{font-size:31px;margin:5px 0}.hero p{opacity:.84;max-width:760px}.heroStats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.heroStats div{background:rgba(255,255,255,.1);padding:10px;border-radius:12px}.heroStats b,.heroStats span{display:block}.heroStats span{font-size:9px;opacity:.7}.sticky{position:sticky;top:0;z-index:30;background:rgba(246,245,251,.94);backdrop-filter:blur(10px);padding:9px 0}.chips{display:flex;overflow:auto;gap:7px}.chip{white-space:nowrap;border:1px solid #e2dfeb;background:white;border-radius:999px;padding:10px 13px}.chip.on{background:#171926;color:#fff}.insights{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;margin-top:13px}.panel{background:white;border:1px solid #e5e2ed;border-radius:20px;padding:14px}.panel h2{margin:0;font-size:18px}.muted,.section>p{font-size:11px;color:#777b89}.plot{overflow:auto}.plot svg{min-width:650px;width:100%}.grid{stroke:#eceaf1}.tick,.axis{fill:#777b89;font-size:10px}.dot{stroke:white;stroke-width:2;filter:drop-shadow(0 2px 2px rgba(0,0,0,.16))}.catgrid{display:grid;gap:8px;margin-top:10px}.cat{background:linear-gradient(135deg,#f6f3ff,#fff);padding:12px;border-radius:14px}.cat b,.cat strong,.cat span{display:block}.cat strong{font-size:19px}.cat span{font-size:9px;color:#777b89}.cat div{display:flex;gap:8px;margin-top:7px;flex-wrap:wrap}.cat em{font-style:normal;background:white;border-radius:8px;padding:6px;font-size:9px}.section{margin-top:22px}.section h2{font-size:21px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.home{position:relative;background:#fff;border:1px solid #e5e2ed;border-radius:18px;padding:13px;scroll-margin-top:80px}.rank{width:28px;height:28px;border-radius:50%;background:#171926;color:#fff;display:grid;place-items:center;font-weight:800}.newer{position:absolute;right:12px;top:12px;color:#654ced;font-size:9px;font-weight:850}.top{display:flex;justify-content:space-between;gap:9px;margin-top:9px}.top h3{font-size:15px;margin:0}.top p{font-size:9px;color:#777b89;margin:3px 0}.score{font-size:21px;font-weight:850}.score span{font-size:8px;color:#777b89}.price{font-size:20px;font-weight:850;margin-top:7px}.price span{font-size:10px;color:#777b89;margin-left:7px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:9px}.facts div{background:#f7f7fa;border-radius:8px;padding:7px}.facts b,.facts span{display:block}.facts b{font-size:10px}.facts span{font-size:7px;color:#777b89}.commute{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.commute div{border:1px solid #ece9f2;border-radius:9px;padding:8px}.commute small,.commute b,.commute span{display:block}.commute small,.commute span{font-size:8px;color:#777b89}.commute b{font-size:10px;margin:2px 0}.quality{background:#f2efff;border-radius:8px;padding:7px;font-size:9px;margin-top:8px}.home>a{display:block;text-align:center;background:#654ced;color:white;border-radius:9px;padding:9px;text-decoration:none;font-size:10px;margin-top:8px}.hidden{display:none!important}@media(max-width:900px){.insights{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.heroStats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.hero{padding:20px 15px}.hero h1{font-size:27px}}
-.filterradio{position:absolute;opacity:0;pointer-events:none}
-.filtertitle{font-size:10px;color:#777b89;margin:0 0 6px 2px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.cssfilters label{cursor:pointer}
-#filter-all:checked ~ .sticky label[for="filter-all"],
-#filter-condo:checked ~ .sticky label[for="filter-condo"],
-#filter-house:checked ~ .sticky label[for="filter-house"],
-#filter-town:checked ~ .sticky label[for="filter-town"],
-#filter-newer:checked ~ .sticky label[for="filter-newer"],
-#filter-schools:checked ~ .sticky label[for="filter-schools"]{background:#171926;color:#fff;border-color:#171926}
-#filter-condo:checked ~ .insights ~ .section .home:not([data-cat="Condo"]){display:none}
-#filter-house:checked ~ .insights ~ .section .home:not([data-cat="Single-family"]){display:none}
-#filter-town:checked ~ .insights ~ .section .home:not([data-cat="Townhouse / attached"]){display:none}
-#filter-newer:checked ~ .insights ~ .section .home:not([data-newer="yes"]){display:none}
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="2"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.0"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.1"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.2"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.3"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.4"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.5"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.6"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.7"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.8"],
-#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.9"]{display:none}
-.school{background:linear-gradient(135deg,#eefaf4,#f9fffc);border:1px solid #d9efe4;border-radius:8px;padding:7px;font-size:9px;margin-top:6px;color:#23684f}
-.schoolpanel{background:linear-gradient(145deg,#f1fff7,#ffffff)}
-.schoolscale{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.schoolscale span{background:white;border:1px solid #dcefe4;border-radius:999px;padding:6px 8px;font-size:9px;color:#47705e}
-
-.tastePanel{margin-top:14px;background:linear-gradient(135deg,#fff4fa,#f3efff 55%,#eef8ff);border:1px solid #eadff2;border-radius:24px;padding:17px}
-.tasteHead{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.tasteEyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:9px;font-weight:800;color:#8b5a9d}.tasteHead h2{font-size:20px;margin:3px 0}.tasteHead p{font-size:11px;color:#777b89;margin:4px 0}.tasteCount{background:white;border:1px solid #eadff2;border-radius:16px;padding:10px 14px;text-align:center;min-width:70px}.tasteCount b,.tasteCount span{display:block}.tasteCount b{font-size:22px}.tasteCount span{font-size:8px;color:#777b89;text-transform:uppercase}
-.traitGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:13px}.trait{background:rgba(255,255,255,.86);border:1px solid #ece4f2;border-radius:13px;padding:10px}.trait b,.trait span{display:block}.trait b{font-size:13px}.trait span{font-size:8px;color:#777b89;margin-top:2px}
-.similarWrap{margin-top:15px;border-top:1px solid #eadff2;padding-top:13px}.similarHead{display:flex;justify-content:space-between;gap:10px;align-items:end}.similarHead h3{font-size:15px;margin:0}.similarHead span{font-size:8px;color:#777b89}.similarGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:9px}.similarCard{background:white;border:1px solid #e8e2ef;border-radius:14px;padding:10px}.similarCard b,.similarCard span{display:block}.similarCard b{font-size:11px}.similarCard span{font-size:8px;color:#777b89;margin-top:2px}.simScore{color:#654ced!important;font-weight:800!important;font-size:10px!important}.similarCard a{display:block;margin-top:7px;text-decoration:none;background:#171926;color:white;border-radius:8px;padding:7px;text-align:center;font-size:9px}
-.tasteActions{display:flex;gap:7px;margin-top:8px}.tasteActions a{margin-top:0!important;flex:1}.likeBtn{border:1px solid #e1d9ec;background:#fff;color:#5c4567;border-radius:9px;padding:9px 12px;font-size:10px;font-weight:700}.likeBtn.liked{background:#ffedf4;border-color:#ffc8dc;color:#b4235f}
-@media(max-width:700px){.traitGrid{grid-template-columns:repeat(2,1fr)}.similarGrid{grid-template-columns:1fr}.tasteHead{align-items:center}}
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NYC Home Hunt</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5fb;color:#151720;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:1200px;margin:auto;padding:12px 10px 50px}.hero{background:linear-gradient(135deg,#17142d,#654ced 58%,#a177ff);color:white;border-radius:25px;padding:24px}.hero h1{font-size:31px;margin:5px 0}.hero p{opacity:.84;max-width:760px}.heroStats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.heroStats div{background:rgba(255,255,255,.1);padding:10px;border-radius:12px}.heroStats b,.heroStats span{display:block}.heroStats span{font-size:9px;opacity:.7}.sticky{position:sticky;top:0;z-index:30;background:rgba(246,245,251,.94);backdrop-filter:blur(10px);padding:9px 0}.chips{display:flex;overflow:auto;gap:7px}.chip{white-space:nowrap;border:1px solid #e2dfeb;background:#fff;border-radius:999px;padding:10px 13px}.chip.on{background:#171926;color:white}.taste{margin-top:14px;background:linear-gradient(135deg,#fff4fa,#f3efff 55%,#eef8ff);border:1px solid #eadff2;border-radius:24px;padding:17px}.tasteHead{display:flex;justify-content:space-between;gap:14px}.tasteHead h2{margin:0;font-size:20px}.tasteHead p{font-size:11px;color:#777b89}.tasteCount{background:#fff;border:1px solid #eadff2;border-radius:15px;padding:9px 14px;text-align:center}.tasteCount b,.tasteCount span{display:block}.tasteCount b{font-size:22px}.tasteCount span{font-size:8px;color:#777b89}.traits{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px}.trait{background:#fff;border:1px solid #ece4f2;border-radius:12px;padding:9px}.trait b,.trait span{display:block}.trait b{font-size:13px}.trait span{font-size:8px;color:#777b89}.section{margin-top:22px}.section h2{margin:0;font-size:21px}.section p{font-size:11px;color:#777b89}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.home{position:relative;background:#fff;border:1px solid #e5e2ed;border-radius:18px;padding:13px}.home.hidden{display:none}.rank{width:28px;height:28px;border-radius:50%;background:#171926;color:white;display:grid;place-items:center;font-weight:800}.newer{position:absolute;right:12px;top:12px;color:#654ced;font-size:9px;font-weight:850}.top{display:flex;justify-content:space-between;gap:10px;margin-top:9px}.top h3{margin:0;font-size:15px}.top p{font-size:9px;color:#777b89;margin:3px 0}.score{font-size:21px;font-weight:850}.score span{font-size:8px;color:#777b89}.price{font-size:20px;font-weight:850;margin-top:7px}.price span{font-size:10px;color:#777b89;margin-left:7px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:9px}.facts div{background:#f7f7fa;border-radius:8px;padding:7px}.facts b,.facts span{display:block}.facts b{font-size:10px}.facts span{font-size:7px;color:#777b89}.commute{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.commute div{border:1px solid #ece9f2;border-radius:9px;padding:8px}.commute small,.commute b,.commute span{display:block}.commute small,.commute span{font-size:8px;color:#777b89}.commute b{font-size:10px;margin:2px 0}.quality,.school{border-radius:8px;padding:7px;font-size:9px;margin-top:7px}.quality{background:#f2efff}.school{background:#eefaf4;color:#23684f}.actions{display:flex;gap:7px;margin-top:8px}.actions a,.actions button{padding:9px;border-radius:9px;font-size:10px}.actions a{background:#654ced;color:#fff;text-decoration:none;flex:1;text-align:center}.actions button{border:1px solid #e1d9ec;background:#fff}.actions button.liked{background:#ffedf4;color:#b4235f;border-color:#ffc8dc}.similar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}.sim{background:#fff;border:1px solid #e8e2ef;border-radius:12px;padding:9px}.sim b,.sim span{display:block}.sim b{font-size:11px}.sim span{font-size:8px;color:#777b89}.sim a{display:block;margin-top:6px;background:#171926;color:white;border-radius:7px;padding:6px;text-align:center;text-decoration:none;font-size:9px}@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.heroStats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.traits{grid-template-columns:repeat(2,1fr)}.similar{grid-template-columns:1fr}.hero{padding:20px 15px}.hero h1{font-size:27px}}
 </style></head><body><main class="wrap">
-
-<section class="hero">
-  <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">Deep market scan • Sep 5, 2026</div>
-  <h1>100+ listings screened. 45 finalists.</h1>
-  <p>I screened 100+ current listings and ranked 45 finalists. School quality is now a real ranking factor alongside space, commute, condition, age, price, taxes and HOA.</p>
-  <div class="heroStats">
-    <div><b>100+</b><span>market listings screened</span></div>
-    <div><b>45</b><span>ranked finalists</span></div>
-    <div><b>15</b><span>verified 2000+ plotted</span></div>
-    <div><b>$1.2M</b><span>hard ceiling</span></div>
-  </div>
-</section>
-
-<input checked class="filterradio" id="filter-all" name="homefilter" type="radio"/>
-<input class="filterradio" id="filter-condo" name="homefilter" type="radio"/>
-<input class="filterradio" id="filter-house" name="homefilter" type="radio"/>
-<input class="filterradio" id="filter-town" name="homefilter" type="radio"/>
-<input class="filterradio" id="filter-newer" name="homefilter" type="radio"/>
-<input class="filterradio" id="filter-schools" name="homefilter" type="radio"/>
-
-<section class="sticky">
-  <div class="filtertitle">Browse by home type</div>
-  <div class="chips cssfilters">
-    <label class="chip" for="filter-all">Everything</label>
-    <label class="chip" for="filter-condo">🏙 Condos</label>
-    <label class="chip" for="filter-house">🏡 Houses</label>
-    <label class="chip" for="filter-town">🏘 Townhouses</label>
-    <label class="chip" for="filter-newer">✨ Built 2000+</label>
-    <label class="chip" for="filter-schools">🎓 Best school fit</label>
-  </div>
-</section>
-
-<section class="tastePanel">
-  <div class="tasteHead">
-    <div>
-      <div class="tasteEyebrow">Your taste profile</div>
-      <h2>Like the homes that feel right.</h2>
-      <p id="tasteHint">Like 2–3 homes and I’ll show what they have in common.</p>
-    </div>
-    <div class="tasteCount"><b id="likedCount">0</b><span>liked</span></div>
-  </div>
-  <div id="tasteTraits" class="traitGrid"></div>
-  <div id="similarWrap" class="similarWrap hidden">
-    <div class="similarHead">
-      <h3>Best matches for your taste</h3>
-      <span>Recalculates from your likes</span>
-    </div>
-    <div id="similarHomes" class="similarGrid"></div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Top 15 condos</h2>
-  <p>Ranked for your criteria. Commute figures are screening estimates.</p>
-  <div class="cards">
-
-    <article class="home" id="h1" data-cat="Condo" data-year="2007" data-newer="yes" data-school="3.3">
-      <div class="rank">1</div><div class="newer">2000+</div>
-      <div class="top"><div><h3>41-35 67th St #4A</h3><p>Woodside, Queens</p></div><div class="score">87<span>/100</span></div></div>
-      <div class="price">$749,000 <span>998 sf</span></div>
-      <div class="facts"><div><b>2 / 2</b><span>beds / baths</span></div><div><b>2007</b><span>built</span></div><div><b>$840</b><span>HOA / mo</span></div><div><b>$1,128</b><span>tax / mo</span></div></div>
-      <div class="commute"><div><small>🚉 nearest rail</small><b>69 St (7)</b><span>≈ 0.19 mi</span></div><div><small>🏙 city</small><b>Grand Central</b><span>≈ 22 min rail</span></div></div>
-      <div class="quality">✨ Updated / well-maintained</div><div class="school">🎓 School fit 3.3/5</div>
-      <div class="tasteActions"><button class="likeBtn" data-like="h1">♡ Like</button><a href="https://streeteasy.com/building/41_35-67-street-woodside/4a?similarHDP2=1" target="_blank">Open listing</a></div>
-    </article>
-
-    <article class="home" id="h2" data-cat="Condo" data-year="2026" data-newer="yes" data-school="3.0">
-      <div class="rank">2</div><div class="newer">2000+</div>
-      <div class="top"><div><h3>168 E 111th St #2A</h3><p>East Harlem, Manhattan</p></div><div class="score">86<span>/100</span></div></div>
-      <div class="price">$823,000 <span>825 sf</span></div>
-      <div class="facts"><div><b>2 / 2</b><span>beds / baths</span></div><div><b>2026</b><span>built</span></div><div><b>$650</b><span>HOA / mo</span></div><div><b>$350</b><span>tax / mo</span></div></div>
-      <div class="commute"><div><small>🚉 nearest rail</small><b>6 at 110 St</b><span>≈ 0.10 mi</span></div><div><small>🏙 city</small><b>Grand Central</b><span>≈ 15 min rail</span></div></div>
-      <div class="quality">✨ New development</div><div class="school">🎓 School fit 3.0/5</div>
-      <div class="tasteActions"><button class="likeBtn" data-like="h2">♡ Like</button><a href="https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000" target="_blank">Open listing</a></div>
-    </article>
-
-    <article class="home" id="h3" data-cat="Condo" data-year="2012" data-newer="yes" data-school="3.1">
-      <div class="rank">3</div><div class="newer">2000+</div>
-      <div class="top"><div><h3>2605 Frederick Douglass Blvd #3B</h3><p>Central Harlem, Manhattan</p></div><div class="score">85<span>/100</span></div></div>
-      <div class="price">$849,000 <span>1,244 sf</span></div>
-      <div class="facts"><div><b>2 / 2</b><span>beds / baths</span></div><div><b>2012</b><span>built</span></div><div><b>$1,050</b><span>HOA / mo</span></div><div><b>$500</b><span>tax / mo</span></div></div>
-      <div class="commute"><div><small>🚉 nearest rail</small><b>A/C/B/D at 145 St</b><span>≈ 0.20 mi</span></div><div><small>🏙 city</small><b>Penn Station</b><span>≈ 18 min rail</span></div></div>
-      <div class="quality">✨ Modern condo</div><div class="school">🎓 School fit 3.1/5</div>
-      <div class="tasteActions"><button class="likeBtn" data-like="h3">♡ Like</button><a href="https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000" target="_blank">Open listing</a></div>
-    </article>
-
-  </div>
-</section>
-
-<section class="section">
-  <h2>Top houses and townhouses</h2>
-  <p>The rest of the shortlist remains available through the category filters.</p>
-  <div class="cards">
-
-    <article class="home" id="h17" data-cat="Single-family" data-year="1950" data-school="4.0">
-      <div class="rank">1</div>
-      <div class="top"><div><h3>26 Ballad Ln</h3><p>Hicksville, Nassau</p></div><div class="score">85<span>/100</span></div></div>
-      <div class="price">$929,000 <span>2,404 sf</span></div>
-      <div class="facts"><div><b>4 / 2</b><span>beds / baths</span></div><div><b>1950</b><span>built</span></div><div><b>N/A</b><span>HOA / mo</span></div><div><b>$1,053</b><span>tax / mo</span></div></div>
-      <div class="commute"><div><small>🚉 nearest rail</small><b>Hicksville LIRR</b><span>≈ 1.50 mi</span></div><div><small>🏙 city</small><b>Penn Station</b><span>≈ 45 min rail</span></div></div>
-      <div class="quality">✨ Updated / remodeled</div><div class="school">🎓 School fit 4.0/5</div>
-      <div class="tasteActions"><button class="likeBtn" data-like="h17">♡ Like</button><a href="https://www.zillow.com/homes/26-Ballad-Ln%2C-Hicksville%2C-Nassau_rb/" target="_blank">Open listing</a></div>
-    </article>
-
-    <article class="home" id="h32" data-cat="Townhouse / attached" data-year="1930" data-school="4.5">
-      <div class="rank">1</div>
-      <div class="top"><div><h3>67-139 Burns St</h3><p>Forest Hills, Queens</p></div><div class="score">86<span>/100</span></div></div>
-      <div class="price">$998,800 <span>1,110 sf</span></div>
-      <div class="facts"><div><b>3 / 2</b><span>beds / baths</span></div><div><b>1930</b><span>built</span></div><div><b>N/A</b><span>HOA / mo</span></div><div><b>Unknown</b><span>tax / mo</span></div></div>
-      <div class="commute"><div><small>🚉 nearest rail</small><b>M/R + Forest Hills LIRR</b><span>≈ 0.30 mi</span></div><div><small>🏙 city</small><b>Penn / Grand Central</b><span>≈ 22 min rail</span></div></div>
-      <div class="quality">✨ Well-maintained</div><div class="school">🎓 School fit 4.5/5</div>
-      <div class="tasteActions"><button class="likeBtn" data-like="h32">♡ Like</button><a href="https://www.zillow.com/homes/67-139-Burns-St%2C-Forest-Hills%2C-Queens_rb/" target="_blank">Open listing</a></div>
-    </article>
-
-  </div>
-</section>
-
+<section class="hero"><div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">Deep market scan • Sep 5, 2026</div><h1>100+ listings screened. 45 finalists.</h1><p>All 15 condos, 15 single-family homes and 15 townhouses are embedded directly in this file.</p><div class="heroStats"><div><b>45</b><span>finalists</span></div><div><b>15</b><span>condos</span></div><div><b>15</b><span>houses</span></div><div><b>15</b><span>townhouses</span></div></div></section>
+<section class="sticky"><div class="chips" id="filters"><button class="chip on" data-f="all">Everything</button><button class="chip" data-f="Condo">🏙 Condos</button><button class="chip" data-f="Single-family">🏡 Houses</button><button class="chip" data-f="Townhouse / attached">🏘 Townhouses</button><button class="chip" data-f="newer">✨ Built 2000+</button><button class="chip" data-f="schools">🎓 Best schools</button><button class="chip" data-f="liked">♥ Liked</button></div></section>
+<section class="taste"><div class="tasteHead"><div><h2>Your taste profile</h2><p id="hint">Like 2–3 homes and the site will show what they have in common.</p></div><div class="tasteCount"><b id="likedCount">0</b><span>liked</span></div></div><div id="traits" class="traits"></div><div id="similar" class="similar"></div></section>
+<div id="content"></div>
 <script>
-const HOMES=[
-{id:"h1",name:"41-35 67th St #4A",area:"Woodside, Queens",category:"Condo",year:2007,school:3.3,price:749000,sqft:998,cityMin:22,stationMi:.19},
-{id:"h2",name:"168 E 111th St #2A",area:"East Harlem, Manhattan",category:"Condo",year:2026,school:3.0,price:823000,sqft:825,cityMin:15,stationMi:.10},
-{id:"h3",name:"2605 Frederick Douglass Blvd #3B",area:"Central Harlem, Manhattan",category:"Condo",year:2012,school:3.1,price:849000,sqft:1244,cityMin:18,stationMi:.20},
-{id:"h17",name:"26 Ballad Ln",area:"Hicksville, Nassau",category:"Single-family",year:1950,school:4.0,price:929000,sqft:2404,cityMin:45,stationMi:1.5},
-{id:"h32",name:"67-139 Burns St",area:"Forest Hills, Queens",category:"Townhouse / attached",year:1930,school:4.5,price:998800,sqft:1110,cityMin:22,stationMi:.30}
-];
-
-const liked=new Set();
-const byId=Object.fromEntries(HOMES.map(h=>[h.id,h]));
-const $=s=>document.querySelector(s);
+const HOMES=[{"id": "c01", "name": "41-35 67th St #4A", "area": "Woodside, Queens", "category": "Condo", "price": 749000, "sqft": 998, "beds": 2, "baths": 2, "year": 2007, "hoa": 840, "tax": 1128, "school": 3.3, "station": "69 St (7)", "station_mi": 0.19, "city": "Grand Central", "city_min": 22, "quality": "Updated / well-maintained", "score": 87, "url": "https://streeteasy.com/building/41_35-67-street-woodside/4a?similarHDP2=1"}, {"id": "c02", "name": "168 E 111th St #2A", "area": "East Harlem, Manhattan", "category": "Condo", "price": 823000, "sqft": 825, "beds": 2, "baths": 2, "year": 2026, "hoa": 650, "tax": 350, "school": 3.0, "station": "6 at 110 St", "station_mi": 0.1, "city": "Grand Central", "city_min": 15, "quality": "New development", "score": 86, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000"}, {"id": "c03", "name": "2605 Frederick Douglass Blvd #3B", "area": "Central Harlem, Manhattan", "category": "Condo", "price": 849000, "sqft": 1244, "beds": 2, "baths": 2, "year": 2012, "hoa": 1050, "tax": 500, "school": 3.1, "station": "A/C/B/D at 145 St", "station_mi": 0.2, "city": "Penn Station", "city_min": 18, "quality": "Modern condo", "score": 85, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000"}, {"id": "c04", "name": "168 E 111th St #2D", "area": "East Harlem, Manhattan", "category": "Condo", "price": 818000, "sqft": 796, "beds": 2, "baths": 2, "year": 2026, "hoa": 630, "tax": 350, "school": 3.0, "station": "6 at 110 St", "station_mi": 0.1, "city": "Grand Central", "city_min": 15, "quality": "New development", "score": 85, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000"}, {"id": "c05", "name": "58-01 Queens Blvd #F8 \u2014 Centric", "area": "Woodside, Queens", "category": "Condo", "price": 955000, "sqft": 821, "beds": 2, "baths": 2, "year": 2026, "hoa": 551, "tax": 947, "school": 3.3, "station": "Woodside 61 St / LIRR", "station_mi": 0.33, "city": "Penn / Grand Central", "city_min": 18, "quality": "Brand-new", "score": 85, "url": "https://streeteasy.com/building/centric-condominium/f8?similarHDP2=1"}, {"id": "c06", "name": "58-01 Queens Blvd #E6 \u2014 Centric", "area": "Woodside, Queens", "category": "Condo", "price": 985000, "sqft": 897, "beds": 2, "baths": 2, "year": 2026, "hoa": 575, "tax": 980, "school": 3.3, "station": "Woodside 61 St / LIRR", "station_mi": 0.33, "city": "Penn / Grand Central", "city_min": 18, "quality": "Brand-new", "score": 85, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/queens"}, {"id": "c07", "name": "1400 Fifth Ave #6P", "area": "South Harlem, Manhattan", "category": "Condo", "price": 849000, "sqft": 1034, "beds": 2, "baths": 2, "year": 2004, "hoa": 900, "tax": 450, "school": 3.2, "station": "2/3 at 116 St", "station_mi": 0.18, "city": "Penn Station", "city_min": 20, "quality": "Modern condo", "score": 84, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000"}, {"id": "c08", "name": "58-01 Queens Blvd #5G \u2014 Centric", "area": "Woodside, Queens", "category": "Condo", "price": 980000, "sqft": 854, "beds": 2, "baths": 2, "year": 2026, "hoa": 570, "tax": 970, "school": 3.3, "station": "Woodside 61 St / LIRR", "station_mi": 0.33, "city": "Penn / Grand Central", "city_min": 18, "quality": "Brand-new", "score": 84, "url": "https://streeteasy.com/2-bedroom-apartments-for-sale/queens"}, {"id": "c09", "name": "63-36 99th St #D6 \u2014 Millennium 99", "area": "Rego Park, Queens", "category": "Condo", "price": 799000, "sqft": 1205, "beds": 2, "baths": 2.5, "year": 2008, "hoa": 1287, "tax": 629, "school": 4.0, "station": "63 Dr\u2013Rego Park (M/R)", "station_mi": 0.28, "city": "Midtown East", "city_min": 30, "quality": "Modern / well-maintained", "score": 84, "url": "https://streeteasy.com/building/millennium-99/d6"}, {"id": "c10", "name": "28-08 21st St #A2 \u2014 Twenty8", "area": "Astoria, Queens", "category": "Condo", "price": 799000, "sqft": 687, "beds": 2, "baths": 2, "year": 2026, "hoa": 424, "tax": 416, "school": 3.6, "station": "30 Av (N/W)", "station_mi": 0.41, "city": "Grand Central", "city_min": 27, "quality": "Brand-new", "score": 82, "url": "https://streeteasy.com/building/twenty8/a2?card=1"}, {"id": "c11", "name": "63-36 99th St #6J \u2014 Millennium 99", "area": "Rego Park, Queens", "category": "Condo", "price": 939000, "sqft": 1489, "beds": 2, "baths": 2, "year": 2008, "hoa": 1350, "tax": 700, "school": 4.0, "station": "63 Dr\u2013Rego Park (M/R)", "station_mi": 0.28, "city": "Midtown East", "city_min": 30, "quality": "Modern / full service", "score": 83, "url": "https://streeteasy.com/2-bedroom-apartments-for-sale/queens"}, {"id": "c12", "name": "32 Schaefer St GARDENB", "area": "Bushwick, Brooklyn", "category": "Condo", "price": 995000, "sqft": 1473, "beds": 2, "baths": 2.5, "year": 2021, "hoa": 650, "tax": 500, "school": 2.8, "station": "J/Z near Halsey / Chauncey", "station_mi": 0.25, "city": "Penn Station", "city_min": 38, "quality": "Newer boutique condo", "score": 80, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/brooklyn"}, {"id": "c13", "name": "40-22 61st St #2E \u2014 Arcadia", "area": "Woodside, Queens", "category": "Condo", "price": 1150000, "sqft": 1068, "beds": 2, "baths": 2, "year": 2024, "hoa": 674, "tax": 1380, "school": 3.3, "station": "61 St\u2013Woodside / LIRR", "station_mi": 0.12, "city": "Penn / Grand Central", "city_min": 16, "quality": "Newer construction", "score": 81, "url": "https://streeteasy.com/building/arcadia-woodside-condominium/2e"}, {"id": "c14", "name": "428 E 9th St #705", "area": "Kensington, Brooklyn", "category": "Condo", "price": 840000, "sqft": 950, "beds": 2, "baths": 2, "year": 2025, "hoa": 650, "tax": 650, "school": 3.8, "station": "F at Church Ave", "station_mi": 0.35, "city": "Penn Station", "city_min": 42, "quality": "New development", "score": 82, "url": "https://streeteasy.com/2-bedroom-condos-for-sale/brooklyn"}, {"id": "c15", "name": "23 Ocean Pkwy #7H \u2014 The Windsor", "area": "Windsor Terrace, Brooklyn", "category": "Condo", "price": 1150000, "sqft": 800, "beds": 2, "baths": 1, "year": 2026, "hoa": 743, "tax": 912, "school": 4.3, "station": "Fort Hamilton Pkwy (F/G)", "station_mi": 0.14, "city": "Penn Station", "city_min": 38, "quality": "Brand-new", "score": 83, "url": "https://streeteasy.com/building/the-windsor/7h"}, {"id": "h01", "name": "34 Hedge Ln", "area": "Westbury, Nassau", "category": "Single-family", "price": 799999, "sqft": 2050, "beds": 5, "baths": 2, "year": 1951, "hoa": null, "tax": 952, "school": 3.2, "station": "Westbury LIRR", "station_mi": 1.4, "city": "Penn Station", "city_min": 40, "quality": "Updated / move-in ready", "score": 84, "url": "https://www.zillow.com/homes/34-Hedge-Ln%2C-Westbury%2C-Nassau_rb/"}, {"id": "h02", "name": "26 Ballad Ln", "area": "Hicksville, Nassau", "category": "Single-family", "price": 929000, "sqft": 2404, "beds": 4, "baths": 2, "year": 1950, "hoa": null, "tax": 1053, "school": 4.0, "station": "Hicksville LIRR", "station_mi": 1.5, "city": "Penn Station", "city_min": 45, "quality": "Updated / remodeled", "score": 85, "url": "https://www.zillow.com/homes/26-Ballad-Ln%2C-Hicksville%2C-Nassau_rb/"}, {"id": "h03", "name": "12 Hilton Ct", "area": "Hicksville, Nassau", "category": "Single-family", "price": 848888, "sqft": 2628, "beds": 4, "baths": 3, "year": null, "hoa": null, "tax": 1223, "school": 4.0, "station": "Hicksville LIRR", "station_mi": 1.6, "city": "Penn Station", "city_min": 45, "quality": "Strong space value", "score": 85, "url": "https://www.zillow.com/homes/12-Hilton-Ct%2C-Hicksville%2C-Nassau_rb/"}, {"id": "h04", "name": "11 Verbena Ct", "area": "Hicksville, Nassau", "category": "Single-family", "price": 989999, "sqft": 1891, "beds": 3, "baths": 4, "year": null, "hoa": null, "tax": 1032, "school": 4.0, "station": "Hicksville LIRR", "station_mi": 1.3, "city": "Penn Station", "city_min": 45, "quality": "Updated", "score": 83, "url": "https://www.zillow.com/homes/11-Verbena-Ct%2C-Hicksville%2C-Nassau_rb/"}, {"id": "h05", "name": "177 Jerome Ave", "area": "Mineola, Nassau", "category": "Single-family", "price": 889000, "sqft": 1547, "beds": 3, "baths": 2, "year": 1947, "hoa": null, "tax": 950, "school": 4.2, "station": "Mineola LIRR", "station_mi": 0.8, "city": "Penn / Grand Central", "city_min": 35, "quality": "New listing / updated", "score": 84, "url": "https://www.zillow.com/homes/177-Jerome-Ave%2C-Mineola%2C-Nassau_rb/"}, {"id": "h06", "name": "465 Washington Pl", "area": "Mineola, Nassau", "category": "Single-family", "price": 879000, "sqft": 1373, "beds": 4, "baths": 3, "year": 1950, "hoa": null, "tax": 856, "school": 4.2, "station": "Mineola LIRR", "station_mi": 0.9, "city": "Penn / Grand Central", "city_min": 35, "quality": "Updated", "score": 83, "url": "https://www.zillow.com/homes/465-Washington-Pl%2C-Mineola%2C-Nassau_rb/"}, {"id": "h07", "name": "560 N 6th St", "area": "New Hyde Park, Nassau", "category": "Single-family", "price": 929000, "sqft": 1575, "beds": 5, "baths": 2, "year": null, "hoa": null, "tax": 1050, "school": 4.5, "station": "New Hyde Park LIRR", "station_mi": 1.1, "city": "Penn Station", "city_min": 32, "quality": "Large family layout", "score": 84, "url": "https://www.zillow.com/homes/560-N-6th-St%2C-New-Hyde-Park%2C-Nassau_rb/"}, {"id": "h08", "name": "425 Marcellus Rd", "area": "Mineola, Nassau", "category": "Single-family", "price": 885000, "sqft": 1468, "beds": 4, "baths": 2, "year": 1928, "hoa": null, "tax": 900, "school": 4.2, "station": "Mineola LIRR", "station_mi": 0.8, "city": "Penn / Grand Central", "city_min": 35, "quality": "New listing", "score": 82, "url": "https://www.zillow.com/homes/425-Marcellus-Rd%2C-Mineola%2C-Nassau_rb/"}, {"id": "h09", "name": "85 Joseph St", "area": "New Hyde Park, Nassau", "category": "Single-family", "price": 998000, "sqft": 1341, "beds": 3, "baths": 2, "year": null, "hoa": null, "tax": 1050, "school": 4.5, "station": "New Hyde Park LIRR", "station_mi": 1.0, "city": "Penn Station", "city_min": 32, "quality": "Bright / well-kept", "score": 83, "url": "https://www.zillow.com/homes/85-Joseph-St%2C-New-Hyde-Park%2C-Nassau_rb/"}, {"id": "h10", "name": "108 Marcus Ave", "area": "New Hyde Park, Nassau", "category": "Single-family", "price": 999999, "sqft": 1440, "beds": 3, "baths": 3, "year": null, "hoa": null, "tax": 1100, "school": 4.5, "station": "New Hyde Park LIRR", "station_mi": 1.0, "city": "Penn Station", "city_min": 32, "quality": "Updated", "score": 83, "url": "https://www.zillow.com/homes/108-Marcus-Ave%2C-New-Hyde-Park%2C-Nassau_rb/"}, {"id": "h11", "name": "7616 269th St", "area": "New Hyde Park, Nassau", "category": "Single-family", "price": 899000, "sqft": 1650, "beds": 5, "baths": 2, "year": null, "hoa": null, "tax": 1000, "school": 4.5, "station": "New Hyde Park LIRR", "station_mi": 1.5, "city": "Penn Station", "city_min": 32, "quality": "Larger footprint", "score": 82, "url": "https://www.zillow.com/homes/7616-269th-St%2C-New-Hyde-Park%2C-Nassau_rb/"}, {"id": "h12", "name": "494 Sally Rd", "area": "Mineola, Nassau", "category": "Single-family", "price": 749999, "sqft": 1066, "beds": 3, "baths": 2, "year": null, "hoa": null, "tax": 850, "school": 4.2, "station": "Mineola LIRR", "station_mi": 1.0, "city": "Penn / Grand Central", "city_min": 35, "quality": "Move-in ready", "score": 81, "url": "https://www.zillow.com/homes/494-Sally-Rd%2C-Mineola%2C-Nassau_rb/"}, {"id": "h13", "name": "190 Albertson Pl", "area": "Mineola, Nassau", "category": "Single-family", "price": 819999, "sqft": 1201, "beds": 3, "baths": 2, "year": null, "hoa": null, "tax": 785, "school": 4.2, "station": "Mineola LIRR", "station_mi": 1.1, "city": "Penn / Grand Central", "city_min": 35, "quality": "Value candidate", "score": 81, "url": "https://www.zillow.com/homes/190-Albertson-Pl%2C-Mineola%2C-Nassau_rb/"}, {"id": "h14", "name": "33 Michael Ln", "area": "New Hyde Park, Nassau", "category": "Single-family", "price": 1200000, "sqft": 1603, "beds": 4, "baths": 3, "year": 1948, "hoa": null, "tax": 1200, "school": 4.5, "station": "New Hyde Park LIRR", "station_mi": 1.2, "city": "Penn Station", "city_min": 32, "quality": "Updated", "score": 81, "url": "https://www.zillow.com/homes/33-Michael-Ln%2C-New-Hyde-Park%2C-Nassau_rb/"}, {"id": "h15", "name": "35 Meeting Ln", "area": "Hicksville, Nassau", "category": "Single-family", "price": 699500, "sqft": 1200, "beds": 4, "baths": 2, "year": null, "hoa": null, "tax": 900, "school": 4.0, "station": "Hicksville LIRR", "station_mi": 1.2, "city": "Penn Station", "city_min": 45, "quality": "Value candidate", "score": 78, "url": "https://www.zillow.com/homes/35-Meeting-Ln%2C-Hicksville%2C-Nassau_rb/"}, {"id": "t01", "name": "67-139 Burns St", "area": "Forest Hills, Queens", "category": "Townhouse / attached", "price": 998800, "sqft": 1110, "beds": 3, "baths": 2, "year": 1930, "hoa": null, "tax": null, "school": 4.5, "station": "M/R + Forest Hills LIRR", "station_mi": 0.3, "city": "Penn / Grand Central", "city_min": 22, "quality": "Well-maintained", "score": 86, "url": "https://www.zillow.com/homes/67-139-Burns-St%2C-Forest-Hills%2C-Queens_rb/"}, {"id": "t02", "name": "892 Clarkson Ave", "area": "East Flatbush, Brooklyn", "category": "Townhouse / attached", "price": 799000, "sqft": 1600, "beds": 3, "baths": 2, "year": 1910, "hoa": null, "tax": 364, "school": 3.0, "station": "Saratoga / Sutter area subway", "station_mi": 0.45, "city": "Penn Station", "city_min": 42, "quality": "Fully renovated", "score": 83, "url": "https://www.zillow.com/homes/892-Clarkson-Ave%2C-East-Flatbush%2C-Brooklyn_rb/"}, {"id": "t03", "name": "1452 E 16th St", "area": "Midwood, Brooklyn", "category": "Townhouse / attached", "price": 735999, "sqft": 976, "beds": 3, "baths": 2, "year": null, "hoa": null, "tax": 550, "school": 4.2, "station": "B/Q at Kings Hwy", "station_mi": 0.35, "city": "Penn Station", "city_min": 40, "quality": "Quiet block", "score": 82, "url": "https://www.zillow.com/homes/1452-E-16th-St%2C-Midwood%2C-Brooklyn_rb/"}, {"id": "t04", "name": "1595 Independence Ave", "area": "Dyker Heights, Brooklyn", "category": "Townhouse / attached", "price": 828999, "sqft": 1056, "beds": 3, "baths": 2, "year": null, "hoa": null, "tax": 600, "school": 4.0, "station": "D train / bus connection", "station_mi": 0.8, "city": "Penn Station", "city_min": 45, "quality": "Townhouse listing", "score": 80, "url": "https://www.zillow.com/homes/1595-Independence-Ave%2C-Dyker-Heights%2C-Brooklyn_rb/"}, {"id": "t05", "name": "62-30 65th St", "area": "Middle Village, Queens", "category": "Townhouse / attached", "price": 1200000, "sqft": 2480, "beds": 6, "baths": 3, "year": null, "hoa": null, "tax": 700, "school": 4.2, "station": "M at Metropolitan Ave", "station_mi": 0.7, "city": "Grand Central", "city_min": 35, "quality": "Large townhouse", "score": 81, "url": "https://www.zillow.com/homes/62-30-65th-St%2C-Middle-Village%2C-Queens_rb/"}, {"id": "t06", "name": "90-43 70th Dr", "area": "Forest Hills, Queens", "category": "Townhouse / attached", "price": 999000, "sqft": null, "beds": 3, "baths": 2, "year": 1935, "hoa": null, "tax": 600, "school": 4.5, "station": "Forest Hills LIRR / E/F/M/R", "station_mi": 0.76, "city": "Penn / Grand Central", "city_min": 23, "quality": "Well-maintained", "score": 82, "url": "https://www.zillow.com/homes/90-43-70th-Dr%2C-Forest-Hills%2C-Queens_rb/"}, {"id": "t07", "name": "186-01 Nashville Blvd", "area": "Springfield Gardens, Queens", "category": "Townhouse / attached", "price": 850000, "sqft": 1670, "beds": 5, "baths": 2, "year": null, "hoa": null, "tax": 550, "school": 3.0, "station": "Jamaica rail complex", "station_mi": 1.2, "city": "Penn Station", "city_min": 42, "quality": "Large attached home", "score": 76, "url": "https://www.zillow.com/homes/186-01-Nashville-Blvd%2C-Springfield-Gardens%2C-Queens_rb/"}, {"id": "t08", "name": "88-32 75th St", "area": "Woodhaven, Queens", "category": "Townhouse / attached", "price": 900000, "sqft": 1800, "beds": 6, "baths": 4, "year": null, "hoa": null, "tax": 650, "school": 3.2, "station": "J/Z at 75 St\u2013Elderts Ln", "station_mi": 0.25, "city": "Penn Station", "city_min": 38, "quality": "Multi-level townhouse", "score": 77, "url": "https://www.zillow.com/homes/88-32-75th-St%2C-Woodhaven%2C-Queens_rb/"}, {"id": "t09", "name": "95-11 Cresskill Pl", "area": "Jamaica, Queens", "category": "Townhouse / attached", "price": 1200000, "sqft": 2200, "beds": 10, "baths": 4, "year": null, "hoa": null, "tax": 750, "school": 3.0, "station": "Jamaica E/F/J/Z/LIRR", "station_mi": 0.7, "city": "Penn / Grand Central", "city_min": 28, "quality": "Very large townhouse", "score": 76, "url": "https://www.zillow.com/homes/95-11-Cresskill-Pl%2C-Jamaica%2C-Queens_rb/"}, {"id": "t10", "name": "72-43 Calamus Ave", "area": "Woodside, Queens", "category": "Townhouse / attached", "price": 995000, "sqft": 1250, "beds": 3, "baths": 3, "year": 1940, "hoa": null, "tax": 662, "school": 3.3, "station": "M/R at 65 St", "station_mi": 0.7, "city": "Grand Central", "city_min": 30, "quality": "Private yard / parking", "score": 76, "url": "https://www.zillow.com/homes/72-43-Calamus-Ave%2C-Woodside%2C-Queens_rb/"}, {"id": "t11", "name": "3412 Avenue T", "area": "Marine Park, Brooklyn", "category": "Townhouse / attached", "price": 829000, "sqft": 2040, "beds": 2, "baths": 3, "year": null, "hoa": null, "tax": 600, "school": 3.9, "station": "B/Q via Kings Hwy", "station_mi": 1.2, "city": "Penn Station", "city_min": 50, "quality": "Private driveway", "score": 78, "url": "https://www.zillow.com/homes/3412-Avenue-T%2C-Marine-Park%2C-Brooklyn_rb/"}, {"id": "t12", "name": "1593 Independence Ave", "area": "Dyker Heights, Brooklyn", "category": "Townhouse / attached", "price": 999900, "sqft": 992, "beds": 2, "baths": 2, "year": null, "hoa": null, "tax": 600, "school": 4.0, "station": "D at 79 St", "station_mi": 0.75, "city": "Penn Station", "city_min": 45, "quality": "Oversized windows", "score": 77, "url": "https://www.zillow.com/homes/1593-Independence-Ave%2C-Dyker-Heights%2C-Brooklyn_rb/"}, {"id": "t13", "name": "4116 Avenue S", "area": "Marine Park, Brooklyn", "category": "Townhouse / attached", "price": 688888, "sqft": 966, "beds": 3, "baths": 2, "year": null, "hoa": null, "tax": 500, "school": 3.9, "station": "B/Q via Kings Hwy", "station_mi": 1.0, "city": "Penn Station", "city_min": 50, "quality": "Maintained backyard", "score": 75, "url": "https://www.zillow.com/homes/4116-Avenue-S%2C-Marine-Park%2C-Brooklyn_rb/"}, {"id": "t14", "name": "2171 Hendrickson St", "area": "Marine Park, Brooklyn", "category": "Townhouse / attached", "price": 824999, "sqft": 1000, "beds": 2, "baths": 3, "year": null, "hoa": null, "tax": 500, "school": 3.9, "station": "B/Q via Kings Hwy", "station_mi": 1.3, "city": "Penn Station", "city_min": 50, "quality": "Newly listed", "score": 75, "url": "https://www.zillow.com/homes/2171-Hendrickson-St%2C-Marine-Park%2C-Brooklyn_rb/"}, {"id": "t15", "name": "2351 E 70th St", "area": "Bergen Beach, Brooklyn", "category": "Townhouse / attached", "price": 949000, "sqft": 1998, "beds": 3, "baths": 3, "year": null, "hoa": null, "tax": 650, "school": 4.0, "station": "B/Q via bus", "station_mi": 2.0, "city": "Penn Station", "city_min": 55, "quality": "Large attached-style home", "score": 74, "url": "https://www.zillow.com/homes/2351-E-70th-St%2C-Bergen-Beach%2C-Brooklyn_rb/"}];
+const liked=new Set(JSON.parse(localStorage.getItem('home-hunt-liked')||'[]')); let filter='all';
+const groups=[['Condo','Top 15 condos'],['Single-family','Top 15 single-family homes'],['Townhouse / attached','Top 15 townhouses / attached homes']];
+const money=v=>v==null?'Unknown':'$'+Math.round(v).toLocaleString();
+const mode=a=>{const m={};a.forEach(x=>m[x]=(m[x]||0)+1);return Object.entries(m).sort((a,b)=>b[1]-a[1])[0]?.[0]||'Mixed'};
 const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
-
-function mode(a){
-  if(!a.length)return null;
-  let m={};
-  a.forEach(x=>m[x]=(m[x]||0)+1);
-  return Object.entries(m).sort((a,b)=>b[1]-a[1])[0][0];
-}
-
-function render(){
-  const xs=[...liked].map(id=>byId[id]).filter(Boolean);
-  $('#likedCount').textContent=xs.length;
-
-  document.querySelectorAll('[data-like]').forEach(b=>{
-    const on=liked.has(b.dataset.like);
-    b.classList.toggle('liked',on);
-    b.textContent=on?'♥ Liked':'♡ Like';
-  });
-
-  const traits=$('#tasteTraits');
-  const wrap=$('#similarWrap');
-
-  if(!xs.length){
-    traits.innerHTML='';
-    wrap.classList.add('hidden');
-    $('#tasteHint').textContent='Like 2–3 homes and I’ll show what they have in common.';
-    return;
-  }
-
-  const p={
-    category:mode(xs.map(h=>h.category)),
-    price:avg(xs.map(h=>h.price)),
-    sqft:avg(xs.map(h=>h.sqft)),
-    year:avg(xs.map(h=>h.year)),
-    school:avg(xs.map(h=>h.school)),
-    cityMin:avg(xs.map(h=>h.cityMin)),
-    stationMi:avg(xs.map(h=>h.stationMi))
-  };
-
-  $('#tasteHint').textContent=xs.length===1
-    ?'Like one or two more and the pattern will get clearer.'
-    :'Here’s the pattern across the homes you like.';
-
-  const td=[
-    ['Property type',p.category||'Mixed'],
-    ['Typical price','$'+Math.round(p.price/1000)+'k'],
-    ['Typical size',Math.round(p.sqft).toLocaleString()+' sq ft'],
-    ['School fit',p.school.toFixed(1)+'/5'],
-    ['City commute','~'+Math.round(p.cityMin)+' min'],
-    ['Station distance','~'+p.stationMi.toFixed(2)+' mi']
-  ];
-
-  traits.innerHTML=td.map(([k,v])=>
-    `<div class="trait"><b>${v}</b><span>${k}</span></div>`
-  ).join('');
-
-  if(xs.length>=2){
-    const candidates=HOMES
-      .filter(h=>!liked.has(h.id))
-      .map(h=>{
-        let s=0;
-        s+=h.category===p.category?30:5;
-        s+=Math.max(0,25-Math.abs(h.price-p.price)/16000);
-        s+=Math.max(0,20-Math.abs(h.sqft-p.sqft)/60);
-        s+=Math.max(0,15-Math.abs(h.school-p.school)*8);
-        return [h,s];
-      })
-      .sort((a,b)=>b[1]-a[1])
-      .slice(0,4);
-
-    $('#similarHomes').innerHTML=candidates.map(([h,s])=>
-      `<div class="similarCard">
-        <b>${h.name}</b>
-        <span>${h.area}</span>
-        <span class="simScore">${Math.round(s)}% taste match</span>
-        <a href="#${h.id}">Jump to home</a>
-      </div>`
-    ).join('');
-    wrap.classList.remove('hidden');
-  } else {
-    wrap.classList.add('hidden');
-  }
-}
-
-document.querySelectorAll('[data-like]').forEach(b=>{
-  b.addEventListener('click',()=>{
-    const id=b.dataset.like;
-    liked.has(id)?liked.delete(id):liked.add(id);
+function pass(h){if(filter==='all')return true;if(filter==='newer')return h.year>=2000;if(filter==='schools')return h.school>=4;if(filter==='liked')return liked.has(h.id);return h.category===filter}
+function card(h,i){return `<article class="home" id="${h.id}"><div class="rank">${i+1}</div>${h.year>=2000?'<div class="newer">2000+</div>':''}<div class="top"><div><h3>${h.name}</h3><p>${h.area}</p></div><div class="score">${h.score}<span>/100</span></div></div><div class="price">${money(h.price)}<span>${h.sqft?h.sqft.toLocaleString()+' sf':'Size unknown'}</span></div><div class="facts"><div><b>${h.beds} / ${h.baths}</b><span>beds / baths</span></div><div><b>${h.year||'Verify'}</b><span>built</span></div><div><b>${h.hoa==null?'N/A':money(h.hoa)}</b><span>HOA / mo</span></div><div><b>${h.tax==null?'Unknown':money(h.tax)}</b><span>tax / mo</span></div></div><div class="commute"><div><small>🚉 nearest rail</small><b>${h.station}</b><span>≈ ${h.station_mi.toFixed(2)} mi</span></div><div><small>🏙 city</small><b>${h.city}</b><span>≈ ${h.city_min} min rail</span></div></div><div class="quality">✨ ${h.quality}</div><div class="school">🎓 School fit ${h.school.toFixed(1)}/5</div><div class="actions"><button class="${liked.has(h.id)?'liked':''}" data-like="${h.id}">${liked.has(h.id)?'♥ Liked':'♡ Like'}</button><a href="${h.url}" target="_blank" rel="noopener">Open listing</a></div></article>`}
+function render(){let html='';groups.forEach(([cat,title])=>{const xs=HOMES.filter(h=>h.category===cat&&pass(h));if(xs.length)html+=`<section class="section"><h2>${title}</h2><p>${xs.length} shown</p><div class="cards">${xs.map(card).join('')}</div></section>`});document.getElementById('content').innerHTML=html;document.querySelectorAll('[data-like]').forEach(b=>b.onclick=()=>{liked.has(b.dataset.like)?liked.delete(b.dataset.like):liked.add(b.dataset.like);localStorage.setItem('home-hunt-liked',JSON.stringify([...liked]));render();taste()});taste()}
+function taste(){const xs=HOMES.filter(h=>liked.has(h.id));document.getElementById('likedCount').textContent=xs.length;if(!xs.length){document.getElementById('traits').innerHTML='';document.getElementById('similar').innerHTML='';document.getElementById('hint').textContent='Like 2–3 homes and the site will show what they have in common.';return}const p={category:mode(xs.map(h=>h.category)),price:avg(xs.map(h=>h.price)),sqft:avg(xs.map(h=>h.sqft).filter(Boolean)),school:avg(xs.map(h=>h.school)),city:avg(xs.map(h=>h.city_min)),station:avg(xs.map(h=>h.station_mi))};document.getElementById('hint').textContent=xs.length<2?'Like one or two more and the pattern will get clearer.':'Here is the pattern across the homes you like.';document.getElementById('traits').innerHTML=[['Type',p.category],['Typical price','$'+Math.round(p.price/1000)+'k'],['Typical size',p.sqft?Math.round(p.sqft).toLocaleString()+' sf':'—'],['School fit',p.school.toFixed(1)+'/5'],['City commute','~'+Math.round(p.city)+' min'],['Station','~'+p.station.toFixed(2)+' mi']].map(([k,v])=>`<div class="trait"><b>${v}</b><span>${k}</span></div>`).join('');if(xs.length<2){document.getElementById('similar').innerHTML='';return}const cand=HOMES.filter(h=>!liked.has(h.id)).map(h=>{let s=0;s+=h.category===p.category?30:5;s+=Math.max(0,25-Math.abs(h.price-p.price)/16000);if(h.sqft&&p.sqft)s+=Math.max(0,20-Math.abs(h.sqft-p.sqft)/65);s+=Math.max(0,15-Math.abs(h.school-p.school)*8);s+=Math.max(0,10-Math.abs(h.city_min-p.city)/4);return[h,s]}).sort((a,b)=>b[1]-a[1]).slice(0,6);document.getElementById('similar').innerHTML=cand.map(([h,s])=>`<div class="sim"><b>${h.name}</b><span>${h.area}</span><span>${Math.round(s)}% taste match</span><a href="#${h.id}">Jump to home</a></div>`).join('')}
+document.querySelectorAll('#filters .chip').forEach(b=>b.onclick=()=>{filter=b.dataset.f;document.querySelectorAll('#filters .chip').forEach(x=>x.classList.toggle('on',x===b));render()});
+document.getElementById('similar').addEventListener('click',event=>{
+  const link=event.target.closest('a[href^="#"]');
+  if(!link)return;
+  const id=link.getAttribute('href').slice(1);
+  if(!HOMES.some(h=>h.id===id))return;
+  if(!document.getElementById(id)){
+    filter='all';
+    document.querySelectorAll('#filters .chip').forEach(b=>b.classList.toggle('on',b.dataset.f==='all'));
     render();
-  });
+  }
+  event.preventDefault();
+  history.replaceState(null,'','#'+id);
+  document.getElementById(id).scrollIntoView({block:'center'});
 });
-
 render();
-</script>
-
-</main></body></html>
+</script></main></body></html>
