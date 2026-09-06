@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>NYC Home Market Deep Scan</title><style>*{box-sizing:border-box}body{margin:0;background:#f6f5fb;color:#151720;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.wrap{max-width:1200px;margin:auto;padding:12px 10px 50px}.hero{background:linear-gradient(135deg,#17142d,#654ced 58%,#a177ff);color:#fff;border-radius:25px;padding:24px}.hero h1{font-size:31px;margin:5px 0}.hero p{opacity:.84;max-width:760px}.heroStats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}.heroStats div{background:rgba(255,255,255,.1);padding:10px;border-radius:12px}.heroStats b,.heroStats span{display:block}.heroStats span{font-size:9px;opacity:.7}.sticky{position:sticky;top:0;z-index:30;background:rgba(246,245,251,.94);backdrop-filter:blur(10px);padding:9px 0}.chips{display:flex;overflow:auto;gap:7px}.chip{white-space:nowrap;border:1px solid #e2dfeb;background:white;border-radius:999px;padding:10px 13px}.chip.on{background:#171926;color:#fff}.insights{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;margin-top:13px}.panel{background:white;border:1px solid #e5e2ed;border-radius:20px;padding:14px}.panel h2{margin:0;font-size:18px}.muted,.section>p{font-size:11px;color:#777b89}.plot{overflow:auto}.plot svg{min-width:650px;width:100%}.grid{stroke:#eceaf1}.tick,.axis{fill:#777b89;font-size:10px}.dot{stroke:white;stroke-width:2;filter:drop-shadow(0 2px 2px rgba(0,0,0,.16))}.catgrid{display:grid;gap:8px;margin-top:10px}.cat{background:linear-gradient(135deg,#f6f3ff,#fff);padding:12px;border-radius:14px}.cat b,.cat strong,.cat span{display:block}.cat strong{font-size:19px}.cat span{font-size:9px;color:#777b89}.cat div{display:flex;gap:8px;margin-top:7px;flex-wrap:wrap}.cat em{font-style:normal;background:white;border-radius:8px;padding:6px;font-size:9px}.section{margin-top:22px}.section h2{font-size:21px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.home{position:relative;background:#fff;border:1px solid #e5e2ed;border-radius:18px;padding:13px;scroll-margin-top:80px}.rank{width:28px;height:28px;border-radius:50%;background:#171926;color:#fff;display:grid;place-items:center;font-weight:800}.newer{position:absolute;right:12px;top:12px;color:#654ced;font-size:9px;font-weight:850}.top{display:flex;justify-content:space-between;gap:9px;margin-top:9px}.top h3{font-size:15px;margin:0}.top p{font-size:9px;color:#777b89;margin:3px 0}.score{font-size:21px;font-weight:850}.score span{font-size:8px;color:#777b89}.price{font-size:20px;font-weight:850;margin-top:7px}.price span{font-size:10px;color:#777b89;margin-left:7px}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:9px}.facts div{background:#f7f7fa;border-radius:8px;padding:7px}.facts b,.facts span{display:block}.facts b{font-size:10px}.facts span{font-size:7px;color:#777b89}.commute{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.commute div{border:1px solid #ece9f2;border-radius:9px;padding:8px}.commute small,.commute b,.commute span{display:block}.commute small,.commute span{font-size:8px;color:#777b89}.commute b{font-size:10px;margin:2px 0}.quality{background:#f2efff;border-radius:8px;padding:7px;font-size:9px;margin-top:8px}.home>a{display:block;text-align:center;background:#654ced;color:white;border-radius:9px;padding:9px;text-decoration:none;font-size:10px;margin-top:8px}.hidden{display:none!important}@media(max-width:900px){.insights{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.heroStats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.hero{padding:20px 15px}.hero h1{font-size:27px}}
+.filterradio{position:absolute;opacity:0;pointer-events:none}
+.filtertitle{font-size:10px;color:#777b89;margin:0 0 6px 2px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.cssfilters label{cursor:pointer}
+#filter-all:checked ~ .sticky label[for="filter-all"],
+#filter-condo:checked ~ .sticky label[for="filter-condo"],
+#filter-house:checked ~ .sticky label[for="filter-house"],
+#filter-town:checked ~ .sticky label[for="filter-town"],
+#filter-newer:checked ~ .sticky label[for="filter-newer"],
+#filter-schools:checked ~ .sticky label[for="filter-schools"]{background:#171926;color:#fff;border-color:#171926}
+#filter-condo:checked ~ .insights ~ .section .home:not([data-cat="Condo"]){display:none}
+#filter-house:checked ~ .insights ~ .section .home:not([data-cat="Single-family"]){display:none}
+#filter-town:checked ~ .insights ~ .section .home:not([data-cat="Townhouse / attached"]){display:none}
+#filter-newer:checked ~ .insights ~ .section .home:not([data-newer="yes"]){display:none}
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="2"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.0"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.1"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.2"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.3"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.4"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.5"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.6"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.7"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.8"],
+#filter-schools:checked ~ .insights ~ .section .home[data-school^="3.9"]{display:none}
+.school{background:linear-gradient(135deg,#eefaf4,#f9fffc);border:1px solid #d9efe4;border-radius:8px;padding:7px;font-size:9px;margin-top:6px;color:#23684f}
+.schoolpanel{background:linear-gradient(145deg,#f1fff7,#ffffff)}
+.schoolscale{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.schoolscale span{background:white;border:1px solid #dcefe4;border-radius:999px;padding:6px 8px;font-size:9px;color:#47705e}
+
+.tastePanel{margin-top:14px;background:linear-gradient(135deg,#fff4fa,#f3efff 55%,#eef8ff);border:1px solid #eadff2;border-radius:24px;padding:17px}
+.tasteHead{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.tasteEyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:9px;font-weight:800;color:#8b5a9d}.tasteHead h2{font-size:20px;margin:3px 0}.tasteHead p{font-size:11px;color:#777b89;margin:4px 0}.tasteCount{background:white;border:1px solid #eadff2;border-radius:16px;padding:10px 14px;text-align:center;min-width:70px}.tasteCount b,.tasteCount span{display:block}.tasteCount b{font-size:22px}.tasteCount span{font-size:8px;color:#777b89;text-transform:uppercase}
+.traitGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:13px}.trait{background:rgba(255,255,255,.86);border:1px solid #ece4f2;border-radius:13px;padding:10px}.trait b,.trait span{display:block}.trait b{font-size:13px}.trait span{font-size:8px;color:#777b89;margin-top:2px}
+.similarWrap{margin-top:15px;border-top:1px solid #eadff2;padding-top:13px}.similarHead{display:flex;justify-content:space-between;gap:10px;align-items:end}.similarHead h3{font-size:15px;margin:0}.similarHead span{font-size:8px;color:#777b89}.similarGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:9px}.similarCard{background:white;border:1px solid #e8e2ef;border-radius:14px;padding:10px}.similarCard b,.similarCard span{display:block}.similarCard b{font-size:11px}.similarCard span{font-size:8px;color:#777b89;margin-top:2px}.simScore{color:#654ced!important;font-weight:800!important;font-size:10px!important}.similarCard a{display:block;margin-top:7px;text-decoration:none;background:#171926;color:white;border-radius:8px;padding:7px;text-align:center;font-size:9px}
+.tasteActions{display:flex;gap:7px;margin-top:8px}.tasteActions a{margin-top:0!important;flex:1}.likeBtn{border:1px solid #e1d9ec;background:#fff;color:#5c4567;border-radius:9px;padding:9px 12px;font-size:10px;font-weight:700}.likeBtn.liked{background:#ffedf4;border-color:#ffc8dc;color:#b4235f}
+@media(max-width:700px){.traitGrid{grid-template-columns:repeat(2,1fr)}.similarGrid{grid-template-columns:1fr}.tasteHead{align-items:center}}
+</style></head><body><main class="wrap">
+
+<section class="hero">
+  <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">Deep market scan • Sep 5, 2026</div>
+  <h1>100+ listings screened. 45 finalists.</h1>
+  <p>I screened 100+ current listings and ranked 45 finalists. School quality is now a real ranking factor alongside space, commute, condition, age, price, taxes and HOA.</p>
+  <div class="heroStats">
+    <div><b>100+</b><span>market listings screened</span></div>
+    <div><b>45</b><span>ranked finalists</span></div>
+    <div><b>15</b><span>verified 2000+ plotted</span></div>
+    <div><b>$1.2M</b><span>hard ceiling</span></div>
+  </div>
+</section>
+
+<input checked class="filterradio" id="filter-all" name="homefilter" type="radio"/>
+<input class="filterradio" id="filter-condo" name="homefilter" type="radio"/>
+<input class="filterradio" id="filter-house" name="homefilter" type="radio"/>
+<input class="filterradio" id="filter-town" name="homefilter" type="radio"/>
+<input class="filterradio" id="filter-newer" name="homefilter" type="radio"/>
+<input class="filterradio" id="filter-schools" name="homefilter" type="radio"/>
+
+<section class="sticky">
+  <div class="filtertitle">Browse by home type</div>
+  <div class="chips cssfilters">
+    <label class="chip" for="filter-all">Everything</label>
+    <label class="chip" for="filter-condo">🏙 Condos</label>
+    <label class="chip" for="filter-house">🏡 Houses</label>
+    <label class="chip" for="filter-town">🏘 Townhouses</label>
+    <label class="chip" for="filter-newer">✨ Built 2000+</label>
+    <label class="chip" for="filter-schools">🎓 Best school fit</label>
+  </div>
+</section>
+
+<section class="tastePanel">
+  <div class="tasteHead">
+    <div>
+      <div class="tasteEyebrow">Your taste profile</div>
+      <h2>Like the homes that feel right.</h2>
+      <p id="tasteHint">Like 2–3 homes and I’ll show what they have in common.</p>
+    </div>
+    <div class="tasteCount"><b id="likedCount">0</b><span>liked</span></div>
+  </div>
+  <div id="tasteTraits" class="traitGrid"></div>
+  <div id="similarWrap" class="similarWrap hidden">
+    <div class="similarHead">
+      <h3>Best matches for your taste</h3>
+      <span>Recalculates from your likes</span>
+    </div>
+    <div id="similarHomes" class="similarGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Top 15 condos</h2>
+  <p>Ranked for your criteria. Commute figures are screening estimates.</p>
+  <div class="cards">
+
+    <article class="home" id="h1" data-cat="Condo" data-year="2007" data-newer="yes" data-school="3.3">
+      <div class="rank">1</div><div class="newer">2000+</div>
+      <div class="top"><div><h3>41-35 67th St #4A</h3><p>Woodside, Queens</p></div><div class="score">87<span>/100</span></div></div>
+      <div class="price">$749,000 <span>998 sf</span></div>
+      <div class="facts"><div><b>2 / 2</b><span>beds / baths</span></div><div><b>2007</b><span>built</span></div><div><b>$840</b><span>HOA / mo</span></div><div><b>$1,128</b><span>tax / mo</span></div></div>
+      <div class="commute"><div><small>🚉 nearest rail</small><b>69 St (7)</b><span>≈ 0.19 mi</span></div><div><small>🏙 city</small><b>Grand Central</b><span>≈ 22 min rail</span></div></div>
+      <div class="quality">✨ Updated / well-maintained</div><div class="school">🎓 School fit 3.3/5</div>
+      <div class="tasteActions"><button class="likeBtn" data-like="h1">♡ Like</button><a href="https://streeteasy.com/building/41_35-67-street-woodside/4a?similarHDP2=1" target="_blank">Open listing</a></div>
+    </article>
+
+    <article class="home" id="h2" data-cat="Condo" data-year="2026" data-newer="yes" data-school="3.0">
+      <div class="rank">2</div><div class="newer">2000+</div>
+      <div class="top"><div><h3>168 E 111th St #2A</h3><p>East Harlem, Manhattan</p></div><div class="score">86<span>/100</span></div></div>
+      <div class="price">$823,000 <span>825 sf</span></div>
+      <div class="facts"><div><b>2 / 2</b><span>beds / baths</span></div><div><b>2026</b><span>built</span></div><div><b>$650</b><span>HOA / mo</span></div><div><b>$350</b><span>tax / mo</span></div></div>
+      <div class="commute"><div><small>🚉 nearest rail</small><b>6 at 110 St</b><span>≈ 0.10 mi</span></div><div><small>🏙 city</small><b>Grand Central</b><span>≈ 15 min rail</span></div></div>
+      <div class="quality">✨ New development</div><div class="school">🎓 School fit 3.0/5</div>
+      <div class="tasteActions"><button class="likeBtn" data-like="h2">♡ Like</button><a href="https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000" target="_blank">Open listing</a></div>
+    </article>
+
+    <article class="home" id="h3" data-cat="Condo" data-year="2012" data-newer="yes" data-school="3.1">
+      <div class="rank">3</div><div class="newer">2000+</div>
+      <div class="top"><div><h3>2605 Frederick Douglass Blvd #3B</h3><p>Central Harlem, Manhattan</p></div><div class="score">85<span>/100</span></div></div>
+      <div class="price">$849,000 <span>1,244 sf</span></div>
+      <div class="facts"><div><b>2 / 2</b><span>beds / baths</span></div><div><b>2012</b><span>built</span></div><div><b>$1,050</b><span>HOA / mo</span></div><div><b>$500</b><span>tax / mo</span></div></div>
+      <div class="commute"><div><small>🚉 nearest rail</small><b>A/C/B/D at 145 St</b><span>≈ 0.20 mi</span></div><div><small>🏙 city</small><b>Penn Station</b><span>≈ 18 min rail</span></div></div>
+      <div class="quality">✨ Modern condo</div><div class="school">🎓 School fit 3.1/5</div>
+      <div class="tasteActions"><button class="likeBtn" data-like="h3">♡ Like</button><a href="https://streeteasy.com/2-bedroom-condos-for-sale/manhattan/price%3A-1000000" target="_blank">Open listing</a></div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2>Top houses and townhouses</h2>
+  <p>The rest of the shortlist remains available through the category filters.</p>
+  <div class="cards">
+
+    <article class="home" id="h17" data-cat="Single-family" data-year="1950" data-school="4.0">
+      <div class="rank">1</div>
+      <div class="top"><div><h3>26 Ballad Ln</h3><p>Hicksville, Nassau</p></div><div class="score">85<span>/100</span></div></div>
+      <div class="price">$929,000 <span>2,404 sf</span></div>
+      <div class="facts"><div><b>4 / 2</b><span>beds / baths</span></div><div><b>1950</b><span>built</span></div><div><b>N/A</b><span>HOA / mo</span></div><div><b>$1,053</b><span>tax / mo</span></div></div>
+      <div class="commute"><div><small>🚉 nearest rail</small><b>Hicksville LIRR</b><span>≈ 1.50 mi</span></div><div><small>🏙 city</small><b>Penn Station</b><span>≈ 45 min rail</span></div></div>
+      <div class="quality">✨ Updated / remodeled</div><div class="school">🎓 School fit 4.0/5</div>
+      <div class="tasteActions"><button class="likeBtn" data-like="h17">♡ Like</button><a href="https://www.zillow.com/homes/26-Ballad-Ln%2C-Hicksville%2C-Nassau_rb/" target="_blank">Open listing</a></div>
+    </article>
+
+    <article class="home" id="h32" data-cat="Townhouse / attached" data-year="1930" data-school="4.5">
+      <div class="rank">1</div>
+      <div class="top"><div><h3>67-139 Burns St</h3><p>Forest Hills, Queens</p></div><div class="score">86<span>/100</span></div></div>
+      <div class="price">$998,800 <span>1,110 sf</span></div>
+      <div class="facts"><div><b>3 / 2</b><span>beds / baths</span></div><div><b>1930</b><span>built</span></div><div><b>N/A</b><span>HOA / mo</span></div><div><b>Unknown</b><span>tax / mo</span></div></div>
+      <div class="commute"><div><small>🚉 nearest rail</small><b>M/R + Forest Hills LIRR</b><span>≈ 0.30 mi</span></div><div><small>🏙 city</small><b>Penn / Grand Central</b><span>≈ 22 min rail</span></div></div>
+      <div class="quality">✨ Well-maintained</div><div class="school">🎓 School fit 4.5/5</div>
+      <div class="tasteActions"><button class="likeBtn" data-like="h32">♡ Like</button><a href="https://www.zillow.com/homes/67-139-Burns-St%2C-Forest-Hills%2C-Queens_rb/" target="_blank">Open listing</a></div>
+    </article>
+
+  </div>
+</section>
+
+<script>
+const HOMES=[
+{id:"h1",name:"41-35 67th St #4A",area:"Woodside, Queens",category:"Condo",year:2007,school:3.3,price:749000,sqft:998,cityMin:22,stationMi:.19},
+{id:"h2",name:"168 E 111th St #2A",area:"East Harlem, Manhattan",category:"Condo",year:2026,school:3.0,price:823000,sqft:825,cityMin:15,stationMi:.10},
+{id:"h3",name:"2605 Frederick Douglass Blvd #3B",area:"Central Harlem, Manhattan",category:"Condo",year:2012,school:3.1,price:849000,sqft:1244,cityMin:18,stationMi:.20},
+{id:"h17",name:"26 Ballad Ln",area:"Hicksville, Nassau",category:"Single-family",year:1950,school:4.0,price:929000,sqft:2404,cityMin:45,stationMi:1.5},
+{id:"h32",name:"67-139 Burns St",area:"Forest Hills, Queens",category:"Townhouse / attached",year:1930,school:4.5,price:998800,sqft:1110,cityMin:22,stationMi:.30}
+];
+
+const liked=new Set();
+const byId=Object.fromEntries(HOMES.map(h=>[h.id,h]));
+const $=s=>document.querySelector(s);
+const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
+
+function mode(a){
+  if(!a.length)return null;
+  let m={};
+  a.forEach(x=>m[x]=(m[x]||0)+1);
+  return Object.entries(m).sort((a,b)=>b[1]-a[1])[0][0];
+}
+
+function render(){
+  const xs=[...liked].map(id=>byId[id]).filter(Boolean);
+  $('#likedCount').textContent=xs.length;
+
+  document.querySelectorAll('[data-like]').forEach(b=>{
+    const on=liked.has(b.dataset.like);
+    b.classList.toggle('liked',on);
+    b.textContent=on?'♥ Liked':'♡ Like';
+  });
+
+  const traits=$('#tasteTraits');
+  const wrap=$('#similarWrap');
+
+  if(!xs.length){
+    traits.innerHTML='';
+    wrap.classList.add('hidden');
+    $('#tasteHint').textContent='Like 2–3 homes and I’ll show what they have in common.';
+    return;
+  }
+
+  const p={
+    category:mode(xs.map(h=>h.category)),
+    price:avg(xs.map(h=>h.price)),
+    sqft:avg(xs.map(h=>h.sqft)),
+    year:avg(xs.map(h=>h.year)),
+    school:avg(xs.map(h=>h.school)),
+    cityMin:avg(xs.map(h=>h.cityMin)),
+    stationMi:avg(xs.map(h=>h.stationMi))
+  };
+
+  $('#tasteHint').textContent=xs.length===1
+    ?'Like one or two more and the pattern will get clearer.'
+    :'Here’s the pattern across the homes you like.';
+
+  const td=[
+    ['Property type',p.category||'Mixed'],
+    ['Typical price','$'+Math.round(p.price/1000)+'k'],
+    ['Typical size',Math.round(p.sqft).toLocaleString()+' sq ft'],
+    ['School fit',p.school.toFixed(1)+'/5'],
+    ['City commute','~'+Math.round(p.cityMin)+' min'],
+    ['Station distance','~'+p.stationMi.toFixed(2)+' mi']
+  ];
+
+  traits.innerHTML=td.map(([k,v])=>
+    `<div class="trait"><b>${v}</b><span>${k}</span></div>`
+  ).join('');
+
+  if(xs.length>=2){
+    const candidates=HOMES
+      .filter(h=>!liked.has(h.id))
+      .map(h=>{
+        let s=0;
+        s+=h.category===p.category?30:5;
+        s+=Math.max(0,25-Math.abs(h.price-p.price)/16000);
+        s+=Math.max(0,20-Math.abs(h.sqft-p.sqft)/60);
+        s+=Math.max(0,15-Math.abs(h.school-p.school)*8);
+        return [h,s];
+      })
+      .sort((a,b)=>b[1]-a[1])
+      .slice(0,4);
+
+    $('#similarHomes').innerHTML=candidates.map(([h,s])=>
+      `<div class="similarCard">
+        <b>${h.name}</b>
+        <span>${h.area}</span>
+        <span class="simScore">${Math.round(s)}% taste match</span>
+        <a href="#${h.id}">Jump to home</a>
+      </div>`
+    ).join('');
+    wrap.classList.remove('hidden');
+  } else {
+    wrap.classList.add('hidden');
+  }
+}
+
+document.querySelectorAll('[data-like]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const id=b.dataset.like;
+    liked.has(id)?liked.delete(id):liked.add(id);
+    render();
+  });
+});
+
+render();
+</script>
+
+</main></body></html>
