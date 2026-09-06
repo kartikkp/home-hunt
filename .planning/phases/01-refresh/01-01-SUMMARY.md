@@ -1,0 +1,15 @@
+# September 6, 2026 refresh
+
+Implementation commit: `5ea32c2`.
+
+Screened 3,569 distinct source properties from 132 first-page ZIP searches. Retained 500 individually checked active candidates: 151 condos, 269 single-family houses, 80 attached homes. All original 45 IDs survive: 12 refreshed active, one coming soon, 32 not reverified. Catalogue total: 533. The browser JSON and server catalogue are identical.
+
+Added search, active/original views, pagination, price/space/known-cost/rail/bike sorting, source disclosures, crime context and bike-infrastructure proximity. Preserved all original category filters, Built 2000+, explicitly unverified Best schools estimates, localStorage, separate member likes, both-liked views, notes, conflict handling and explained taste recommendations. New Bikeability and Crime safety feedback is accepted by both server and browser. Crime counts do not affect similarity scores.
+
+Corrections during verification: excluded one geocoded address conflict and two undisclosed-address listings; excluded three listings now pending/hold; treated missing condo association fees as unknown; excluded school placeholders from coverage counts. Source school names are not school-quality ratings. No land-lease status has been verified. The active list is discovery candidates, not certified matches.
+
+Verification: nine automated tests pass, including exact catalogue parity, original IDs, filters, unknown-value sorts, geographic calculations, new-ID feedback, idempotency, conflicts and member isolation. NYPD's own 500-metre query independently returned the same 278 reports as the local calculation for a sample home. Browser tests verified original 45, active 500, pagination, combined indicators, feedback persistence after reload, both-liked views, phone-width layout without horizontal overflow, and a recommendation jump revealing catalogue position 506. No browser errors were observed.
+
+Server deployment: private pre-refresh preference snapshot retained on serverwheel; existing shared records verified preserved. API and backup application containers rebuilt; DynamoDB container/volume and connection token unchanged. Deployed server/catalogue/taste-engine hashes match the local commit. Public HTTPS health endpoint returns success. GitHub accepted the main implementation commit and Pages reports it built successfully. The published browser shows 500 active candidates, the 359-home NYC local-crime filter, and a successful existing-device sync. Live browser logs contain no errors or warnings; no live likes were changed for testing.
+
+Data sources, periods, screening bias and source-specific limitations are documented in `methodology.html` and `data/refresh-summary.json`. Nassau crime is county-wide 2024 context, not neighborhood risk; NYC counts cover January–June 2026 reports in a 500-metre radius. Bike proximity is not route quality or a safety guarantee. School quality, land leases, assessments, physical condition and door-to-door commutes remain follow-up work, not completed verification.
