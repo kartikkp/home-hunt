@@ -1,0 +1,30 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {once} from 'node:events';
+import {randomUUID} from 'node:crypto';
+import {createApp} from '../server.mjs';
+import {buildProfile} from '../../taste-engine.mjs';
+import {selectHomes} from '../../catalog-view.mjs';
+const sample=['a','b','c','d','e'].map(id=>({id,name:id,category:'Condo',price:800000,sqft:1000,eligible:true,status:'Active'}));
+test('dislikes are explicit, member-specific, reversible and never inferred from an unlike',async t=>{
+  const data=new Map(),store={all:async()=>[...data.values()],get:async(m,id)=>data.get(m+id)||null,put:async(r,b)=>{if((data.get(r.member+r.homeId)?.version||0)!==b)return false;data.set(r.member+r.homeId,r);return true;}};
+  const token='test-only-dislike-token-123456789012345',server=createApp({store,homes:sample,token});server.listen(0,'127.0.0.1');await once(server,'listening');t.after(()=>server.close());
+  const put=body=>fetch('http://127.0.0.1:'+server.address().port+'/likes/a',{method:'PUT',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(body)});
+  const op={member:'Kartik',liked:false,disliked:true,dislikeReasons:['Layout','High monthly costs'],reasons:[],note:'Test feedback',baseVersion:0,operationId:randomUUID()};
+  let r=await put(op);assert.equal(r.status,200);let body=await r.json();assert.equal(body.record.disliked,true);assert.deepEqual(body.record.dislikeReasons,op.dislikeReasons);
+  assert.equal((await put(op)).status,200);assert.equal((await put({...op,operationId:randomUUID()})).status,409);
+  assert.equal((await put({...op,member:'Minoli',liked:true,disliked:false,dislikeReasons:[],operationId:randomUUID()})).status,200);
+  assert.equal((await put({...op,liked:true,baseVersion:1,operationId:randomUUID()})).status,400);
+  assert.equal((await put({...op,dislikeReasons:['bogus'],baseVersion:1,operationId:randomUUID()})).status,400);
+  r=await put({...op,liked:true,disliked:false,dislikeReasons:[],baseVersion:1,operationId:randomUUID()});assert.equal(r.status,200);
+  r=await put({member:'Kartik',liked:false,baseVersion:2,operationId:randomUUID()});body=await r.json();assert.equal(body.record.disliked,false,'Legacy unlike remains neutral');
+  assert.ok((await store.all()).find(x=>x.member==='Minoli').liked);
+});
+test('profile saves negative reasons/notes, omits rejected homes, and scopes each person correctly',()=>{
+  const rs=[{member:'Kartik',homeId:'a',liked:true},{member:'Kartik',homeId:'b',liked:true},{member:'Minoli',homeId:'c',liked:false,disliked:true,dislikeReasons:['Layout'],note:'Too chopped up'}];
+  const p=buildProfile(sample,rs);assert.equal(p.dislikedCount,1);assert.ok(!p.recommendations.some(r=>r.id==='c'));assert.equal(p.avoidThreads[0].label,'Layout');assert.equal(p.searchBrief.dislikes[0].note,'Too chopped up');
+  assert.ok(buildProfile(sample,rs,'Kartik').recommendations.some(r=>r.id==='c'));
+  assert.equal(buildProfile(sample,[rs[2]]).searchBrief.dislikes.length,1,'Negative-only profile still exports feedback');
+  assert.deepEqual(selectHomes(sample,rs,{filter:'disliked'}).map(h=>h.id),['c']);
+  assert.equal(buildProfile(sample,[{member:'Kartik',homeId:'c',liked:false}]).dislikedCount,0);
+});

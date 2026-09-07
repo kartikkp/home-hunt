@@ -3,8 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {createHash,timingSafeEqual} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {dynamoStore} from './store.mjs';
-import {buildProfile,MEMBERS,REASONS} from '../taste-engine.mjs';
-export {MEMBERS,REASONS};
+import {buildProfile,MEMBERS,REASONS,DISLIKE_REASONS} from '../taste-engine.mjs';
+export {MEMBERS,REASONS,DISLIKE_REASONS};
 const digest=s=>createHash('sha256').update(s).digest();
 const publicRecord=r=>r;
 
@@ -30,19 +30,20 @@ export function createApp({store,homes,token,origins=['https://kartikkp.github.i
       if(!timingSafeEqual(digest(supplied),digest(token)))return respond(res,401,{error:'Enter your household connection code'});
       if(path==='/state'&&req.method==='GET')return respond(res,200,{schemaVersion:1,members:MEMBERS,records:(await store.all()).map(publicRecord),serverTime:new Date().toISOString()});
       if(path==='/profile'&&req.method==='GET') {
-        const records=await store.all();return respond(res,200,{schemaVersion:1,generatedAt:new Date().toISOString(),catalogDate:'2026-09-06',records,profile:buildProfile(homes,records),homes:homes.filter(h=>records.some(r=>r.homeId===h.id&&r.liked))});
+        const records=await store.all();return respond(res,200,{schemaVersion:1,generatedAt:new Date().toISOString(),catalogDate:'2026-09-06',records,profile:buildProfile(homes,records),homes:homes.filter(h=>records.some(r=>r.homeId===h.id&&(r.liked||r.disliked)))});
       }
       const match=path.match(/^\/likes\/([a-z0-9]+)$/);
       if(match&&req.method==='PUT') {
         if(!req.headers['content-type']?.startsWith('application/json'))return respond(res,415,{error:'JSON required'});
         let raw='',length=0;for await(const part of req){length+=part.length;if(length>16384)return respond(res,413,{error:'Request too large'});raw+=part;}
         let body;try{body=JSON.parse(raw);}catch{return respond(res,400,{error:'Invalid JSON'});}
-        const {member,liked,reasons=[],note='',baseVersion,operationId}=body||{};
+        const {member,liked,disliked=false,reasons=[],dislikeReasons=[],note='',baseVersion,operationId}=body||{};
+        if(typeof disliked!=='boolean'||liked&&disliked||!Array.isArray(dislikeReasons)||dislikeReasons.length>DISLIKE_REASONS.length||dislikeReasons.some(r=>!DISLIKE_REASONS.includes(r)))return respond(res,400,{error:'Invalid dislike update'});
         if(!validIds.has(match[1])||!MEMBERS.includes(member)||typeof liked!=='boolean'||!Array.isArray(reasons)||reasons.length>REASONS.length||reasons.some(r=>!REASONS.includes(r))||typeof note!=='string'||note.length>1000||!Number.isSafeInteger(baseVersion)||baseVersion<0||typeof operationId!=='string'||!/^[a-zA-Z0-9-]{16,80}$/.test(operationId))return respond(res,400,{error:'Invalid like update'});
         const existing=await store.get(member,match[1]);
         if(existing?.operationId===operationId)return respond(res,200,{record:existing});
         if((existing?.version||0)!==baseVersion)return respond(res,409,{error:'Changed on another device. Your latest shared version was kept.',record:existing});
-        const record={member,homeId:match[1],liked,reasons:[...new Set(reasons)],note:note.trim(),version:baseVersion+1,operationId,updatedAt:new Date().toISOString()};
+        const record={member,homeId:match[1],liked,disliked,reasons:[...new Set(reasons)],dislikeReasons:[...new Set(dislikeReasons)],note:note.trim(),version:baseVersion+1,operationId,updatedAt:new Date().toISOString()};
         if(!await store.put(record,baseVersion)) {
           const current=await store.get(member,match[1]);
           if(current?.operationId===operationId)return respond(res,200,{record:current});

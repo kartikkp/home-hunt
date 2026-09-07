@@ -1,0 +1,19 @@
+export const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function photoURLs(h){return (h.photos||[]).filter(v=>{try{const u=new URL(v);return u.protocol==='https:'&&['brokerdata-b.b-cdn.net','bpp.mlsgrid.com'].includes(u.hostname);}catch{return false;}});}
+export function photoMarkup(h,index=0){
+  const xs=photoURLs(h),i=index%Math.max(1,xs.length),esc=escapeHTML;
+  if(!xs.length)return '<div class="photoUnavailable">No verified listing photo available · open the source listing</div>';
+  return `<figure class="homePhotos"><a href="${esc(h.url)}" target="_blank" rel="noopener noreferrer"><img src="${esc(xs[i])}" alt="Listing photo ${i+1} of ${esc(h.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="600" height="400"></a><p class="photoFailure" hidden>Photo unavailable. Open the listing to view its photos.</p><figcaption><span>Listing photo · ${esc(h.source?.broker||h.source?.name||'Source listing')}</span>${xs.length>1?`<div class="photoControls"><button type="button" data-photo="${h.id}" data-step="-1" aria-label="Previous photo of ${esc(h.name)}">‹</button><span>${i+1} / ${xs.length}${h.photoCount>xs.length?' previews':''}</span><button type="button" data-photo="${h.id}" data-step="1" aria-label="Next photo of ${esc(h.name)}">›</button></div>`:''}</figcaption></figure>`;
+}
+export function extraDetailsMarkup(h){
+  const rows=Object.entries(h.details||{}),esc=escapeHTML;
+  const cost=Number.isFinite(h.hoa)&&Number.isFinite(h.tax)?'$'+Math.round(h.hoa+h.tax).toLocaleString()+'/mo HOA + tax':'Monthly HOA + tax total incomplete';
+  return `<div class="costContext">${cost}${h.price>0&&h.sqft>0?' · $'+Math.round(h.price/h.sqft).toLocaleString()+'/sq ft':''}<small>Excludes mortgage, insurance, utilities and unverified assessments.</small></div><details class="propertyDetails"><summary>More home details${rows.length?' ('+rows.length+')':''}</summary>${rows.length?'<dl>'+rows.map(([k,v])=>'<dt>'+esc(k)+'</dt><dd>'+esc(v)+'</dd>').join('')+'</dl><small>Listing-reported facts from '+esc(h.detailsAsOf)+'. Not independently inspected; building/lot features may be shared for condos.</small>':'<p>No additional verified details are available for this original snapshot.</p>'}</details>`;
+}
+import {REASONS,DISLIKE_REASONS} from './taste-engine.mjs';
+export function feedbackMarkup(h,mine,member,isOpen){
+  if(!mine?.liked&&!mine?.disliked)return '';
+  const esc=escapeHTML;
+  const controls=mine.disliked?`<label class="noteLabel" for="dislike-${h.id}">Add a dislike reason<select id="dislike-${h.id}" data-dislike-reason="${h.id}"><option value="">Choose a reason…</option>${DISLIKE_REASONS.filter(r=>!(mine.dislikeReasons||[]).includes(r)).map(r=>'<option>'+esc(r)+'</option>').join('')}</select></label><div class="dislikeTags">${(mine.dislikeReasons||[]).map(r=>`<button type="button" data-remove-dislike="${h.id}" data-reason-value="${esc(r)}" aria-label="Remove reason: ${esc(r)}">${esc(r)} ×</button>`).join('')}</div><small>Choose several reasons if needed. Click Disliked again to undo.</small>`:`<div class="reasonGrid">${REASONS.map(r=>`<label><input type="checkbox" data-reason="${h.id}" value="${esc(r)}" ${mine.reasons?.includes(r)?'checked':''}>${esc(r)}</label>`).join('')}</div>`;
+  return `<details data-detail="${h.id}" ${isOpen?'open':''}><summary>${mine.disliked?'Why does this home not work?':'What do you like about it?'}</summary>${controls}<label class="noteLabel" for="note-${h.id}">${mine.disliked?'What would need to be different?':'What caught your eye?'}</label><textarea id="note-${h.id}" data-note="${h.id}" maxlength="1000" placeholder="Tell us what matters to you">${esc(mine.note)}</textarea><small>Saved as ${esc(member)}. Notes and reasons help future searches; they are not verified property facts.</small></details>`;
+}

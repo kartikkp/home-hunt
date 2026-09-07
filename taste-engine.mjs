@@ -1,4 +1,5 @@
 export const MEMBERS=['Kartik','Minoli'];
+export const DISLIKE_REASONS=['Too expensive','Too small','High monthly costs','Commute too long','Too far from rail','Layout','Needs renovation','Style / appearance','Not enough light','No outdoor space','Parking','School fit','Bike access','Safety concerns','Location','Other'];
 export const REASONS=['Layout','Natural light','Outdoor space','Updated interiors','Architecture','Location','Space','Price','Schools','Commute','Newer build','Bikeability','Crime safety'];
 const bikeMiles=h=>h.bike?.protectedMiles??h.bike?.mappedPathMiles??null;
 export const mean=values=>{const xs=values.filter(x=>Number.isFinite(x));return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:null;};
@@ -9,6 +10,9 @@ export function condition(h){if(/new development|brand-new|new construction/i.te
 const money=v=>'$'+Math.round(v/1000).toLocaleString()+'k';
 export function buildProfile(homes,records,member='household'){
   const positive=records.filter(r=>r.liked&&(member==='household'||r.member===member));
+  const negative=records.filter(r=>r.disliked&&!r.liked&&(member==='household'||r.member===member));
+  const negativeIds=new Set(negative.map(r=>r.homeId)),dislikedHomes=homes.filter(h=>negativeIds.has(h.id));
+  const avoidThreads=DISLIKE_REASONS.map(label=>{const ids=new Set(negative.filter(r=>r.dislikeReasons?.includes(label)).map(r=>r.homeId));return {label,count:ids.size,examples:homes.filter(h=>ids.has(h.id)).slice(0,3).map(h=>({id:h.id,name:h.name}))};}).filter(t=>t.count).sort((a,b)=>b.count-a.count);
   const ids=new Set(positive.map(r=>r.homeId));const likedHomes=homes.filter(h=>ids.has(h.id));
   const both=homes.filter(h=>MEMBERS.every(m=>records.some(r=>r.member===m&&r.homeId===h.id&&r.liked)));
   const stats={category:mode(likedHomes.map(h=>h.category)),area:mode(likedHomes.map(h=>h.area)),price:median(likedHomes.map(h=>h.price)),sqft:median(likedHomes.map(h=>h.sqft)),year:median(likedHomes.map(h=>h.year)),school:mean(likedHomes.map(h=>h.school)),city:median(likedHomes.map(h=>h.city_min)),station:median(likedHomes.map(h=>h.station_mi)),condition:mode(likedHomes.map(condition).filter(Boolean))};
@@ -30,7 +34,7 @@ export function buildProfile(homes,records,member='household'){
   for(const reason of REASONS){const selected=new Set(positive.filter(r=>r.reasons?.includes(reason)).map(r=>r.homeId));thread(reason,h=>selected.has(h.id),'your feedback');}
   threads.sort((a,b)=>(b.source==='your feedback')-(a.source==='your feedback')||b.strength-a.strength||b.count-a.count);
   const boost=(reason,weight)=>weight*(1+new Set(positive.filter(r=>r.reasons?.includes(reason)).map(r=>r.homeId)).size/Math.max(1,likedHomes.length));
-  const recommendations=likedHomes.length<2?[]:homes.filter(h=>!ids.has(h.id)&&h.eligible!==false).map(h=>{
+  const recommendations=likedHomes.length<2?[]:homes.filter(h=>!ids.has(h.id)&&!negativeIds.has(h.id)&&h.eligible!==false).map(h=>{
     let earned=0,possible=0,total=0;const explanations=[];
     function numeric(value,target,weight,scale,why){if(target==null)return;total+=weight;if(!Number.isFinite(value))return;possible+=weight;const similarity=Math.max(0,1-Math.abs(value-target)/scale);earned+=weight*similarity;if(similarity>=0.7)explanations.push({weight:weight*similarity,text:why});}
     function categorical(value,target,weight,why){if(!target)return;total+=weight;if(value==null)return;possible+=weight;if(value===target){earned+=weight;explanations.push({weight,text:why});}}
@@ -44,7 +48,18 @@ export function buildProfile(homes,records,member='household'){
     numeric(h.station_mi,stats.station,5,1,'~'+h.station_mi+' miles to rail');
     categorical(condition(h),stats.condition,boost('Updated interiors',7),'Similar condition: '+condition(h));
     if(positive.some(r=>r.reasons?.includes('Bikeability')))numeric(bikeMiles(h),stats.bikeMiles,12,1,'Mapped bike infrastructure ~'+bikeMiles(h)+' mi away; proximity, not route quality');
-    return {id:h.id,name:h.name,area:h.area,score:total?Math.round(earned/total*100):0,coverage:total?Math.round(possible/total*100):0,reasons:explanations.sort((a,b)=>b.weight-a.weight).slice(0,3).map(x=>x.text)};
+    const cautions=new Set();
+    const comparable=(a,b)=>Number.isFinite(a)&&Number.isFinite(b);
+    for(const r of negative){const rejected=homes.find(x=>x.id===r.homeId);if(!rejected)continue;
+      for(const reason of r.dislikeReasons||[]){
+        if(reason==='Too expensive'&&comparable(h.price,rejected.price)&&h.price>=rejected.price)cautions.add('Priced at least as high as a home you rejected for price');
+        if(reason==='Too small'&&comparable(h.sqft,rejected.sqft)&&h.sqft<=rejected.sqft)cautions.add('No larger than a home you rejected for size');
+        if(reason==='High monthly costs'&&[h.hoa,h.tax,rejected.hoa,rejected.tax].every(Number.isFinite)&&h.hoa+h.tax>=rejected.hoa+rejected.tax)cautions.add('Known HOA + tax is at least as high as a home you rejected for costs');
+        if(reason==='Too far from rail'&&comparable(h.station_mi,rejected.station_mi)&&h.station_mi>=rejected.station_mi)cautions.add('At least as far from rail as a home you rejected for station access');
+        if(reason==='Bike access'&&comparable(bikeMiles(h),bikeMiles(rejected))&&bikeMiles(h)>=bikeMiles(rejected))cautions.add('Mapped bike infrastructure is at least as far away as for a rejected home');
+      }
+    }
+    return {id:h.id,name:h.name,area:h.area,score:total?Math.max(0,Math.round(earned/total*100)-Math.min(18,cautions.size*6)):0,coverage:total?Math.round(possible/total*100):0,reasons:explanations.sort((a,b)=>b.weight-a.weight).slice(0,3).map(x=>x.text),cautions:[...cautions]};
   }).sort((a,b)=>b.score-a.score||b.coverage-a.coverage||a.id.localeCompare(b.id)).slice(0,6);
-  return {member,count:likedHomes.length,confidence:likedHomes.length<2?'Getting started':likedHomes.length<5?'Early pattern':likedHomes.length<10?'Emerging pattern':'More evidence',stats,threads:threads.slice(0,8),bothLiked:both.map(h=>({id:h.id,name:h.name})),recommendations,searchBrief:likedHomes.length?{preferredType:stats.category,preferredArea:stats.area,typicalPrice:stats.price,typicalSqft:stats.sqft,typicalYear:stats.year,typicalCommuteMinutes:stats.city,typicalStationMiles:stats.station,typicalSchoolFit:stats.school,condition:stats.condition,explicitReasons:[...new Set(positive.flatMap(r=>r.reasons||[]))],notes:positive.filter(r=>r.note).map(r=>({member:r.member,homeId:r.homeId,note:r.note})),bothLiked:both.map(h=>h.name),guidance:'Observed preferences, not hard requirements. Verify live listings, school assignments and commutes. Reason tags and notes are user feedback, not verified attributes of candidate homes.'}:null};
+  return {member,count:likedHomes.length,dislikedCount:dislikedHomes.length,avoidThreads,confidence:likedHomes.length<2?'Getting started':likedHomes.length<5?'Early pattern':likedHomes.length<10?'Emerging pattern':'More evidence',stats,threads:threads.slice(0,8),bothLiked:both.map(h=>({id:h.id,name:h.name})),recommendations,searchBrief:likedHomes.length||dislikedHomes.length?{preferredType:stats.category,preferredArea:stats.area,typicalPrice:stats.price,typicalSqft:stats.sqft,typicalYear:stats.year,typicalCommuteMinutes:stats.city,typicalStationMiles:stats.station,typicalSchoolFit:stats.school,condition:stats.condition,explicitReasons:[...new Set(positive.flatMap(r=>r.reasons||[]))],notes:positive.filter(r=>r.note).map(r=>({member:r.member,homeId:r.homeId,note:r.note})),bothLiked:both.map(h=>h.name),dislikes:negative.map(r=>({member:r.member,homeId:r.homeId,name:homes.find(h=>h.id===r.homeId)?.name,reasons:r.dislikeReasons||[],note:r.note||''})),guidance:'Explicit dislikes are exclusions for the selected profile. Objective negative feedback can reduce similarity scores; subjective reasons require listing research, not inferred visual attributes. Observed preferences, not hard requirements. Verify live listings, school assignments and commutes. Reason tags and notes are user feedback, not verified attributes of candidate homes.'}:null};
 }

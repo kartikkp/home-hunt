@@ -8,13 +8,14 @@ export function selectHomes(homes,records,{filter='all',query='',availability='a
   const terms=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   const xs=homes.filter(h=>{
     const fans=likes.get(h.id)||new Set();
-    const special=filter==='liked'||filter==='both';
+    const special=filter==='liked'||filter==='both'||filter==='disliked';
     // Liked views always retain saved homes, even if no longer active.
     if(!special&&availability==='active'&&!isActive(h))return false;
     if(availability==='original'&&!h.legacy)return false;
     if(filter==='newer'&&!(h.year>=2000))return false;
     if(filter==='schools'&&!(h.school>=4))return false;
     if(filter==='liked'&&!fans.size)return false;
+    if(filter==='disliked'&&!records.some(r=>r.homeId===h.id&&r.disliked&&!r.liked))return false;
     if(filter==='both'&&!(fans.has('Kartik')&&fans.has('Minoli')))return false;
     if(CATEGORIES.includes(filter)&&h.category!==filter)return false;
     if(bike&&!bikeNearby(h)||crime&&!localCrime(h))return false;

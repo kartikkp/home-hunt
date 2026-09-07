@@ -1,5 +1,6 @@
-import {buildProfile,MEMBERS,REASONS} from './taste-engine.mjs';
+import {buildProfile,MEMBERS,REASONS,DISLIKE_REASONS} from './taste-engine.mjs';
 import {selectHomes,isActive,localCrime} from './catalog-view.mjs';
+import {photoMarkup,photoURLs,extraDetailsMarkup,feedbackMarkup} from './card-details.mjs';
 const HOMES=window.homeHuntCatalog;
 const API='https://kartikkp.synology.me/home-hunt-api';
 const CACHE='home-hunt-sync-v1',TOKEN='home-hunt-connection',MEMBER_KEY='home-hunt-member';
@@ -14,10 +15,11 @@ let visibleLimit=60,query='',availability='all',sort='rail',bike=false,crime=fal
 let legacy=read('home-hunt-liked',[]);if(!Array.isArray(legacy))legacy=[];legacy=legacy.filter(id=>HOMES.some(h=>h.id===id));
 let importedLegacy=!!saved.importedLegacy;
 const openDetails=new Set();
+const photoIndexes=new Map();
 const key=r=>r.member+':'+r.homeId;
 function persist(){try{localStorage.setItem(CACHE,JSON.stringify({records,pending,importedLegacy}));return true;}catch{storageWarning=true;return false;}}
 function effective(){const map=new Map(records.map(r=>[key(r),r]));for(const r of pending)map.set(key(r),{...map.get(key(r)),...r});return [...map.values()];}
-function current(id){return effective().find(r=>r.homeId===id&&r.member===member)||{homeId:id,member,liked:false,reasons:[],note:'',version:0};}
+function current(id){return effective().find(r=>r.homeId===id&&r.member===member)||{homeId:id,member,liked:false,disliked:false,reasons:[],dislikeReasons:[],note:'',version:0};}
 function queue(update){const old=pending.find(r=>key(r)===key(update));const base=records.find(r=>key(r)===key(update));const change={...update,baseVersion:old?.baseVersion??base?.version??0,operationId:crypto.randomUUID()};pending=pending.filter(r=>key(r)!==key(change));pending.push(change);persist();}
 function status(){
   $('#syncStatus').textContent=storageWarning?'Browser storage is unavailable. Keep this page open until changes sync.':connectionInvalid?'Connection code expired or incorrect. Reconnect this device.':!token?'This device is not connected yet.':syncing?'Syncing…':pending.length?pending.length+' change'+(pending.length===1?'':'s')+' waiting to sync':lastSync?'Saved to your shared list · '+lastSync.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):'Connecting…';
@@ -77,7 +79,7 @@ function listingFacts(h){
 }
 function card(h,rank,rs){
   const mine=rs.find(r=>r.homeId===h.id&&r.member===member),fans=rs.filter(r=>r.homeId===h.id&&r.liked).map(r=>r.member);
-  return `<article class="home" id="${h.id}"><div class="rank">${rank}</div>${h.year>=2000?'<div class="newer">2000+</div>':''}<div class="top"><div><h3>${esc(h.name)}</h3><p>${esc(h.area)}</p></div>${Number.isFinite(h.score)?`<div class="score">${h.score}<span>prior fit</span></div>`:''}</div>${listingFacts(h)}<div class="fans">${fans.length?fans.map(m=>'<span>♥ '+m+'</span>').join(' '):'No shared likes yet'}</div><div class="actions"><button class="${mine?.liked?'liked':''}" data-like="${h.id}" aria-pressed="${!!mine?.liked}">${mine?.liked?'♥ Liked':'♡ Like'} as ${member}</button><a href="${esc(h.url)}" target="_blank" rel="noopener noreferrer">Open listing</a></div>${mine?.liked?`<details data-detail="${h.id}" ${openDetails.has(h.id)?'open':''}><summary>What do you like about it?</summary><div class="reasonGrid">${REASONS.map(r=>`<label><input type="checkbox" data-reason="${h.id}" value="${esc(r)}" ${mine.reasons?.includes(r)?'checked':''}>${esc(r)}</label>`).join('')}</div><label class="noteLabel" for="note-${h.id}">What caught your eye?</label><textarea id="note-${h.id}" data-note="${h.id}" maxlength="1000" placeholder="e.g. the bright living room, floor plan, or backyard">${esc(mine.note)}</textarea><small>Notes save as you type. They help future searches understand your style.</small></details>`:''}</article>`;
+  return `<article class="home" id="${h.id}"><div class="rank">${rank}</div>${h.year>=2000?'<div class="newer">2000+</div>':''}<div class="top"><div><h3>${esc(h.name)}</h3><p>${esc(h.area)}</p></div>${Number.isFinite(h.score)?`<div class="score">${h.score}<span>prior fit</span></div>`:''}</div>${photoMarkup(h,photoIndexes.get(h.id)||0)}${listingFacts(h)}${extraDetailsMarkup(h)}<div class="fans">${fans.length?fans.map(m=>'<span>♥ '+m+'</span>').join(' '):'No shared likes yet'} ${rs.filter(r=>r.homeId===h.id&&r.disliked&&!r.liked).map(r=>'<span class="negativeFan">✕ '+esc(r.member)+'</span>').join(' ')}</div><div class="actions"><button class="${mine?.liked?'liked':''}" data-like="${h.id}" aria-pressed="${!!mine?.liked}">${mine?.liked?'♥ Liked':'♡ Like'} as ${member}</button><button class="${mine?.disliked?'disliked':''}" data-dislike="${h.id}" aria-pressed="${!!mine?.disliked}">${mine?.disliked?'✕ Disliked':'✕ Dislike'} as ${member}</button><a href="${esc(h.url)}" target="_blank" rel="noopener noreferrer">Open listing</a></div>${feedbackMarkup(h,mine,member,openDetails.has(h.id))}</article>`;
 }
 function render(){
   const rs=effective(),matches=selected(rs),shown=matches.slice(0,visibleLimit);let html='';
@@ -96,13 +98,24 @@ function render(){
 function renderTaste(rs){
   const p=buildProfile(HOMES,rs,tasteView),s=p.stats;
   $('#likedCount').textContent=p.count;
+  $('#dislikedCount').textContent=p.dislikedCount+' disliked';
+  $('#avoidThreads').innerHTML=p.avoidThreads.length?'<h3>What to avoid · your feedback</h3>'+p.avoidThreads.slice(0,8).map(t=>'<div class="thread avoidThread"><b>'+esc(t.label)+'</b><span>'+t.count+' rejected home'+(t.count===1?'':'s')+'</span><small>'+t.examples.map(h=>esc(h.name)).join(' · ')+'</small></div>').join(''):p.dislikedCount?'<p>Add reasons to your dislikes so future searches know what to avoid.</p>':'';
   $('#hint').textContent=p.count<2?'Like at least two homes to start finding patterns.':p.confidence+' · '+p.count+' liked homes'+(p.bothLiked.length?' · '+p.bothLiked.length+' liked by both of you':'');
   $('#traits').innerHTML=p.count?[['Type',s.category],['Typical price',money(s.price)],['Typical size',s.sqft?Math.round(s.sqft).toLocaleString()+' sf':'Unknown'],['Typical build year',s.year?Math.round(s.year):'Unknown'],['Prior school fit',Number.isFinite(s.school)?s.school.toFixed(1)+'/5':'Unknown'],['Rail commute',Number.isFinite(s.city)?'~'+s.city+' min':'Unknown']].map(([k,v])=>`<div class="trait"><b>${esc(v)}</b><span>${k}</span></div>`).join(''):'';
   $('#threads').innerHTML=p.threads.length?'<h3>What your liked homes have in common</h3>'+p.threads.map(t=>`<div class="thread"><b>${esc(t.label)}</b><span>${t.count} of ${t.total} liked homes${t.source==='your feedback'?' · from your feedback':''}</span><small>${t.examples.map(h=>esc(h.name)).join(' · ')}</small></div>`).join(''):p.count?'<p>More likes will help distinguish a preference from a coincidence.</p>':'';
-  $('#similar').innerHTML=p.recommendations.map(r=>`<div class="sim"><b>${esc(r.name)}</b><span>${esc(r.area)}</span><strong>${r.score}/100 similarity</strong><ul>${r.reasons.map(why=>'<li>'+esc(why)+'</li>').join('')}</ul><a href="#${r.id}">Jump to home</a></div>`).join('');
+  $('#similar').innerHTML=p.recommendations.map(r=>`<div class="sim"><b>${esc(r.name)}</b><span>${esc(r.area)}</span><strong>${r.score}/100 similarity</strong><ul>${r.reasons.map(why=>'<li>'+esc(why)+'</li>').join('')}</ul>${r.cautions.length?'<p class="recommendationCaution">'+r.cautions.map(esc).join('; ')+'. Score reduced based on your feedback.</p>':''}<a href="#${r.id}">Jump to home</a></div>`).join('');
   $('#recommendationTitle').hidden=!p.recommendations.length;
 }
-$('#content').addEventListener('click',e=>{const b=e.target.closest('[data-like]');if(!b)return;const r=current(b.dataset.like);queue({...r,liked:!r.liked});notice='';render();sync();});
+$('#content').addEventListener('click',e=>{
+  const photo=e.target.closest('[data-photo]');if(photo){const h=HOMES.find(h=>h.id===photo.dataset.photo),xs=photoURLs(h);photoIndexes.set(h.id,((photoIndexes.get(h.id)||0)+Number(photo.dataset.step)+xs.length)%xs.length);const figure=photo.closest('figure');figure.outerHTML=photoMarkup(h,photoIndexes.get(h.id));return;}
+  const remove=e.target.closest('[data-remove-dislike]');if(remove){const r=current(remove.dataset.removeDislike);queue({...r,dislikeReasons:(r.dislikeReasons||[]).filter(x=>x!==remove.dataset.reasonValue)});render();sync();return;}
+  const b=e.target.closest('[data-like],[data-dislike]');if(!b)return;
+  const id=b.dataset.like||b.dataset.dislike,r=current(id);
+  if(b.dataset.like)queue({...r,liked:!r.liked,disliked:false});
+  else {queue({...r,liked:false,disliked:!r.disliked});openDetails.add(id);}
+  notice='';render();sync();
+});
+$('#content').addEventListener('error',e=>{if(e.target.matches('.homePhotos img')){e.target.hidden=true;e.target.closest('figure').querySelector('.photoFailure').hidden=false;}},true);
 let noteTimer;
 $('#content').addEventListener('input',e=>{
   const id=e.target.dataset.note;if(!id)return;
@@ -110,7 +123,8 @@ $('#content').addEventListener('input',e=>{
   clearTimeout(noteTimer);noteTimer=setTimeout(()=>sync(),500);
 });
 $('#content').addEventListener('change',e=>{
-  const id=e.target.dataset.reason||e.target.dataset.note;if(!id)return;const r=current(id);openDetails.add(id);
+  const id=e.target.dataset.reason||e.target.dataset.note||e.target.dataset.dislikeReason;if(!id)return;const r=current(id);openDetails.add(id);
+  if(e.target.dataset.dislikeReason){if(!e.target.value)return;queue({...r,dislikeReasons:[...new Set([...(r.dislikeReasons||[]),e.target.value])]});render();sync();return;}
   if(e.target.dataset.note)queue({...r,note:e.target.value});
   else {const reasons=new Set(r.reasons);e.target.checked?reasons.add(e.target.value):reasons.delete(e.target.value);queue({...r,reasons:[...reasons]});}
   notice='';renderTaste(effective());status();sync();
@@ -144,7 +158,7 @@ $('#importLegacy').addEventListener('click',()=>{
   importedLegacy=true;persist();notice=count+' earlier likes imported as '+member+'.';render();sync();
 });
 $('#exportProfile').addEventListener('click',()=>{
-  const rs=effective(),data={generatedAt:new Date().toISOString(),profile:buildProfile(HOMES,rs),records:rs,likedHomes:HOMES.filter(h=>rs.some(r=>r.homeId===h.id&&r.liked))};
+  const rs=effective(),data={generatedAt:new Date().toISOString(),profile:buildProfile(HOMES,rs),records:rs,likedHomes:HOMES.filter(h=>rs.some(r=>r.homeId===h.id&&r.liked)),dislikedHomes:HOMES.filter(h=>rs.some(r=>r.homeId===h.id&&r.disliked&&!r.liked))};
   const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='home-hunt-taste-profile.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 const join=new URLSearchParams(location.hash.slice(1)).get('join');if(join){$('#connectionCode').value=join;history.replaceState(null,'',location.pathname+location.search);token='';notice='Choose whose likes this device saves, then connect.';}
