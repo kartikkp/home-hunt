@@ -1,5 +1,11 @@
 # Home Hunt sync on serverwheel
 
+September 7 access update: the public catalogue stays on GitHub Pages. `POST /login` verifies the shared password against server-only `LOGIN_PASSWORD_HASH` (salted scrypt) and returns a signed 180-day bearer session. The browser stores that session, not the password. No cross-site cookies are needed. Failed logins are throttled. Changing the password hash invalidates password-issued sessions. Existing household-token sessions remain compatible so already connected devices keep working. “Sign out this device” removes the browser's saved session and synced cache, after outstanding edits finish; it does not revoke a copied bearer token elsewhere.
+
+Never put the password or its hash in GitHub. Set the hash only in the server `.env` and recreate the API container. The password permits either member label; Kartik and Minoli are not separate security accounts. Listings remain publicly readable, as requested. Feedback still requires authentication.
+
+Feedback records include `liked`, `disliked`, positive `reasons`, `dislikeReasons` and `note`. Like/dislike are mutually exclusive; a legacy `liked:false` remains neutral. Member/home keys, version conflicts and retry IDs are unchanged. Profile exports include rejected homes and negative reasons, not just likes.
+
 The API and backup container use a dedicated DynamoDB Local container. Its persistent Docker volume is `home-hunt_dynamodb-data`; no database or API host port is published. The API is routed through the existing HTTPS gateway at `https://kartikkp.synology.me/home-hunt-api/`. CORS allows `https://kartikkp.github.io` only. Requests need the private `HOUSEHOLD_TOKEN` from the server-only `.env` file, never a token in GitHub source.
 
 Deployment directory: `/home/kingkart/home-hunt/server`. Run `python3 bootstrap.py` once, then `docker compose up -d --build`. The edge network must already exist. API health is `/health`; state is `/state`; profile is `/profile`. PUT `/likes/<homeId>` updates exactly one member/home with a conditional version check and an idempotency key. Unlikes are retained as records so offline devices cannot resurrect stale likes automatically.

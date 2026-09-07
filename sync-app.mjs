@@ -22,10 +22,10 @@ function effective(){const map=new Map(records.map(r=>[key(r),r]));for(const r o
 function current(id){return effective().find(r=>r.homeId===id&&r.member===member)||{homeId:id,member,liked:false,disliked:false,reasons:[],dislikeReasons:[],note:'',version:0};}
 function queue(update){const old=pending.find(r=>key(r)===key(update));const base=records.find(r=>key(r)===key(update));const change={...update,baseVersion:old?.baseVersion??base?.version??0,operationId:crypto.randomUUID()};pending=pending.filter(r=>key(r)!==key(change));pending.push(change);persist();}
 function status(){
-  $('#syncStatus').textContent=storageWarning?'Browser storage is unavailable. Keep this page open until changes sync.':connectionInvalid?'Connection code expired or incorrect. Reconnect this device.':!token?'This device is not connected yet.':syncing?'Syncing…':pending.length?pending.length+' change'+(pending.length===1?'':'s')+' waiting to sync':lastSync?'Saved to your shared list · '+lastSync.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):'Connecting…';
+  $('#syncStatus').textContent=storageWarning?'Browser storage is unavailable. Keep this page open until changes sync.':connectionInvalid?'Please sign in again. Your unsynced changes are kept here.':!token?'Browse freely. Sign in to save shared likes and dislikes.':syncing?'Syncing…':pending.length?pending.length+' change'+(pending.length===1?'':'s')+' waiting to sync':lastSync?'Saved to your shared list · '+lastSync.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}):'Connecting…';
   $('#syncNotice').textContent=notice;
-  $('#connectionForm').hidden=!!token&&!connectionInvalid;
-  $('#pairDevice').hidden=!token||connectionInvalid;
+  $('#loginForm').hidden=!!token&&!connectionInvalid;
+  $('#forgetDevice').hidden=!token;
   $('#importLegacy').hidden=importedLegacy||!legacy.length;
   $('#importLegacy').textContent='Import '+legacy.length+' earlier likes as '+member;
 }
@@ -39,7 +39,7 @@ async function sync(){
   syncing=true;status();let changed=false;
   try{
     const response=await request('/state');
-    if(response.status===401){connectionInvalid=true;throw Error('Use your private household code to reconnect.');}
+    if(response.status===401){connectionInvalid=true;throw Error('Sign in with your shared password to reconnect.');}
     if(!response.ok)throw Error('Sync is unavailable. Changes are kept here and will retry.');
     const remote=await response.json();if(!Array.isArray(remote.records))throw Error('Unexpected sync response');
     changed=JSON.stringify(records)!==JSON.stringify(remote.records);records=remote.records;
@@ -47,7 +47,7 @@ async function sync(){
     while(pending.length&&sent++<100){
       const operation={...pending[0]};
       const result=await request('/likes/'+operation.homeId,{method:'PUT',body:JSON.stringify(operation)});
-      if(result.status===401){connectionInvalid=true;throw Error('Use your private household code to reconnect.');}
+      if(result.status===401){connectionInvalid=true;throw Error('Sign in with your shared password to reconnect.');}
       if(result.status===409){const body=await result.json();merge(body.record);pending=pending.filter(r=>r.operationId!==operation.operationId);notice='A like changed on another device. The shared version was kept; check it before editing again.';persist();changed=true;continue;}
       if(!result.ok)throw Error('Changes are kept on this device and will retry when sync returns.');
       const body=await result.json();merge(body.record);
@@ -110,6 +110,7 @@ $('#content').addEventListener('click',e=>{
   const photo=e.target.closest('[data-photo]');if(photo){const h=HOMES.find(h=>h.id===photo.dataset.photo),xs=photoURLs(h);photoIndexes.set(h.id,((photoIndexes.get(h.id)||0)+Number(photo.dataset.step)+xs.length)%xs.length);const figure=photo.closest('figure');figure.outerHTML=photoMarkup(h,photoIndexes.get(h.id));return;}
   const remove=e.target.closest('[data-remove-dislike]');if(remove){const r=current(remove.dataset.removeDislike);queue({...r,dislikeReasons:(r.dislikeReasons||[]).filter(x=>x!==remove.dataset.reasonValue)});render();sync();return;}
   const b=e.target.closest('[data-like],[data-dislike]');if(!b)return;
+  if(!token||connectionInvalid){notice='Sign in once, then choose Kartik or Minoli to save your feedback.';status();$('#loginPassword').focus();return;}
   const id=b.dataset.like||b.dataset.dislike,r=current(id);
   if(b.dataset.like)queue({...r,liked:!r.liked,disliked:false});
   else {queue({...r,liked:false,disliked:!r.disliked});openDetails.add(id);}
@@ -140,20 +141,27 @@ $('#member').addEventListener('change',e=>{member=e.target.value;try{localStorag
 $('#tasteView').addEventListener('change',e=>{tasteView=e.target.value;renderTaste(effective());});
 $('#similar').addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const id=a.getAttribute('href').slice(1);e.preventDefault();if(!document.getElementById(id)){filter='all';query='';availability='all';bike=false;crime=false;$('#homeSearch').value='';$('#availability').value='all';$('#bikeNearby').checked=false;$('#crimeData').checked=false;visibleLimit=Math.max(60,selected(effective()).findIndex(h=>h.id===id)+1);render();}history.replaceState(null,'','#'+id);document.getElementById(id)?.scrollIntoView({block:'center'});});
 $('#syncNow').addEventListener('click',()=>{notice='';sync();});
-$('#connectionForm').addEventListener('submit',async e=>{
-  e.preventDefault();const entered=$('#connectionCode').value.trim();
-  let candidate=entered;try{if(entered.startsWith('https://'))candidate=new URLSearchParams(new URL(entered).hash.slice(1)).get('join')||'';}catch{}
-  if(!/^[A-Za-z0-9_-]{32,80}$/.test(candidate)){notice='Paste the household code or connection link from your setup file.';status();return;}
-  const old=token;token=candidate;connectionInvalid=false;
-  try{const r=await request('/state');if(!r.ok)throw Error('Connection failed. Check your code and try again.');try{localStorage.setItem(TOKEN,JSON.stringify(token));}catch{storageWarning=true;}notice='Device connected. Choose whose likes you are saving above.';$('#connectionCode').value='';await sync();}catch(err){token=old;notice=err.message;status();}
+$('#loginForm').addEventListener('submit',async e=>{
+  e.preventDefault();const password=$('#loginPassword').value;$('#loginButton').disabled=true;
+  try{
+    const response=await request('/login',{method:'POST',body:JSON.stringify({password})});
+    const body=await response.json();if(!response.ok)throw Error(body.error||'Sign in failed. Please try again.');
+    if(typeof body.session!=='string'||!body.expiresAt)throw Error('Unexpected login response.');
+    token=body.session;connectionInvalid=false;
+    try{localStorage.setItem(TOKEN,JSON.stringify(token));}catch{storageWarning=true;}
+    $('#loginPassword').value='';notice='Signed in. Choose Kartik or Minoli above; this device will remember you.';
+    await sync();
+  }catch(err){notice=err.name==='AbortError'?'Sign in timed out. Please try again.':err.message;status();}
+  finally{$('#loginButton').disabled=false;}
 });
-$('#pairDevice').addEventListener('click',async()=>{
-  const link=location.origin+location.pathname+'#join='+token;
-  $('#pairLink').value=link;$('#pairPanel').hidden=false;
-  try{await navigator.clipboard.writeText(link);notice='Private connection link copied. Open it on your other device and choose Kartik or Minoli.';}catch{notice='Copy the private link below and open it on your other device.';}status();
+$('#forgetDevice').addEventListener('click',()=>{
+  if(pending.length||syncing){notice='Wait for your pending changes to sync before signing out.';status();return;}
+  token='';records=[];connectionInvalid=false;lastSync=null;
+  try{localStorage.removeItem(TOKEN);localStorage.removeItem(CACHE);}catch{storageWarning=true;}
+  notice='Signed out on this device.';render();
 });
-$('#closePair').addEventListener('click',()=>{$('#pairPanel').hidden=true;$('#pairLink').value='';});
 $('#importLegacy').addEventListener('click',()=>{
+  if(!token||connectionInvalid){notice='Sign in to import your earlier likes.';status();$('#loginPassword').focus();return;}
   let count=0;for(const id of legacy){const r=current(id);if(r.version>0||pending.some(p=>key(p)===key(r)))continue;queue({...r,liked:true});count++;}
   importedLegacy=true;persist();notice=count+' earlier likes imported as '+member+'.';render();sync();
 });
@@ -161,10 +169,12 @@ $('#exportProfile').addEventListener('click',()=>{
   const rs=effective(),data={generatedAt:new Date().toISOString(),profile:buildProfile(HOMES,rs),records:rs,likedHomes:HOMES.filter(h=>rs.some(r=>r.homeId===h.id&&r.liked)),dislikedHomes:HOMES.filter(h=>rs.some(r=>r.homeId===h.id&&r.disliked&&!r.liked))};
   const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='home-hunt-taste-profile.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
-const join=new URLSearchParams(location.hash.slice(1)).get('join');if(join){$('#connectionCode').value=join;history.replaceState(null,'',location.pathname+location.search);token='';notice='Choose whose likes this device saves, then connect.';}
+// Retire private pairing links without persisting or displaying their credentials.
+if(new URLSearchParams(location.hash.slice(1)).has('join')){history.replaceState(null,'',location.pathname+location.search);notice='Use the shared password to sign in. No connection code is needed.';}
 $('#catalogStats').innerHTML=[[HOMES.filter(isActive).length,'refreshed active'],...['Condo','Single-family','Townhouse / attached'].map(cat=>[HOMES.filter(h=>isActive(h)&&h.category===cat).length,'active · '+cat])].map(([n,label])=>'<div><b>'+n+'</b><span>'+esc(label)+'</span></div>').join('');
 render();sync();
 setInterval(()=>{if(document.visibilityState==='visible')sync();},10000);
 window.addEventListener('online',()=>sync());
+window.addEventListener('storage',e=>{if(e.key===TOKEN){token=read(TOKEN,'');connectionInvalid=false;lastSync=null;if(!token){records=[];pending=[];notice='Signed out on this device.';}render();if(token)sync();}});
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')sync();});
 window.addEventListener('storage',e=>{if(e.key===CACHE&&!syncing){const next=read(CACHE,{});records=next.records||records;pending=next.pending||pending;importedLegacy=!!next.importedLegacy;if(!document.activeElement?.matches('textarea,input'))render();if(pending.length)sync();}});

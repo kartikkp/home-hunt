@@ -3,11 +3,12 @@ import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {resolve,extname} from 'node:path';
 import {createApp} from '../server.mjs';
+import {hashPassword} from '../password-auth.mjs';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const homes=JSON.parse(await readFile(new URL('../homes.json',import.meta.url),'utf8'));
 const data=new Map();const store={all:async()=>[...data.values()],get:async(m,id)=>data.get(m+id)||null,put:async(r,base)=>{if((data.get(r.member+r.homeId)?.version||0)!==base)return false;data.set(r.member+r.homeId,r);return true;}};
 const port=Number(process.env.PREVIEW_PORT||8765),origin='http://127.0.0.1:'+port;
-const api=createApp({store,homes,token:'test-only-home-hunt-connection-code-12345678',origins:[origin]});
+const api=createApp({store,homes,token:'test-only-home-hunt-connection-code-12345678',passwordHash:await hashPassword('preview-password-only'),origins:[origin]});
 http.createServer(async(req,res)=>{
   if(req.url.startsWith('/home-hunt-api/')){req.url=req.url.replace('/home-hunt-api','');return api.emit('request',req,res);}
   const pathname=new URL(req.url,'http://localhost').pathname;
