@@ -1,6 +1,6 @@
 # Home Hunt state
 
-September 7 work in progress: richer cards and explicit per-member dislikes are implemented and tested locally, not deployed. See `phases/02-easier-feedback/02-01-SUMMARY.md`. User requested a remembered shared-password login. Awaiting permission to move the app from GitHub Pages to the existing HTTPS serverwheel address so the page itself can be protected; alternative is leaving listings public and protecting only feedback. Do not publish the password or silently substitute a client-only privacy screen. Current live site remains unchanged.
+September 7 delivered: user explicitly chose to keep public listings on GitHub Pages. Richer cards, 500 source-linked photo previews, explicit per-member dislikes/reasons, and remembered server-verified password login are live in implementation commit `476d10c`. Existing shared feedback was backed up and preserved; the DynamoDB container was unchanged. All 17 automated tests pass. Live page assets exactly match the release, and HTTPS login/session reuse/unauthenticated denial were verified without writing real feedback. See `phases/02-easier-feedback/02-02-SUMMARY.md`. Password and hash remain server-only. Do not move hosting or make the public catalogue private without a new user request.
 
 Updated September 6, 2026. The catalogue contains 500 source-reported active discovery candidates and 33 retained originals outside that set. Preserve all stable IDs and private feedback on future refreshes. Read the shared profile privately before tailoring a search.
 
