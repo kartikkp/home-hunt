@@ -3730,14 +3730,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/4630-21st-st-unit-2c-long-island-city-ny-11101/6BLriEu6PTt",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/4630-21st-st-unit-2c-long-island-city-ny-11101/6BLriEu6PTt",
       "listingId": "1046720",
       "broker": "Tru International Realty Corp",
-      "accessedAt": "2026-09-06T14:58:32.969Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-04T09:04:44.112Z"
     },
     "location": {
@@ -3758,8 +3758,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -3787,7 +3787,7 @@
       "https://bpp.mlsgrid.com/images/KEY426833846/b324c699-a771-4532-a59e-cebc16dad870.jpeg"
     ],
     "photoCount": 6,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "High Rise",
       "Construction": "Brick",
@@ -7093,7 +7093,7 @@
     "sqft": 1100,
     "year": 2008,
     "hoa": 1006,
-    "tax": 656,
+    "tax": 655.6666666666666,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -7110,19 +7110,19 @@
     "stationSource": "https://data.ny.gov/d/wxmd-5cpm",
     "city": "Midtown Manhattan",
     "city_min": null,
-    "quality": "Condition requires inspection",
+    "quality": "Updated / renovated (listing-reported)",
     "score": null,
     "url": "https://onekeymls.com/home-details/4026-college-point-blvd-unit-18d-flushing-ny-11354/cmBJBHHv5iA",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/4026-college-point-blvd-unit-18d-flushing-ny-11354/cmBJBHHv5iA",
       "listingId": "1034890",
       "broker": "E Realty International Corp",
-      "accessedAt": "2026-09-06T14:58:33.032Z",
-      "modifiedAt": "2026-09-06T05:39:36.434Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T20:09:40.033Z"
     },
     "location": {
       "lat": 40.757493,
@@ -7142,8 +7142,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -7171,7 +7171,7 @@
       "https://bpp.mlsgrid.com/images/KEY426398680/70fe0c2d-9177-40d8-9b61-c25510db9c2d.jpeg"
     ],
     "photoCount": 7,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Interior features": "First Floor Bedroom, First Floor Full Bath, Eat-in Kitchen, Elevator, Kitchen Island, Open Kitchen, Walk-In Closet(s), Washer/Dryer Hookup",
@@ -7194,7 +7194,17 @@
       "Living-area source": "Public Records",
       "Listed since": "2026-08-04",
       "Days on market (at snapshot)": "33"
-    }
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "Renovated high-floor two-bedroom / two-bath condo",
+      "Sky View Parc amenities and doorman",
+      "Listing area conflicts: structured field 1,100 sq ft vs description 1,110; using 1,100"
+    ],
+    "researchSignals": [
+      "Updated interiors"
+    ],
+    "researchCautions": []
   },
   {
     "id": "okdacb718e9e6e00",
@@ -8814,8 +8824,8 @@
     "baths": 2,
     "sqft": 1004,
     "year": 1987,
-    "hoa": 1110.98,
-    "tax": 600,
+    "hoa": 1247.54,
+    "tax": 760.4666666666667,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -8836,14 +8846,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/6254-97th-pl-unit-phc-rego-park-ny-11374/1qGUPpKsudc",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/6254-97th-pl-unit-phc-rego-park-ny-11374/1qGUPpKsudc",
       "listingId": "967308",
       "broker": "Keller Williams Landmark II",
-      "accessedAt": "2026-09-06T14:58:33.067Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-06T07:03:36.936Z"
     },
     "location": {
@@ -8866,9 +8876,11 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
-      "Station distance is straight-line, not a walking route"
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "Estimate includes reported recurring charges and taxes for both garage spaces; confirm these are included in the sale.",
+      "Gym fee and any special assessments remain unverified."
     ],
     "eligible": true,
     "crime": {
@@ -8895,7 +8907,7 @@
       "https://bpp.mlsgrid.com/images/KEY423758920/4bfc3245-3c2b-4708-912c-05d7cd18f15a.jpeg"
     ],
     "photoCount": 35,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Interior features": "Elevator, Entrance Foyer, Primary Bathroom",
@@ -8922,7 +8934,20 @@
       "Utilities": "Cable Connected, Electricity Connected, Natural Gas Connected, Water Connected",
       "Listed since": "2026-03-04",
       "Days on market (at snapshot)": "186"
-    }
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "1,004 sq ft penthouse with balcony",
+      "Floor-to-ceiling windows and two garage spaces",
+      "Doorman and concierge; gym has an extra annual fee"
+    ],
+    "researchSignals": [
+      "Natural light"
+    ],
+    "researchCautions": [
+      "Estimate includes reported recurring charges and taxes for both garage spaces; confirm these are included in the sale.",
+      "Gym fee and any special assessments remain unverified."
+    ]
   },
   {
     "id": "okceb11d293adc6c",
@@ -8935,7 +8960,7 @@
     "sqft": 936,
     "year": 1987,
     "hoa": null,
-    "tax": 468,
+    "tax": 468.4166666666667,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -8956,14 +8981,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/6254-97th-pl-unit-11a-rego-park-ny-11374/3msRfRtD8B0",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/6254-97th-pl-unit-11a-rego-park-ny-11374/3msRfRtD8B0",
       "listingId": "1043017",
       "broker": "Brown Harris Stevens FH",
-      "accessedAt": "2026-09-06T14:58:33.070Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-05T19:09:45.008Z"
     },
     "location": {
@@ -8984,8 +9009,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -9013,7 +9038,7 @@
       "https://bpp.mlsgrid.com/images/KEY426696167/b8597569-e271-4f30-a527-691d64242d2c.jpeg"
     ],
     "photoCount": 16,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Mid Rise",
       "Construction": "Brick",
@@ -10171,7 +10196,7 @@
     "sqft": 885,
     "year": 1912,
     "hoa": 1911,
-    "tax": 913,
+    "tax": 912.6666666666666,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -10185,18 +10210,18 @@
     "stationSource": "https://data.ny.gov/d/39hk-dx4f",
     "city": "Midtown Manhattan",
     "city_min": null,
-    "quality": "Estimated (MLS)",
+    "quality": "Condition requires inspection",
     "score": null,
     "url": "https://onekeymls.com/home-details/127-w-82nd-st-unit-1b-new-york-manhattan-ny-10024/lWZr9VvKaIM",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/127-w-82nd-st-unit-1b-new-york-manhattan-ny-10024/lWZr9VvKaIM",
       "listingId": "1027025",
       "broker": "Utopia Realty Inc.",
-      "accessedAt": "2026-09-06T14:58:33.095Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-18T15:22:36.533Z"
     },
     "location": {
@@ -10217,8 +10242,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -10244,7 +10269,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1027025/b63f1dd6-ca12-4455-b1b0-75f6c6a37a0e.webp"
     ],
     "photoCount": 4,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Mid Rise",
       "Construction": "Brick",
@@ -11887,7 +11912,7 @@
     "sqft": 1200,
     "year": 2008,
     "hoa": null,
-    "tax": 660,
+    "tax": 660.3333333333334,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -11903,15 +11928,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/6336-99th-st-apt-4h-rego-park-ny-11374/kr9LJwJHvnR",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/6336-99th-st-apt-4h-rego-park-ny-11374/kr9LJwJHvnR",
       "listingId": "980458",
       "broker": "LuckSky Brothers Corp",
-      "accessedAt": "2026-09-06T14:58:33.132Z",
-      "modifiedAt": "2026-09-05T03:27:36.484Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T01:49:36.459Z"
     },
     "location": {
       "lat": 40.731775,
@@ -11931,9 +11956,11 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
-      "Station distance is straight-line, not a walking route"
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "HOA amount is not provided; do not treat the no-association flag as zero for this condo.",
+      "Listing transit-line wording conflicts with station data; use the mapped nearest station and verify the route."
     ],
     "eligible": true,
     "crime": {
@@ -11960,7 +11987,7 @@
       "https://bpp.mlsgrid.com/images/KEY424209475/66951d2f-a340-46c7-95b9-ef51e2f80bc3.jpeg"
     ],
     "photoCount": 24,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Block",
       "Interior features": "Breakfast Bar, Eat-in Kitchen, High Ceilings, Kitchen Island, Open Kitchen, Primary Bathroom, Walk-In Closet(s)",
@@ -11978,8 +12005,22 @@
       "Utilities": "See Remarks",
       "Living-area source": "Plans",
       "Listed since": "2026-04-03",
-      "Days on market (at snapshot)": "154"
-    }
+      "Days on market (at snapshot)": "156"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "1,200 sq ft; floor-to-ceiling windows",
+      "Open kitchen and in-unit washer/dryer",
+      "Two bathrooms; shared roof deck and fitness amenities"
+    ],
+    "researchSignals": [
+      "Natural light",
+      "Updated interiors"
+    ],
+    "researchCautions": [
+      "HOA amount is not provided; do not treat the no-association flag as zero for this condo.",
+      "Listing transit-line wording conflicts with station data; use the mapped nearest station and verify the route."
+    ]
   },
   {
     "id": "ok404416d05a1119",
@@ -12196,7 +12237,7 @@
     "sqft": 723,
     "year": 2026,
     "hoa": 417.45,
-    "tax": 726,
+    "tax": 726.4200000000001,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -12217,15 +12258,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/13411-franklin-ave-unit-9b-flushing-ny-11355/gfUNlYIaYQP",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/13411-franklin-ave-unit-9b-flushing-ny-11355/gfUNlYIaYQP",
       "listingId": "1042546",
       "broker": "E Realty International Corp",
-      "accessedAt": "2026-09-06T14:58:33.140Z",
-      "modifiedAt": "2026-09-05T20:09:41.392Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T20:09:41.377Z"
     },
     "location": {
       "lat": 40.753869,
@@ -12246,8 +12287,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -12275,7 +12316,7 @@
       "https://bpp.mlsgrid.com/images/KEY426680286/443280aa-3f3f-4976-998d-87c244475cfe.jpeg"
     ],
     "photoCount": 31,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Interior features": "Eat-in Kitchen, Elevator",
@@ -12294,7 +12335,7 @@
       "Utilities": "Cable Connected, Electricity Connected, Natural Gas Connected, Sewer Connected, Water Connected",
       "Living-area source": "Public Records",
       "Listed since": "2026-08-24",
-      "Days on market (at snapshot)": "12"
+      "Days on market (at snapshot)": "13"
     }
   },
   {
@@ -12308,7 +12349,7 @@
     "sqft": 723,
     "year": 2026,
     "hoa": 417.45,
-    "tax": 726,
+    "tax": 726.4200000000001,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -12329,15 +12370,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/13411-franklin-ave-unit-7b-flushing-ny-11355/gatFV3Ll1o9",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/13411-franklin-ave-unit-7b-flushing-ny-11355/gatFV3Ll1o9",
       "listingId": "1042490",
       "broker": "E Realty International Corp",
-      "accessedAt": "2026-09-06T14:58:33.142Z",
-      "modifiedAt": "2026-09-05T20:09:41.300Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T20:09:41.308Z"
     },
     "location": {
       "lat": 40.753869,
@@ -12358,8 +12399,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -12387,7 +12428,7 @@
       "https://bpp.mlsgrid.com/images/KEY426678742/5ba25246-0050-49a5-ab8f-4b651716058e.jpeg"
     ],
     "photoCount": 9,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Interior features": "First Floor Bedroom, First Floor Full Bath, Eat-in Kitchen, Elevator",
@@ -12406,7 +12447,7 @@
       "Utilities": "Cable Connected, Electricity Connected, Natural Gas Connected, Sewer Connected, Water Connected",
       "Living-area source": "Public Records",
       "Listed since": "2026-08-24",
-      "Days on market (at snapshot)": "12"
+      "Days on market (at snapshot)": "13"
     }
   },
   {
@@ -13043,7 +13084,7 @@
     "sqft": 858,
     "year": 1987,
     "hoa": 697,
-    "tax": 639,
+    "tax": 639.1666666666666,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -13064,14 +13105,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/8730-62nd-ave-unit-10-rego-park-ny-11374/isEnk42MBh1",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/8730-62nd-ave-unit-10-rego-park-ny-11374/isEnk42MBh1",
       "listingId": "994892",
       "broker": "Block & Lot Services Inc",
-      "accessedAt": "2026-09-06T14:58:33.159Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-05T19:39:36.853Z"
     },
     "location": {
@@ -13099,8 +13140,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -13128,7 +13169,7 @@
       "https://bpp.mlsgrid.com/images/KEY424738559/58d42e4c-5d7b-474b-aff9-de0882b749b9.jpeg"
     ],
     "photoCount": 22,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "High Rise, Garden",
       "Construction": "Block, Brick",
@@ -13647,7 +13688,7 @@
     "sqft": 901,
     "year": 2001,
     "hoa": 1825,
-    "tax": 1871,
+    "tax": 1871.1666666666667,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -13666,14 +13707,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/250-e-30th-st-unit-5a-new-york-manhattan-ny-10016/lGZWUvsvl1s",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/250-e-30th-st-unit-5a-new-york-manhattan-ny-10016/lGZWUvsvl1s",
       "listingId": "1023978",
       "broker": "Magic Of Great Neck Realty Inc",
-      "accessedAt": "2026-09-06T14:58:33.172Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-07-19T22:36:36.481Z"
     },
     "location": {
@@ -13694,8 +13735,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -13723,7 +13764,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1023978/983576c1-11c5-4bc5-8aa8-fe8b6c0b1788.webp"
     ],
     "photoCount": 34,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Flooring": "Ceramic Tile, Vinyl",
@@ -16270,14 +16311,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/3165-14th-st-unit-phb-astoria-ny-11106/72RHf0KCqs4",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/3165-14th-st-unit-phb-astoria-ny-11106/72RHf0KCqs4",
       "listingId": "1009239",
       "broker": "Douglas Elliman Real Estate",
-      "accessedAt": "2026-09-06T14:58:33.235Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T18:09:40.809Z"
     },
     "location": {
@@ -16298,8 +16339,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -16327,7 +16368,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1009239/6654691e-222b-428d-8e59-2c434469bddc.webp"
     ],
     "photoCount": 12,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Mid Rise",
       "Interior features": "Eat-in Kitchen, Elevator, Open Kitchen, Stone Counters, Washer/Dryer Hookup",
@@ -16947,14 +16988,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/1124-31st-ave-unit-10e-long-island-city-ny-11106/2auHApkjVQY",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/1124-31st-ave-unit-10e-long-island-city-ny-11106/2auHApkjVQY",
       "listingId": "834034",
       "broker": "EXP Realty",
-      "accessedAt": "2026-09-06T14:58:33.251Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-10T15:54:36.479Z"
     },
     "location": {
@@ -16976,8 +17017,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -17005,7 +17046,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-834034/87e12a2c-6124-424d-b5aa-8c8adb8f0f5f.webp"
     ],
     "photoCount": 29,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "High Rise",
       "Interior features": "Elevator, Entrance Foyer, High Ceilings, Primary Bathroom, Open Floorplan, Open Kitchen, Washer/Dryer Hookup",
@@ -17292,15 +17333,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/3055-vernon-blvd-unit-2a-astoria-ny-11102/1gE0Qp1TFzT",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/3055-vernon-blvd-unit-2a-astoria-ny-11102/1gE0Qp1TFzT",
       "listingId": "975259",
       "broker": "Global R E Ventures Group LLC",
-      "accessedAt": "2026-09-06T14:58:33.260Z",
-      "modifiedAt": "2026-09-05T19:09:37.923Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T19:09:37.730Z"
     },
     "location": {
       "lat": 40.770735,
@@ -17321,8 +17362,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -17350,7 +17391,7 @@
       "https://bpp.mlsgrid.com/images/KEY424020387/f42ed9a7-77ef-4244-b779-9347864d8941.jpeg"
     ],
     "photoCount": 13,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "High Rise",
       "Construction": "Batts Insulation",
@@ -17377,7 +17418,7 @@
       "Utilities": "Cable Connected, Electricity Connected, Natural Gas Connected, Trash Collection Private, Water Connected",
       "Living-area source": "Plans",
       "Listed since": "2026-03-23",
-      "Days on market (at snapshot)": "166"
+      "Days on market (at snapshot)": "167"
     }
   },
   {
@@ -17742,15 +17783,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/2615-4th-st-unit-3d-astoria-ny-11102/aJw28EHiArz",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/2615-4th-st-unit-3d-astoria-ny-11102/aJw28EHiArz",
       "listingId": "920069",
       "broker": "Winzone Realty Inc",
-      "accessedAt": "2026-09-06T14:58:33.272Z",
-      "modifiedAt": "2026-09-05T20:09:37.032Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T20:09:36.907Z"
     },
     "location": {
       "lat": 40.775683,
@@ -17770,8 +17811,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -17799,7 +17840,7 @@
       "https://bpp.mlsgrid.com/images/KEY422121731/59ff93ea-770c-45d0-9516-7f653125f6aa.jpeg"
     ],
     "photoCount": 9,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Cooling": "None",
@@ -17812,7 +17853,7 @@
       "Waterfront": "No",
       "Utilities": "See Remarks",
       "Listed since": "2025-10-02",
-      "Days on market (at snapshot)": "338"
+      "Days on market (at snapshot)": "339"
     }
   },
   {
@@ -17842,15 +17883,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/2615-4th-st-unit-2c-astoria-ny-11102/1t7fo3HBXQd",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/2615-4th-st-unit-2c-astoria-ny-11102/1t7fo3HBXQd",
       "listingId": "920077",
       "broker": "Winzone Realty Inc",
-      "accessedAt": "2026-09-06T14:58:33.275Z",
-      "modifiedAt": "2026-09-05T20:09:37.010Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T20:09:36.886Z"
     },
     "location": {
       "lat": 40.775683,
@@ -17870,8 +17911,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -17899,7 +17940,7 @@
       "https://bpp.mlsgrid.com/images/KEY422121908/089484c5-beeb-4d6f-a48b-5d420ccbf8e6.jpeg"
     ],
     "photoCount": 6,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Construction": "Brick",
       "Cooling": "Wall/Window Unit(s)",
@@ -17911,7 +17952,7 @@
       "Waterfront": "No",
       "Utilities": "See Remarks",
       "Listed since": "2025-10-02",
-      "Days on market (at snapshot)": "338"
+      "Days on market (at snapshot)": "339"
     }
   },
   {
@@ -21865,7 +21906,7 @@
     "sqft": 1396,
     "year": 1921,
     "hoa": 0,
-    "tax": 1197,
+    "tax": 1196.5,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -21886,15 +21927,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/185-crocus-ave-floral-park-ny-11001/etREpur5exS",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/185-crocus-ave-floral-park-ny-11001/etREpur5exS",
       "listingId": "1046596",
       "broker": "Howard Hanna Coach",
-      "accessedAt": "2026-09-06T14:58:33.380Z",
-      "modifiedAt": "2026-09-05T19:09:46.149Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T18:39:39.130Z"
     },
     "location": {
       "lat": 40.72024,
@@ -21919,8 +21960,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -21938,8 +21979,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://bpp.mlsgrid.com/images/KEY426830033/22097e23-0eb0-486b-8a56-870d333fa834.jpeg",
@@ -21950,7 +21990,7 @@
       "https://bpp.mlsgrid.com/images/KEY426830033/9fa331e4-d7f0-4276-ba05-095a14443ad6.jpeg"
     ],
     "photoCount": 36,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Advanced Framing Technique, Frame",
@@ -21979,8 +22019,18 @@
       "Utilities": "Electricity Connected, Natural Gas Connected, Sewer Connected, Trash Collection Public, Water Connected",
       "Living-area source": "Public Records",
       "Listed since": "2026-09-04",
-      "Days on market (at snapshot)": "1"
-    }
+      "Days on market (at snapshot)": "2"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "1,396 sq ft reported living area",
+      "Updated/remodeled condition in structured MLS facts",
+      "Near Bellerose LIRR; inspect layout and usable space"
+    ],
+    "researchSignals": [
+      "Updated interiors"
+    ],
+    "researchCautions": []
   },
   {
     "id": "ok54cc88ed6b90c6",
@@ -22775,7 +22825,7 @@
     "sqft": 1264,
     "year": 1928,
     "hoa": 0,
-    "tax": 857,
+    "tax": 856.8333333333334,
     "taxYear": 2024,
     "school": null,
     "schools": {
@@ -22796,14 +22846,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/9451-226th-st-floral-park-ny-11001/2flVZkv3rnn",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/9451-226th-st-floral-park-ny-11001/2flVZkv3rnn",
       "listingId": "1038289",
       "broker": "Edify Real Estate",
-      "accessedAt": "2026-09-06T14:58:33.404Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-05T18:09:42.744Z"
     },
     "location": {
@@ -22826,8 +22876,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -22845,8 +22895,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://bpp.mlsgrid.com/images/KEY426529146/97197fd2-7d45-458e-879e-4234b068163b.jpeg",
@@ -22857,7 +22906,7 @@
       "https://bpp.mlsgrid.com/images/KEY426529146/c03f1ca9-6dda-4130-be2f-3963e055fd7f.jpeg"
     ],
     "photoCount": 25,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Frame",
@@ -23804,7 +23853,7 @@
     "sqft": 1602,
     "year": 1962,
     "hoa": 0,
-    "tax": 1176,
+    "tax": 1176.4166666666667,
     "taxYear": 2024,
     "school": null,
     "schools": {
@@ -23825,14 +23874,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/67-iris-ave-floral-park-ny-11001/dHCdoMHJDjH",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/67-iris-ave-floral-park-ny-11001/dHCdoMHJDjH",
       "listingId": "1032572",
       "broker": "Coldwell Banker American Homes",
-      "accessedAt": "2026-09-06T14:58:33.431Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T20:09:41.383Z"
     },
     "location": {
@@ -23853,8 +23902,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -23872,8 +23921,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1032572/2fb857ac-a3e9-4073-b21c-9cd090cdaaca.webp",
@@ -23884,7 +23932,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1032572/25ba8967-d059-46b8-aa4e-7d68caf047e9.webp"
     ],
     "photoCount": 17,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Cape Cod",
       "Construction": "Brick, Vinyl Siding",
@@ -24258,7 +24306,7 @@
     "sqft": 1344,
     "year": 1922,
     "hoa": 0,
-    "tax": 1259,
+    "tax": 1258.75,
     "taxYear": 2024,
     "school": null,
     "schools": {
@@ -24279,14 +24327,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/262-floral-blvd-floral-park-ny-11001/qJTdheAGk1",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/262-floral-blvd-floral-park-ny-11001/qJTdheAGk1",
       "listingId": "980793",
       "broker": "BH&G R E Realty Connect",
-      "accessedAt": "2026-09-06T14:58:33.443Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-05T18:39:36.875Z"
     },
     "location": {
@@ -24307,8 +24355,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -24326,8 +24374,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://bpp.mlsgrid.com/images/KEY424221628/4480f829-05dd-4e3c-9eb4-f7496ce6482a.jpeg",
@@ -24338,7 +24385,7 @@
       "https://bpp.mlsgrid.com/images/KEY424221628/f83aa273-036e-444a-91a9-a6cba4667e02.jpeg"
     ],
     "photoCount": 22,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Vinyl Siding",
@@ -28333,7 +28380,7 @@
     "sqft": 1323,
     "year": 1965,
     "hoa": 0,
-    "tax": 1225,
+    "tax": 1225.0833333333333,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -28348,18 +28395,18 @@
     "stationSource": "https://data.ny.gov/d/wxmd-5cpm",
     "city": "Midtown Manhattan",
     "city_min": null,
-    "quality": "Condition requires inspection",
+    "quality": "Updated / renovated (listing-reported)",
     "score": null,
     "url": "https://onekeymls.com/home-details/37-magnolia-ave-floral-park-ny-11001/UssaFnMZzV",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/37-magnolia-ave-floral-park-ny-11001/UssaFnMZzV",
       "listingId": "1030717",
       "broker": "E Realty International Corp",
-      "accessedAt": "2026-09-06T14:58:33.561Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T19:09:43.816Z"
     },
     "location": {
@@ -28380,8 +28427,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -28399,8 +28446,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1030717/a6401eab-c37d-4979-8715-035f43db1d5a.webp",
@@ -28410,7 +28456,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1030717/c06d494f-770e-4278-93f4-60d15b7a163a.webp"
     ],
     "photoCount": 5,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Interior features": "First Floor Bedroom, First Floor Full Bath, Washer/Dryer Hookup",
       "Heating": "Baseboard, Electric, Natural Gas",
@@ -28428,7 +28474,17 @@
       "Utilities": "Cable Available, Cable Connected, Electricity Available, Electricity Connected, Natural Gas Available, Natural Gas Connected, Sewer Available, Sewer Connected, Trash Collection Public, Water Available, Water Connected",
       "Listed since": "2026-07-25",
       "Days on market (at snapshot)": "36"
-    }
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "Listing reports renovation about three years ago",
+      "Detached garage, driveway and backyard",
+      "1,323 sq ft reported; near Floral Park LIRR"
+    ],
+    "researchSignals": [
+      "Updated interiors"
+    ],
+    "researchCautions": []
   },
   {
     "id": "ok85ed71e12969be",
@@ -32216,7 +32272,7 @@
     "sqft": 1796,
     "year": 1925,
     "hoa": 0,
-    "tax": 903,
+    "tax": 903.4166666666666,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -32232,15 +32288,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/25810-87th-rd-floral-park-ny-11001/eyU8xC7tRzG",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/25810-87th-rd-floral-park-ny-11001/eyU8xC7tRzG",
       "listingId": "1033010",
       "broker": "S H V Real Estate Corp",
-      "accessedAt": "2026-09-06T14:58:33.683Z",
-      "modifiedAt": "2026-09-05T20:09:39.916Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T20:09:39.736Z"
     },
     "location": {
       "lat": 40.729423,
@@ -32261,8 +32317,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -32290,7 +32346,7 @@
       "https://bpp.mlsgrid.com/images/KEY426332207/66f5713d-da66-4911-ab64-dd9bd061810b.jpeg"
     ],
     "photoCount": 19,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Vinyl Siding",
@@ -32313,7 +32369,7 @@
       "Utilities": "Electricity Connected, Sewer Connected, Trash Collection Public, Water Connected",
       "Living-area source": "Public Records",
       "Listed since": "2026-08-05",
-      "Days on market (at snapshot)": "31"
+      "Days on market (at snapshot)": "32"
     }
   },
   {
@@ -33919,7 +33975,7 @@
     "sqft": 1666,
     "year": 1950,
     "hoa": 0,
-    "tax": 603,
+    "tax": 603.4166666666666,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -33940,14 +33996,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/8780-little-neck-pkwy-floral-park-ny-11001/isFwNTWytLS",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/8780-little-neck-pkwy-floral-park-ny-11001/isFwNTWytLS",
       "listingId": "1014432",
       "broker": "Property Professionals Realty",
-      "accessedAt": "2026-09-06T14:58:33.740Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T17:09:38.780Z"
     },
     "location": {
@@ -33969,8 +34025,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -33998,7 +34054,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1014432/f4fe5d8f-5e46-42ef-a1c3-bd591bd28267.webp"
     ],
     "photoCount": 22,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Brick",
@@ -37577,7 +37633,7 @@
     "sqft": 2326,
     "year": 1923,
     "hoa": 0,
-    "tax": 1347,
+    "tax": 1346.75,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -37598,14 +37654,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/214-lowell-ave-floral-park-ny-11001/asM0MpKEWfT",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/214-lowell-ave-floral-park-ny-11001/asM0MpKEWfT",
       "listingId": "1030042",
       "broker": "OverSouth LLC",
-      "accessedAt": "2026-09-06T14:58:33.871Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-09-05T07:08:38.541Z"
     },
     "location": {
@@ -37627,8 +37683,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -37646,8 +37702,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://bpp.mlsgrid.com/images/KEY426083947/61837a82-6557-40be-8c7c-275fa1a0717b.jpeg",
@@ -37658,7 +37713,7 @@
       "https://bpp.mlsgrid.com/images/KEY426083947/d19bde42-903b-4064-bd16-5f3209be3ab0.jpeg"
     ],
     "photoCount": 37,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Shingle Siding",
@@ -37681,7 +37736,17 @@
       "Living-area source": "Public Records",
       "Listed since": "2026-07-23",
       "Days on market (at snapshot)": "44"
-    }
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "2,326 sq ft reported living area",
+      "Updated/remodeled condition in structured MLS facts",
+      "House alternative near Floral Park LIRR"
+    ],
+    "researchSignals": [
+      "Updated interiors"
+    ],
+    "researchCautions": []
   },
   {
     "id": "ok0d0afe6aec4667",
@@ -41469,7 +41534,7 @@
     "sqft": 1440,
     "year": 1930,
     "hoa": 0,
-    "tax": 262,
+    "tax": 262.09999999999997,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -41490,14 +41555,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/2005-26th-st-astoria-ny-11105/8MZiA0c5O2C",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/2005-26th-st-astoria-ny-11105/8MZiA0c5O2C",
       "listingId": "1030220",
       "broker": "Realty Executives Today",
-      "accessedAt": "2026-09-06T14:58:34.013Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-01T22:09:36.798Z"
     },
     "location": {
@@ -41518,8 +41583,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -41547,7 +41612,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1030220/6fbab621-fb29-4684-81d3-fa0be011fe41.webp"
     ],
     "photoCount": 24,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Contemporary",
       "Construction": "Brick",
@@ -49639,7 +49704,7 @@
     "sqft": 1600,
     "year": 1951,
     "hoa": 0,
-    "tax": 620,
+    "tax": 619.5266666666666,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -49655,14 +49720,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/2522-45th-st-unit-1-astoria-ny-11103/3duLomhu2cy",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/2522-45th-st-unit-1-astoria-ny-11103/3duLomhu2cy",
       "listingId": "999899",
       "broker": "Amorelli Realty LLC",
-      "accessedAt": "2026-09-06T14:58:34.348Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T19:39:37.176Z"
     },
     "location": {
@@ -49683,8 +49748,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -49712,7 +49777,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-999899/2b391792-0774-4679-b6ef-78e704a2e0e0.webp"
     ],
     "photoCount": 12,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Ranch",
       "Construction": "Brick",
@@ -50430,7 +50495,7 @@
     "sqft": 1512,
     "year": 1938,
     "hoa": 0,
-    "tax": 1354,
+    "tax": 1354.1666666666667,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -50451,15 +50516,15 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/8-orchid-st-floral-park-ny-11001/3bT1AilH3Dx",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/8-orchid-st-floral-park-ny-11001/3bT1AilH3Dx",
       "listingId": "1030429",
       "broker": "Century 21 Sewanhaka Realty",
-      "accessedAt": "2026-09-06T14:58:34.380Z",
-      "modifiedAt": "2026-09-05T17:00:36.542Z"
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T18:09:40.689Z"
     },
     "location": {
       "lat": 40.719398,
@@ -50481,8 +50546,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -50500,8 +50565,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://bpp.mlsgrid.com/images/KEY426099795/8fc9e956-2051-46e7-8c9c-a9349384752d.jpeg",
@@ -50512,7 +50576,7 @@
       "https://bpp.mlsgrid.com/images/KEY426099795/70fa2bf1-58dc-4a39-a2f9-87d49f8658a6.jpeg"
     ],
     "photoCount": 26,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Brick, Frame",
@@ -50537,7 +50601,7 @@
       "Utilities": "Electricity Connected, Natural Gas Connected, Sewer Available, Water Connected",
       "Living-area source": "Public Records",
       "Listed since": "2026-07-30",
-      "Days on market (at snapshot)": "37"
+      "Days on market (at snapshot)": "38"
     }
   },
   {
@@ -51339,7 +51403,7 @@
     "sqft": 1655,
     "year": 1952,
     "hoa": 0,
-    "tax": 1408,
+    "tax": 1408.3333333333333,
     "taxYear": 2026,
     "school": null,
     "schools": {
@@ -51360,14 +51424,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/179-locust-st-floral-park-ny-11001/di7TiLKuy55",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/179-locust-st-floral-park-ny-11001/di7TiLKuy55",
       "listingId": "1029276",
       "broker": "Century 21 Sewanhaka Realty",
-      "accessedAt": "2026-09-06T14:58:34.418Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T18:09:43.926Z"
     },
     "location": {
@@ -51391,8 +51455,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -51410,8 +51474,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1029276/68c6ad24-d4d5-4a73-8313-b45b19d7922f.webp",
@@ -51422,7 +51485,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1029276/20ecb53b-cb25-473c-b5b5-ac54897cd9dc.webp"
     ],
     "photoCount": 42,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Brick, Frame",
@@ -54184,7 +54247,7 @@
     "sqft": 1943,
     "year": 1978,
     "hoa": 0,
-    "tax": 1565,
+    "tax": 1564.6666666666667,
     "taxYear": 2024,
     "school": null,
     "schools": {
@@ -54205,14 +54268,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/67-cedar-pl-floral-park-ny-11001/kDycKYPNn1T",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/67-cedar-pl-floral-park-ny-11001/kDycKYPNn1T",
       "listingId": "1028614",
       "broker": "Goldilocks Real Estate",
-      "accessedAt": "2026-09-06T14:58:34.546Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T19:39:38.099Z"
     },
     "location": {
@@ -54239,8 +54302,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -54258,8 +54321,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1028614/1722a89e-5d4e-417a-a3e0-18be350b1df6.webp",
@@ -54270,7 +54332,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1028614/93e89224-40e7-4897-b44e-a95122e2aa32.webp"
     ],
     "photoCount": 19,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Hi Ranch, Raised Ranch",
       "Construction": "Brick, Frame",
@@ -55250,14 +55312,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/100-memphis-ave-floral-park-ny-11001/9YAhqN2KAxb",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/100-memphis-ave-floral-park-ny-11001/9YAhqN2KAxb",
       "listingId": "1024197",
       "broker": "Tru International Realty Corp",
-      "accessedAt": "2026-09-06T14:58:34.590Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-08-30T19:09:42.633Z"
     },
     "location": {
@@ -55278,8 +55340,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -55297,8 +55359,7 @@
       "source": "https://www.openstreetmap.org/way/351060858",
       "asOf": "2026-09-06",
       "provider": "OpenStreetMap contributors",
-      "license": "ODbL 1.0",
-      "note": "Mapped separated cycleways/tracks or designated cycle paths; surface, access and crossings need verification. Not a route or safety score."
+      "license": "ODbL 1.0"
     },
     "photos": [
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1024197/75e54e9e-e404-4a84-9ec1-15199ff09a06.webp",
@@ -55309,7 +55370,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1024197/4ede183f-a635-497f-b9e9-563a5eb7661a.webp"
     ],
     "photoCount": 29,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Ranch",
       "Construction": "Brick",
@@ -55997,7 +56058,7 @@
     "sqft": 620,
     "year": 1920,
     "hoa": 0,
-    "tax": 152,
+    "tax": 152.33333333333334,
     "taxYear": 2025,
     "school": null,
     "schools": {
@@ -56018,14 +56079,14 @@
     "score": null,
     "url": "https://onekeymls.com/home-details/2152-48th-st-astoria-ny-11105/gREXgwtx5LN",
     "status": "Active",
-    "refreshedAt": "2026-09-06",
+    "refreshedAt": "2026-09-07",
     "legacy": false,
     "source": {
       "name": "OneKey MLS",
       "url": "https://onekeymls.com/home-details/2152-48th-st-astoria-ny-11105/gREXgwtx5LN",
       "listingId": "1000215",
       "broker": "Golden One Realty Group LLC",
-      "accessedAt": "2026-09-06T14:58:34.625Z",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
       "modifiedAt": "2026-07-26T19:09:41.292Z"
     },
     "location": {
@@ -56046,8 +56107,8 @@
     },
     "reviewNotes": [
       "Land lease: not verified; confirm before shortlisting",
-      "Schools named by MLS; attendance zone and quality require verification",
-      "HOA excludes unverified assessments; taxes shown separately",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
       "Station distance is straight-line, not a walking route"
     ],
     "eligible": true,
@@ -56075,7 +56136,7 @@
       "https://brokerdata-b.b-cdn.net/mlsgrid/onekey/property/M00000489-1000215/8e0a5452-f54b-4b3f-a27e-b6081166e5dd.webp"
     ],
     "photoCount": 24,
-    "detailsAsOf": "2026-09-06",
+    "detailsAsOf": "2026-09-07",
     "details": {
       "Architecture": "Colonial",
       "Construction": "Stucco",
@@ -57928,6 +57989,995 @@
       "Living-area source": "Public Records",
       "Listed since": "2026-08-19",
       "Days on market (at snapshot)": "17"
+    }
+  },
+  {
+    "id": "okcc4f7276b6ea58",
+    "name": "14238 37th Ave Unit 5C",
+    "area": "Flushing, Queens",
+    "category": "Condo",
+    "price": 899000,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 818,
+    "year": 2017,
+    "hoa": 421,
+    "tax": 39.38,
+    "taxYear": 2025,
+    "school": null,
+    "schools": {
+      "ElementarySchool": "Ps 29",
+      "ElementarySchoolDistrict": "Queens 25",
+      "HighSchool": "Flushing High School",
+      "HighSchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchool": "Jhs 194 William Carr",
+      "MiddleOrJuniorSchoolDistrict": "Queens 25"
+    },
+    "station": "Flushing-Main St (7)",
+    "station_mi": 0.3,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/39hk-dx4f",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "Condition requires inspection",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/14238-37th-ave-unit-5c-flushing-ny-11354/1950B7ZT21i",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/14238-37th-ave-unit-5c-flushing-ny-11354/1950B7ZT21i",
+      "listingId": "1047576",
+      "broker": "Century Homes Realty Group LLC",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T18:54:36.465Z"
+    },
+    "location": {
+      "lat": 40.762594,
+      "lon": -73.825932
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "Mid Rise"
+      ],
+      "outdoor": [],
+      "parking": [
+        "Garage",
+        "Parking Lot"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "818 sq ft: compact layout; verify usable space.",
+      "Very low current taxes reflect a reported 421-a abatement; expiration and post-abatement taxes are unverified."
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY426866493/1d0cb2f9-0b16-46af-88c9-06b73f2aa2ca.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426866493/6078c554-d7fa-4007-81ed-5e9ba6ec1537.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426866493/5726d624-6bd3-4625-bede-67809b45b829.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426866493/ad60bbbf-ed7e-466e-bfc4-205ca38c7abc.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426866493/3d568138-a146-4e43-a03b-8244bc162773.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426866493/084a5ef8-739d-46c5-901c-b708e442945e.jpeg"
+    ],
+    "photoCount": 11,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Architecture": "Mid Rise",
+      "Interior features": "Elevator, Open Floorplan, Open Kitchen, Smart Thermostat, Stone Counters",
+      "Heating": "Natural Gas",
+      "Cooling": "Central Air, Electric",
+      "Appliances": "Dishwasher, Gas Range, Refrigerator",
+      "Laundry": "Common Area, Laundry Room",
+      "Parking": "Garage, Parking Lot",
+      "Garage": "No",
+      "Garage spaces": "0",
+      "Basement": "No",
+      "Levels": "One",
+      "Entry level": "5",
+      "Pets policy": "Call",
+      "HOA covers": "Heat, Hot Water, Sewer, Snow Removal, Trash, Water",
+      "Association amenities": "Door Person, Elevator(s), Fitness Center, Trash",
+      "Waterfront": "No",
+      "Water": "Public",
+      "Sewer": "Public Sewer",
+      "Utilities": "Cable Available, Electricity Connected, Natural Gas Connected, Phone Available, Sewer Connected, Trash Collection Public, Water Connected",
+      "Living-area source": "Public Records",
+      "Listed since": "2026-09-07",
+      "Days on market (at snapshot)": "0"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "Corner unit with wrap-around balcony",
+      "Open kitchen, wood floors and doorman",
+      "Heating and water included in reported HOA"
+    ],
+    "researchSignals": [
+      "Natural light"
+    ],
+    "researchCautions": [
+      "818 sq ft: compact layout; verify usable space.",
+      "Very low current taxes reflect a reported 421-a abatement; expiration and post-abatement taxes are unverified."
+    ],
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 75,
+      "property": 76,
+      "total": 151,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.68,
+      "protectedStreet": "VAN WYCK EXWY EXIT NB",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "ok805d2a1715763d",
+    "name": "41-02 Queens Boulevard Unit 5F",
+    "area": "Sunnyside, Queens",
+    "category": "Condo",
+    "price": 875000,
+    "beds": 2,
+    "baths": 2,
+    "sqft": null,
+    "year": 2007,
+    "hoa": null,
+    "tax": 1184,
+    "taxYear": null,
+    "school": null,
+    "schools": {},
+    "station": "40 St-Lowery St (7)",
+    "station_mi": 0.05,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/39hk-dx4f",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "Condition requires inspection",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/41-02-queens-boulevard-unit-5f-queens-ny-11104/9pOskZIfnOt",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/41-02-queens-boulevard-unit-5f-queens-ny-11104/9pOskZIfnOt",
+      "listingId": "1047756",
+      "broker": "Serhant LLC",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T23:16:36.568Z"
+    },
+    "location": {
+      "lat": 40.743281,
+      "lon": -73.923207
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [],
+      "outdoor": [
+        "None"
+      ],
+      "parking": []
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "Photos are virtually staged, according to the listing.",
+      "Living area and HOA billing frequency are missing; payment is incomplete."
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY426872524/85c54b43-a931-4976-b136-ad599c0e851e.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426872524/ea2947dc-b8e0-4333-892a-67a306c9bd80.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426872524/125c7ac6-b516-4d55-8892-62a827f5e2db.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426872524/e0e79927-7dd4-4a62-b01f-0b17ac30d657.jpeg"
+    ],
+    "photoCount": 4,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Appliances": "None",
+      "Garage": "Yes",
+      "Garage spaces": "0",
+      "Basement": "No",
+      "Entry level": "5",
+      "Patio / porch": "None",
+      "Pets policy": "No",
+      "View": "City, Skyline",
+      "Listed since": "2026-09-07",
+      "Days on market (at snapshot)": "0"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "Two bedrooms / two baths; building completed in 2007",
+      "Listing describes a modern kitchen with newly installed appliances",
+      "Near the 7 train; shared laundry and roof deck"
+    ],
+    "researchSignals": [
+      "Updated interiors"
+    ],
+    "researchCautions": [
+      "Photos are virtually staged, according to the listing.",
+      "Living area and HOA billing frequency are missing; payment is incomplete."
+    ],
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 31,
+      "property": 84,
+      "total": 115,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.02,
+      "protectedStreet": "QUEENS BOULEVARD",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "oke868e5b8ed1af4",
+    "name": "13646 41st Ave Unit 2F",
+    "area": "Flushing, Queens",
+    "category": "Condo",
+    "price": 850000,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 994,
+    "year": 2008,
+    "hoa": 580,
+    "tax": 497.9166666666667,
+    "taxYear": 2025,
+    "school": null,
+    "schools": {
+      "ElementarySchool": "Ps 120",
+      "ElementarySchoolDistrict": "Queens 25",
+      "HighSchool": "John Bowne High School",
+      "HighSchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchool": "Is 250 Robert F Kennedy Comm Ms (The",
+      "MiddleOrJuniorSchoolDistrict": "Queens 25"
+    },
+    "station": "Flushing-Main St (7)",
+    "station_mi": 0.14,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/39hk-dx4f",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "Well-maintained / modern (listing-reported)",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/13646-41st-ave-unit-2f-flushing-ny-11355/6xE8495SYnV",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/13646-41st-ave-unit-2f-flushing-ny-11355/6xE8495SYnV",
+      "listingId": "1047531",
+      "broker": "Jamie Realty Group",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T16:33:36.551Z"
+    },
+    "location": {
+      "lat": 40.758755,
+      "lon": -73.827702
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "High Rise"
+      ],
+      "outdoor": [],
+      "parking": [
+        "None"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route"
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY426864695/80917f54-b738-4689-9a0f-9e3235e7a1e3.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426864695/bca2a0e9-1bf9-4cc4-a16e-8c639f636c50.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426864695/b1542b61-0ade-4488-8002-be2894b19db5.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426864695/c6168edd-1321-457a-92f3-a8ea51888520.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426864695/4634147b-4792-4cf8-91ee-6fd348be6c5b.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426864695/4786c678-0327-44b6-8424-35ca3b13fa59.jpeg"
+    ],
+    "photoCount": 11,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Architecture": "High Rise",
+      "Construction": "Brick",
+      "Interior features": "Kitchen Island, Marble Counters, Natural Woodwork, Open Floorplan, Open Kitchen",
+      "Heating": "Baseboard",
+      "Cooling": "Central Air",
+      "Appliances": "Stainless Steel Appliance(s)",
+      "Parking": "None",
+      "Garage": "No",
+      "Basement": "No",
+      "Entry level": "2",
+      "Lot size (sq ft; may be shared for condos)": "9800",
+      "Lot size (acres; may be shared for condos)": "0.225",
+      "Pets policy": "Call",
+      "HOA covers": "Sewer, Snow Removal, Water",
+      "Waterfront": "No",
+      "Water": "Public",
+      "Sewer": "Public Sewer",
+      "Utilities": "Electricity Connected, Natural Gas Connected, Trash Collection Public, Water Connected",
+      "Living-area source": "Public Records",
+      "Listed since": "2026-09-06",
+      "Days on market (at snapshot)": "1"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "994 sq ft; open living/dining layout",
+      "Listing describes modern finishes and abundant daylight",
+      "In-unit laundry and doorman"
+    ],
+    "researchSignals": [
+      "Natural light",
+      "Updated interiors"
+    ],
+    "researchCautions": [],
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 97,
+      "property": 106,
+      "total": 203,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.5,
+      "protectedStreet": "ROOSEVELT AV",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "okf11b473a1facc1",
+    "name": "3530 146th St Unit 704",
+    "area": "Flushing, Queens",
+    "category": "Condo",
+    "price": 1065000,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 865,
+    "year": 2025,
+    "hoa": 385.52,
+    "tax": 447.60999999999996,
+    "taxYear": 2025,
+    "school": null,
+    "schools": {
+      "ElementarySchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchoolDistrict": "Queens 25",
+      "HighSchool": "Flushing High School",
+      "ElementarySchool": "Ps 21 Edward Hart",
+      "HighSchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchool": "Jhs 185 Edward Bleeker"
+    },
+    "station": "Murray Hill LIRR",
+    "station_mi": 0.37,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/wxmd-5cpm",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "New construction (listing-reported)",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/3530-146th-st-unit-704-flushing-ny-11354/fXha7N3vvcG",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/3530-146th-st-unit-704-flushing-ny-11354/fXha7N3vvcG",
+      "listingId": "977637",
+      "broker": "P R O Links Realty Inc",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T20:09:36.966Z"
+    },
+    "location": {
+      "lat": 40.7652,
+      "lon": -73.82088
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "Other"
+      ],
+      "outdoor": [],
+      "parking": [
+        "Garage"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "865 sq ft: confirm practical bedroom and living-area dimensions."
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY424113366/a49e0746-806e-42d2-b31e-e00f2da2fb4c.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY424113366/16a4b0a5-7a14-4898-9cca-9e5e83c332eb.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY424113366/ff1ad2e3-f197-407d-bcbc-3247af27696b.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY424113366/55348432-8589-45ad-bb3e-36578efd6a61.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY424113366/7e8628cf-188f-472f-a604-13ab4b87df6a.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY424113366/8bcd1c04-e755-4101-aaa1-9364c0f202ea.jpeg"
+    ],
+    "photoCount": 18,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Construction": "ICFs (Insulated Concrete Forms)",
+      "Interior features": "Elevator",
+      "Heating": "Electric",
+      "Cooling": "Electric",
+      "Appliances": "Dishwasher, Dryer, Electric Range, Electric Water Heater, Refrigerator, Washer",
+      "Parking": "Garage",
+      "Garage": "Yes",
+      "Garage spaces": "0",
+      "Basement": "No",
+      "Entry level": "7",
+      "Pets policy": "Call",
+      "HOA covers": "Sewer, Water",
+      "Waterfront": "No",
+      "Water": "Public",
+      "Sewer": "Public Sewer",
+      "Utilities": "Cable Available, Electricity Available, Sewer Available, Trash Collection Public, Water Available",
+      "Living-area source": "Public Records",
+      "Listed since": "2026-03-27",
+      "Days on market (at snapshot)": "164"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "2025 boutique condo; two bedrooms / two baths",
+      "Oversized windows and contemporary finishes",
+      "Fitness room and shared roof garden"
+    ],
+    "researchSignals": [
+      "Natural light",
+      "Updated interiors"
+    ],
+    "researchCautions": [
+      "865 sq ft: confirm practical bedroom and living-area dimensions."
+    ],
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 28,
+      "property": 40,
+      "total": 68,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.47,
+      "protectedStreet": "149 ST",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "ok55f2af4d132692",
+    "name": "15002 Northern Blvd Unit 5G",
+    "area": "Flushing, Queens",
+    "category": "Condo",
+    "price": 822848,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 864,
+    "year": 2025,
+    "hoa": 372,
+    "tax": 894.4166666666666,
+    "taxYear": 2025,
+    "school": null,
+    "schools": {
+      "ElementarySchool": "Active Learning Elementary Sch (The)",
+      "ElementarySchoolDistrict": "Queens 25",
+      "HighSchool": "East-West School Of International Studies",
+      "HighSchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchool": "Bell Academy",
+      "MiddleOrJuniorSchoolDistrict": "Queens 25"
+    },
+    "station": "Murray Hill LIRR",
+    "station_mi": 0.15,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/wxmd-5cpm",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "New construction (listing-reported)",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/15002-northern-blvd-unit-5g-flushing-ny-11354/4HJ1UAiWrX4",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/15002-northern-blvd-unit-5g-flushing-ny-11354/4HJ1UAiWrX4",
+      "listingId": "1046512",
+      "broker": "Winzone Realty Inc",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T22:05:36.512Z"
+    },
+    "location": {
+      "lat": 40.764845,
+      "lon": -73.814769
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "Other"
+      ],
+      "outdoor": [],
+      "parking": [
+        "Other"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "864 sq ft: inspect the floor plan and bedroom dimensions."
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY426826954/5dfa946a-73db-4da9-a672-c9a40be3c006.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426826954/f6d9d3f2-fedd-4cdd-ab06-b9c45f55ee98.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426826954/7ce80932-9c36-4936-91ee-7330362f130a.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426826954/b1863d32-e05d-4df3-af56-fa7751e5d5a5.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426826954/f28b41c0-12f6-4e9c-95a7-929d54ad3fa4.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426826954/8b2fd248-7891-4dd9-a6f0-5c28d1d22dfb.jpeg"
+    ],
+    "photoCount": 11,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Construction": "Brick",
+      "Heating": "Electric",
+      "Cooling": "None",
+      "Appliances": "Cooktop, Dryer, Refrigerator, Washer",
+      "Garage": "No",
+      "Basement": "No",
+      "Entry level": "5",
+      "Pets policy": "Call",
+      "Waterfront": "No",
+      "Utilities": "See Remarks",
+      "Listed since": "2026-09-04",
+      "Days on market (at snapshot)": "3"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "2025 construction; corner two-bedroom / two-bath",
+      "Large windows, balcony and in-unit laundry",
+      "Same building offers other floor plans; compare usable room sizes"
+    ],
+    "researchSignals": [
+      "Natural light",
+      "Updated interiors"
+    ],
+    "researchCautions": [
+      "864 sq ft: inspect the floor plan and bedroom dimensions."
+    ],
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 15,
+      "property": 35,
+      "total": 50,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.48,
+      "protectedStreet": "149 ST",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "okd9b5dd84937944",
+    "name": "4343 Kissena Blvd Unit 306",
+    "area": "Flushing, Queens",
+    "category": "Condo",
+    "price": 808000,
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1164,
+    "year": 1950,
+    "hoa": 619,
+    "tax": 425,
+    "taxYear": 2025,
+    "school": null,
+    "schools": {
+      "ElementarySchool": "Ps 120",
+      "ElementarySchoolDistrict": "Queens 25",
+      "HighSchool": "Flushing High School",
+      "HighSchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchool": "Is 237",
+      "MiddleOrJuniorSchoolDistrict": "Queens 25"
+    },
+    "station": "Flushing Main Street LIRR",
+    "station_mi": 0.46,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/wxmd-5cpm",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "Move-in ready (listing-reported)",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/4343-kissena-blvd-unit-306-flushing-ny-11355/eaEko1v7qCk",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/4343-kissena-blvd-unit-306-flushing-ny-11355/eaEko1v7qCk",
+      "listingId": "1039414",
+      "broker": "Douglas Elliman Real Estate",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-07T20:01:36.608Z"
+    },
+    "location": {
+      "lat": 40.754829,
+      "lon": -73.823376
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "Garden"
+      ],
+      "outdoor": [],
+      "parking": [
+        "Garage"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route"
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY426570393/a7c3c741-110f-4535-8819-7e4dcaa81164.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426570393/233c0e42-a23e-4105-b8d5-78e47262ed5a.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426570393/12f092c1-10a7-4073-99c8-ba9f23e4d335.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426570393/4e58cbba-8713-4b26-ac5c-e59063ecaf22.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426570393/58eabd53-8b64-4426-b4b8-966de4f2035d.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426570393/ecdc6eaa-77ce-492c-bde2-dfd2c2b0ead8.jpeg"
+    ],
+    "photoCount": 10,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Architecture": "Garden",
+      "Construction": "Brick",
+      "Interior features": "Elevator",
+      "Heating": "Hot Water",
+      "Cooling": "Wall/Window Unit(s)",
+      "Appliances": "Gas Range",
+      "Parking": "Garage",
+      "Garage": "No",
+      "Basement": "No",
+      "Entry level": "3",
+      "Pets policy": "Call",
+      "HOA covers": "Common Area Maintenance, Gas, Heat, Hot Water",
+      "Waterfront": "No",
+      "Utilities": "Electricity Connected",
+      "Living-area source": "Plans",
+      "Listed since": "2026-08-17",
+      "Days on market (at snapshot)": "21"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "1,164 sq ft corner unit with dual exposures",
+      "Two bathrooms and private balcony",
+      "Listing describes move-in-ready condition"
+    ],
+    "researchSignals": [
+      "Natural light",
+      "Updated interiors"
+    ],
+    "researchCautions": [],
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 37,
+      "property": 61,
+      "total": 98,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.66,
+      "protectedStreet": "KISSENA PARK GREENWAY",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "ok850dc29d1b1422",
+    "name": "14220 Franklin Ave Unit 7F",
+    "area": "Flushing, Queens",
+    "category": "Condo",
+    "price": 768000,
+    "beds": 2,
+    "baths": 1,
+    "sqft": 850,
+    "year": 1970,
+    "hoa": 590,
+    "tax": 379.4166666666667,
+    "taxYear": 2026,
+    "school": null,
+    "schools": {
+      "ElementarySchool": "Ps 20 John Bowne",
+      "ElementarySchoolDistrict": "Queens 25",
+      "HighSchool": "John Bowne High School",
+      "HighSchoolDistrict": "Queens 25",
+      "MiddleOrJuniorSchool": "Is 237",
+      "MiddleOrJuniorSchoolDistrict": "Queens 25"
+    },
+    "station": "Flushing-Main St (7)",
+    "station_mi": 0.42,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/39hk-dx4f",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "Updated / renovated (listing-reported)",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/14220-franklin-ave-unit-7f-flushing-ny-11355/9vkSHw219ro",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/14220-franklin-ave-unit-7f-flushing-ny-11355/9vkSHw219ro",
+      "listingId": "1031824",
+      "broker": "RE/MAX 1st Choice",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T22:09:36.943Z"
+    },
+    "location": {
+      "lat": 40.756377,
+      "lon": -73.82314
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Queens",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "Other"
+      ],
+      "outdoor": [],
+      "parking": [
+        "Waitlist"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "850 sq ft and one bathroom: a smaller-space alternative.",
+      "Additional $119.38/month assessment reported through December 2026; confirm its end date."
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY426287489/e56dcf02-8531-4b3d-aabd-ac54194f92bf.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426287489/700c89f3-a55c-4e5c-af43-57c6f0c2a165.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426287489/ced5e43c-074f-4502-818d-81aa7a9a38bc.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426287489/cfc5ada7-29ce-45b1-b214-eaae937e0076.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426287489/7164fe0c-4dc2-49f0-a5fb-1c3b98b28448.jpeg",
+      "https://bpp.mlsgrid.com/images/KEY426287489/60fd2199-3cec-41bb-a110-86d840f7e810.jpeg"
+    ],
+    "photoCount": 17,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Construction": "Brick",
+      "Interior features": "Kitchen Island",
+      "Flooring": "Hardwood",
+      "Heating": "Natural Gas",
+      "Cooling": "Wall/Window Unit(s)",
+      "Appliances": "Dishwasher, Gas Range, Refrigerator, Stainless Steel Appliance(s)",
+      "Laundry": "Laundry Room",
+      "Parking": "Waitlist",
+      "Garage": "Yes",
+      "Garage spaces": "0",
+      "Basement": "No",
+      "Entry level": "7",
+      "Pets policy": "Call",
+      "HOA covers": "Common Area Maintenance, Exterior Maintenance, Gas, Grounds Care, Heat, Hot Water, Sewer, Snow Removal, Trash, Water",
+      "Association amenities": "Elevator(s), Live In Super, Snow Removal, Trash",
+      "Waterfront": "No",
+      "Water": "Public",
+      "Sewer": "Public Sewer",
+      "Utilities": "Electricity Connected, Natural Gas Connected, Sewer Connected",
+      "Living-area source": "Public Records",
+      "Listed since": "2026-07-31",
+      "Days on market (at snapshot)": "37"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "Renovated kitchen and bathroom; oak floors",
+      "Open living/dining room and custom closets",
+      "Elevator, shared laundry and bicycle storage"
+    ],
+    "researchSignals": [
+      "Natural light",
+      "Updated interiors"
+    ],
+    "researchCautions": [
+      "850 sq ft and one bathroom: a smaller-space alternative.",
+      "Additional $119.38/month assessment reported through December 2026; confirm its end date."
+    ],
+    "reportedAssessment": 119.38,
+    "assessmentNote": "Reported through December 2026; confirm current balance and end date.",
+    "crime": {
+      "scope": "500m radius",
+      "period": "Jan–Jun 2026",
+      "violent": 38,
+      "property": 70,
+      "total": 108,
+      "source": "https://data.cityofnewyork.us/d/5uac-w243",
+      "omittedCitywide": 1
+    },
+    "bike": {
+      "protectedMiles": 0.74,
+      "protectedStreet": "ROOSEVELT AV",
+      "asOf": "2026-07-24",
+      "source": "https://data.cityofnewyork.us/d/mzxg-pwib"
+    }
+  },
+  {
+    "id": "ok39bbf33ea1fdf7",
+    "name": "239 Bryant Ave",
+    "area": "Floral Park, Nassau",
+    "category": "Single-family",
+    "price": 898000,
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1248,
+    "year": 1925,
+    "hoa": 0,
+    "tax": 771.0174999999999,
+    "taxYear": 2025,
+    "school": null,
+    "schools": {
+      "ElementarySchoolDistrict": "Floral Park-Bellerose",
+      "MiddleOrJuniorSchoolDistrict": "Sewanhaka Central",
+      "HighSchool": "Floral Park Memorial High School",
+      "ElementarySchool": "John Lewis Childs School",
+      "HighSchoolDistrict": "Sewanhaka Central",
+      "MiddleOrJuniorSchool": "Floral Park Memorial High School"
+    },
+    "station": "Floral Park LIRR",
+    "station_mi": 0.58,
+    "stationMethod": "straight-line",
+    "stationSource": "https://data.ny.gov/d/wxmd-5cpm",
+    "city": "Midtown Manhattan",
+    "city_min": null,
+    "quality": "Updated / renovated (listing-reported)",
+    "score": null,
+    "url": "https://onekeymls.com/home-details/239-bryant-ave-floral-park-ny-11001/iuAsjTrQuhp",
+    "status": "Active",
+    "refreshedAt": "2026-09-07",
+    "legacy": false,
+    "source": {
+      "name": "OneKey MLS",
+      "url": "https://onekeymls.com/home-details/239-bryant-ave-floral-park-ny-11001/iuAsjTrQuhp",
+      "listingId": "987250",
+      "broker": "Cross Island Realty One Inc",
+      "accessedAt": "2026-09-08T02:56:10.705Z",
+      "modifiedAt": "2026-09-06T22:09:36.765Z"
+    },
+    "location": {
+      "lat": 40.732631,
+      "lon": -73.702805
+    },
+    "locationPrecision": "ADDRESS_POINT",
+    "county": "Nassau",
+    "landLease": null,
+    "features": {
+      "architecture": [
+        "Craftsman"
+      ],
+      "outdoor": [],
+      "parking": [
+        "Detached",
+        "Garage Door Opener",
+        "Private"
+      ]
+    },
+    "reviewNotes": [
+      "Land lease: not verified; confirm before shortlisting",
+      "School assignments and quality require verification",
+      "HOA excludes unverified assessments; confirm current taxes and abatement terms",
+      "Station distance is straight-line, not a walking route",
+      "1,248 sq ft reported above-ground living area; basement area is not added.",
+      "About 0.58 mi straight-line to rail; walking route and full commute need checking."
+    ],
+    "eligible": true,
+    "photos": [
+      "https://bpp.mlsgrid.com/images/KEY424457614/57eaeaee-a825-4d1e-aa88-6531626b0c40.jpeg"
+    ],
+    "photoCount": 1,
+    "detailsAsOf": "2026-09-07",
+    "details": {
+      "Architecture": "Craftsman",
+      "Construction": "Frame, Stucco, Vinyl Siding",
+      "Interior features": "Eat-in Kitchen",
+      "Flooring": "Hardwood",
+      "Heating": "Natural Gas, Steam",
+      "Cooling": "Wall/Window Unit(s)",
+      "Appliances": "Oven, Range, Refrigerator",
+      "Parking": "Detached, Garage Door Opener, Private",
+      "Garage": "Yes",
+      "Garage spaces": "2",
+      "Basement": "Finished, Full, Walk-Out Access",
+      "Lot size (sq ft; may be shared for condos)": "4400",
+      "Lot size (acres; may be shared for condos)": "0.101",
+      "Pool": "No",
+      "Waterfront": "No",
+      "Water": "Public",
+      "Sewer": "Public Sewer",
+      "Utilities": "Electricity Connected, Natural Gas Connected, Sewer Connected, Water Connected",
+      "Living-area source": "Public Records",
+      "Listed since": "2026-04-18",
+      "Days on market (at snapshot)": "141"
+    },
+    "searchBatch": "2026-09-07",
+    "searchHighlights": [
+      "Recently renovated three-bedroom / three-bath house",
+      "New kitchen and detached two-car garage",
+      "Finished basement and in-home laundry"
+    ],
+    "researchSignals": [
+      "Updated interiors"
+    ],
+    "researchCautions": [
+      "1,248 sq ft reported above-ground living area; basement area is not added.",
+      "About 0.58 mi straight-line to rail; walking route and full commute need checking."
+    ],
+    "crime": {
+      "scope": "Nassau County",
+      "period": "2024",
+      "violent": 2294,
+      "property": 13966,
+      "total": 16260,
+      "source": "https://data.ny.gov/d/ca8h-8gjq"
+    },
+    "bike": {
+      "mappedPathMiles": 1.68,
+      "mappedPath": "Vanderbilt Motor Parkway",
+      "source": "https://www.openstreetmap.org/way/606608978",
+      "asOf": "2026-09-06",
+      "provider": "OpenStreetMap contributors",
+      "license": "ODbL 1.0"
     }
   }
 ]

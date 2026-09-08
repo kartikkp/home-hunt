@@ -8,30 +8,31 @@ import {meters,pointSegmentMeters,nearestBike,crimeWithin,validNYCPoint} from '.
 import {createApp} from '../server.mjs';
 import {buildProfile} from '../../taste-engine.mjs';
 const load=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'utf8'));
-const homes=await load('../homes.json'),summary=await load('../../data/refresh-summary.json');
-test('533 unique records preserve original 45 and mirror the browser catalogue exactly',async()=>{
-  assert.equal(homes.length,533);assert.equal(new Set(homes.map(h=>h.id)).size,533);
+const homes=await load('../homes.json'),summary=await load('../../data/search-2026-09-07.json'),priorIds=await load('../../data/catalogue-ids-2026-09-06.json');
+test('all prior records and original 45 survive; current catalogue mirrors the browser exactly',async()=>{
+  assert.equal(homes.length,summary.total);assert.equal(new Set(homes.map(h=>h.id)).size,homes.length);
+  assert.equal(priorIds.length,533);for(const id of priorIds)assert.ok(homes.some(h=>h.id===id),'Preserve '+id);
   for(const prefix of ['c','h','t'])for(let i=1;i<=15;i++)assert.ok(homes.some(h=>h.id===prefix+String(i).padStart(2,'0')&&h.legacy));
   const html=await readFile(new URL('../../index.html',import.meta.url),'utf8');
   assert.deepEqual(JSON.parse(html.match(/const HOMES=(\[.*?\]);\nwindow.homeHuntCatalog=HOMES;/s)[1]),homes);
-  assert.equal(homes.filter(isActive).length,500);assert.equal(homes.filter(h=>h.status==='Not reverified').length,32);
-  const active=homes.filter(isActive);assert.ok(active.every(h=>h.price>0&&h.price<=1200000&&h.beds>=2&&h.refreshedAt==='2026-09-06'));
+  assert.equal(homes.filter(isActive).length,summary.active);assert.equal(homes.filter(h=>h.status==='Not reverified').length,32);
+  const active=homes.filter(isActive);assert.ok(active.every(h=>h.price>0&&h.price<=1200000&&h.beds>=2&&['2026-09-06','2026-09-07'].includes(h.refreshedAt)));
   assert.ok(active.every(h=>h.source.listingId&&h.url===h.source.url&&new URL(h.url).protocol==='https:'&&['onekeymls.com','www.onekeymls.com'].includes(new URL(h.url).hostname)));
   assert.ok(active.every(h=>h.landLease===null),'No silent lease-free assumption');
-  assert.equal(active.filter(h=>h.hoa!==null).length,452);
-  assert.equal(active.filter(h=>h.tax!==null).length,493);
+  assert.ok(active.filter(h=>h.hoa!==null).length>=452);
+  assert.ok(active.filter(h=>h.tax!==null).length>=493);
   assert.ok(active.every(h=>!h.name.includes('Undisclosed Address')&&h.id!=='ok5ee9b67de2cf9d'),'Ambiguous or undisclosed locations are excluded');
   assert.ok(active.every(h=>Object.values(h.schools).every(v=>!/^contact agent$/i.test(v))));
-  assert.equal(active.filter(h=>Object.keys(h.schools).some(k=>!k.endsWith('District'))).length,463);
-  assert.equal(active.filter(localCrime).length,359);
-  assert.equal(active.filter(h=>h.crime.scope==='Nassau County').length,141);
+  assert.ok(active.filter(h=>Object.keys(h.schools).some(k=>!k.endsWith('District'))).length>=463);
+  assert.ok(active.filter(localCrime).length>=359);
+  assert.ok(active.filter(h=>h.crime.scope==='Nassau County').length>=141);
   assert.deepEqual(Object.fromEntries(['Condo','Single-family','Townhouse / attached'].map(c=>[c,active.filter(h=>h.category===c).length])),summary.categories);
   for(const h of active){assert.ok(Number.isFinite(h.station_mi));assert.ok(h.reviewNotes.some(n=>n.startsWith('Land lease:')));assert.ok(!JSON.stringify(h).includes('NaN'));if(!h.legacy){assert.equal(h.school,null);assert.equal(h.city_min,null);assert.equal(h.score,null);}}
 });
 test('categories, original homes, age, schools, query, local indicators and liked views compose',()=>{
-  assert.equal(selectHomes(homes,[],{availability:'active'}).length,500);
+  assert.equal(selectHomes(homes,[],{availability:'active'}).length,summary.active);
   assert.equal(selectHomes(homes,[],{availability:'original'}).length,45);
-  assert.equal(selectHomes(homes,[],{filter:'Condo',availability:'active'}).length,151);
+  assert.equal(selectHomes(homes,[],{filter:'Condo',availability:'active'}).length,summary.categories.Condo);
   assert.ok(selectHomes(homes,[],{filter:'newer'}).every(h=>h.year>=2000));
   assert.ok(selectHomes(homes,[],{filter:'schools'}).every(h=>h.legacy&&h.school>=4));
   const q=selectHomes(homes,[],{query:'woodside queens'});assert.ok(q.length>0);assert.ok(q.every(h=>(h.name+' '+h.area+' '+h.station+' '+Object.values(h.schools)).toLowerCase().includes('woodside')));

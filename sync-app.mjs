@@ -1,6 +1,7 @@
 import {buildProfile,MEMBERS,REASONS,DISLIKE_REASONS} from './taste-engine.mjs';
 import {selectHomes,isActive,localCrime} from './catalog-view.mjs';
 import {photoMarkup,photoURLs,extraDetailsMarkup,feedbackMarkup} from './card-details.mjs';
+import {normalizeFinancing,paymentMarkup} from './payment-estimate.mjs';
 const HOMES=window.homeHuntCatalog;
 const API='https://kartikkp.synology.me/home-hunt-api';
 const CACHE='home-hunt-sync-v1',TOKEN='home-hunt-connection',MEMBER_KEY='home-hunt-member';
@@ -8,6 +9,8 @@ const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=v=>v==null?'Unknown':'$'+Math.round(v).toLocaleString();
 const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}};
+const FINANCING_KEY='home-hunt-financing-v1';
+let financing=normalizeFinancing(read(FINANCING_KEY,null));
 let saved=read(CACHE,{}),preferredMember=read(MEMBER_KEY,saved.member), member=MEMBERS.includes(preferredMember)?preferredMember:'Kartik';
 let records=Array.isArray(saved.records)?saved.records:[],pending=Array.isArray(saved.pending)?saved.pending:[],token=read(TOKEN,'');
 let filter='all',tasteView='household',syncing=false,lastSync=null,notice='',storageWarning=false,connectionInvalid=false;
@@ -59,7 +62,7 @@ async function sync(){
   }catch(e){notice=e.name==='AbortError'?'Connection timed out. Your changes will retry automatically.':e.message;}
   finally{syncing=false;status();if(changed&&!document.activeElement?.matches('textarea,input'))render();}
 }
-const selected=rs=>selectHomes(HOMES,rs,{filter,query,availability,sort,bike,crime});
+const selected=rs=>selectHomes(HOMES,rs,{filter,query,availability,sort,bike,crime,financing});
 function indicators(h){
   const c=h.crime,b=h.bike;
   const crimeText=localCrime(h)?`${c.total} geocoded major-felony reports within 500 m` : c?.scope==='Nassau County'?`${c.total.toLocaleString()} index crimes · county-wide`:'Local crime data not verified';
@@ -73,6 +76,7 @@ function listingFacts(h){
   return `<div class="listingStatus ${isActive(h)?'fresh':'unverified'}">${esc(isActive(h)?'Active · checked '+h.refreshedAt:h.status||'Original · not reverified')}${h.legacy?' · original home':''}</div>
   <div class="price">${money(h.price)}<span>${h.sqft?h.sqft.toLocaleString()+' sf':'Size unknown'}</span></div>
   <div class="facts"><div><b>${h.beds??'?' } / ${h.baths??'?'}</b><span>beds / baths</span></div><div><b>${h.year||'Unknown'}</b><span>built</span></div><div><b>${money(h.hoa)}</b><span>HOA / mo</span></div><div><b>${money(h.tax)}</b><span>tax / mo${h.taxYear?' · '+h.taxYear:''}</span></div></div>
+  ${paymentMarkup(h,financing)}
   <div class="commute"><div><small>Nearest rail</small><b>${esc(h.station||'Not verified')}</b><span>${Number.isFinite(h.station_mi)?'≈ '+h.station_mi.toFixed(2)+' mi':'Distance unknown'} · ${h.stationMethod==='straight-line'?'straight-line':'prior estimate'}</span></div><div><small>City commute</small><b>${esc(h.city||'Midtown')}</b><span>${Number.isFinite(h.city_min)?'≈ '+h.city_min+' min rail · prior estimate':'Rail time not verified'}</span></div></div>
   <div class="quality">Condition: ${esc(h.quality||'Not verified')}</div><div class="school">${district?'School district: '+esc(district):'School assignment: verify'}${Number.isFinite(h.school)?'<br><small>Prior school fit '+h.school.toFixed(1)+'/5 · unverified estimate</small>':''}</div>
   ${indicators(h)}<details class="sourceDetails"><summary>Listing sources &amp; checks still needed</summary><p>${esc(h.source?.name||'Original imported snapshot')} ${h.source?.listingId?'· MLS '+esc(h.source.listingId):''}${h.source?.broker?'<br>Listing brokerage: '+esc(h.source.broker):''}</p><ul>${(h.reviewNotes||['Original snapshot; price, availability, type, costs, schools and commute need verification.']).map(n=>'<li>'+esc(n)+'</li>').join('')}</ul>${Object.keys(h.schools||{}).length?'<p>'+Object.entries(h.schools).filter(([k])=>!k.endsWith('District')).map(([k,v])=>esc(k.replace(/([A-Z])/g,' $1').trim())+': '+esc(v)).join('<br>')+'</p>':''}${h.stationSource?'<a href="'+esc(h.stationSource)+'" target="_blank" rel="noopener noreferrer">MTA station source</a>':''}</details>`;
@@ -134,6 +138,15 @@ $('#filters').addEventListener('click',e=>{const b=e.target.closest('[data-f]');
 $('#homeSearch').addEventListener('input',e=>{query=e.target.value;visibleLimit=60;render();});
 $('#availability').addEventListener('change',e=>{availability=e.target.value;visibleLimit=60;render();});
 $('#sortHomes').addEventListener('change',e=>{sort=e.target.value;visibleLimit=60;render();});
+function showFinancing(){for(const [id,key] of [['downPayment','downPercent'],['mortgageRate','ratePercent'],['loanYears','years']])$('#'+id).value=financing[key];}
+showFinancing();
+$('#financingForm').addEventListener('submit',e=>{
+  e.preventDefault();if(!e.currentTarget.reportValidity())return;
+  financing=normalizeFinancing({downPercent:$('#downPayment').valueAsNumber,ratePercent:$('#mortgageRate').valueAsNumber,years:$('#loanYears').valueAsNumber});
+  try{localStorage.setItem(FINANCING_KEY,JSON.stringify(financing));$('#financingStatus').textContent='Updated every card. Assumptions saved on this device.';}catch{$('#financingStatus').textContent='Updated every card. Browser storage is unavailable; assumptions will reset on reload.';}
+  render();
+});
+$('#latestSearch').addEventListener('click',()=>{availability='new-search';filter='all';query='';bike=false;crime=false;visibleLimit=60;$('#availability').value=availability;$('#homeSearch').value='';$('#bikeNearby').checked=false;$('#crimeData').checked=false;render();$('#content').scrollIntoView({block:'start'});});
 $('#bikeNearby').addEventListener('change',e=>{bike=e.target.checked;visibleLimit=60;render();});
 $('#crimeData').addEventListener('change',e=>{crime=e.target.checked;visibleLimit=60;render();});
 $('#showMore').addEventListener('click',()=>{visibleLimit+=60;render();});

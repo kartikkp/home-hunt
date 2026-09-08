@@ -47,19 +47,25 @@ export function buildProfile(homes,records,member='household'){
     numeric(h.city_min,stats.city,boost('Commute',10),30,'~'+h.city_min+' minutes by rail');
     numeric(h.station_mi,stats.station,5,1,'~'+h.station_mi+' miles to rail');
     categorical(condition(h),stats.condition,boost('Updated interiors',7),'Similar condition: '+condition(h));
+    // Source-reported evidence only; never infer appearance or light from size/year.
+    for(const reason of ['Updated interiors','Natural light'])if(positive.some(r=>r.reasons?.includes(reason))){
+      total+=5;
+      const supported=h.researchSignals?.includes(reason)||(reason==='Updated interiors'&&['New construction','Updated / move-in ready'].includes(condition(h)));
+      if(supported){possible+=5;earned+=5;explanations.push({weight:5,feedback:true,text:'Listing reports '+reason.toLowerCase()+'; matches your feedback (verify in person)'});}
+    }
     if(positive.some(r=>r.reasons?.includes('Bikeability')))numeric(bikeMiles(h),stats.bikeMiles,12,1,'Mapped bike infrastructure ~'+bikeMiles(h)+' mi away; proximity, not route quality');
     const cautions=new Set();
     const comparable=(a,b)=>Number.isFinite(a)&&Number.isFinite(b);
     for(const r of negative){const rejected=homes.find(x=>x.id===r.homeId);if(!rejected)continue;
       for(const reason of r.dislikeReasons||[]){
         if(reason==='Too expensive'&&comparable(h.price,rejected.price)&&h.price>=rejected.price)cautions.add('Priced at least as high as a home you rejected for price');
-        if(reason==='Too small'&&comparable(h.sqft,rejected.sqft)&&h.sqft<=rejected.sqft)cautions.add('No larger than a home you rejected for size');
+        if(reason==='Too small'&&h.category===rejected.category&&comparable(h.sqft,rejected.sqft)&&h.sqft<=rejected.sqft)cautions.add('No larger than a home of the same type you rejected for size; compare layouts');
         if(reason==='High monthly costs'&&[h.hoa,h.tax,rejected.hoa,rejected.tax].every(Number.isFinite)&&h.hoa+h.tax>=rejected.hoa+rejected.tax)cautions.add('Known HOA + tax is at least as high as a home you rejected for costs');
-        if(reason==='Too far from rail'&&comparable(h.station_mi,rejected.station_mi)&&h.station_mi>=rejected.station_mi)cautions.add('At least as far from rail as a home you rejected for station access');
+        if(reason==='Too far from rail'&&h.stationMethod===rejected.stationMethod&&comparable(h.station_mi,rejected.station_mi)&&h.station_mi>=Math.max(.5,rejected.station_mi))cautions.add('At least half a mile from rail and no closer than a home you rejected; verify the walking route');
         if(reason==='Bike access'&&comparable(bikeMiles(h),bikeMiles(rejected))&&bikeMiles(h)>=bikeMiles(rejected))cautions.add('Mapped bike infrastructure is at least as far away as for a rejected home');
       }
     }
-    return {id:h.id,name:h.name,area:h.area,score:total?Math.max(0,Math.round(earned/total*100)-Math.min(18,cautions.size*6)):0,coverage:total?Math.round(possible/total*100):0,reasons:explanations.sort((a,b)=>b.weight-a.weight).slice(0,3).map(x=>x.text),cautions:[...cautions]};
+    return {id:h.id,name:h.name,area:h.area,score:total?Math.max(0,Math.round(earned/total*100)-Math.min(18,cautions.size*6)):0,coverage:total?Math.round(possible/total*100):0,reasons:explanations.sort((a,b)=>Number(!!b.feedback)-Number(!!a.feedback)||b.weight-a.weight).slice(0,3).map(x=>x.text),cautions:[...cautions]};
   }).sort((a,b)=>b.score-a.score||b.coverage-a.coverage||a.id.localeCompare(b.id)).slice(0,6);
   return {member,count:likedHomes.length,dislikedCount:dislikedHomes.length,avoidThreads,confidence:likedHomes.length<2?'Getting started':likedHomes.length<5?'Early pattern':likedHomes.length<10?'Emerging pattern':'More evidence',stats,threads:threads.slice(0,8),bothLiked:both.map(h=>({id:h.id,name:h.name})),recommendations,searchBrief:likedHomes.length||dislikedHomes.length?{preferredType:stats.category,preferredArea:stats.area,typicalPrice:stats.price,typicalSqft:stats.sqft,typicalYear:stats.year,typicalCommuteMinutes:stats.city,typicalStationMiles:stats.station,typicalSchoolFit:stats.school,condition:stats.condition,explicitReasons:[...new Set(positive.flatMap(r=>r.reasons||[]))],notes:positive.filter(r=>r.note).map(r=>({member:r.member,homeId:r.homeId,note:r.note})),bothLiked:both.map(h=>h.name),dislikes:negative.map(r=>({member:r.member,homeId:r.homeId,name:homes.find(h=>h.id===r.homeId)?.name,reasons:r.dislikeReasons||[],note:r.note||''})),guidance:'Explicit dislikes are exclusions for the selected profile. Objective negative feedback can reduce similarity scores; subjective reasons require listing research, not inferred visual attributes. Observed preferences, not hard requirements. Verify live listings, school assignments and commutes. Reason tags and notes are user feedback, not verified attributes of candidate homes.'}:null};
 }

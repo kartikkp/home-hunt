@@ -4,11 +4,12 @@ import {readFile} from 'node:fs/promises';
 import {photoURLs,photoMarkup,extraDetailsMarkup,feedbackMarkup} from '../../card-details.mjs';
 import {buildProfile} from '../../taste-engine.mjs';
 const homes=JSON.parse(await readFile(new URL('../homes.json',import.meta.url),'utf8'));
+const summary=JSON.parse(await readFile(new URL('../../data/search-2026-09-07.json',import.meta.url),'utf8'));
 test('source-linked image previews and detailed cards preserve unknowns and escape untrusted text',()=>{
-  assert.equal(homes.filter(h=>photoURLs(h).length).length,500);
-  assert.equal(homes.filter(h=>Object.keys(h.details||{}).length).length,501);
+  assert.equal(homes.filter(h=>photoURLs(h).length).length,summary.photoCount);
+  assert.equal(homes.filter(h=>Object.keys(h.details||{}).length).length,summary.detailHomeCount);
   assert.ok(homes.every(h=>photoURLs(h).length<=6));
-  assert.equal(homes.reduce((n,h)=>n+Object.keys(h.details||{}).length,0),9882);
+  assert.equal(homes.reduce((n,h)=>n+Object.keys(h.details||{}).length,0),summary.detailFields);
   const h={id:'test',name:'<script>bad</script>',url:'https://onekeymls.com/',photos:['javascript:alert(1)','https://evil.example/x','https://bpp.mlsgrid.com/images/test.jpeg'],details:{Heating:'<img onerror=bad>'},hoa:null,tax:50};
   assert.equal(photoURLs(h).length,1);const html=photoMarkup(h)+extraDetailsMarkup(h);
   assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('javascript:'));assert.ok(html.includes('Monthly HOA + tax total incomplete'));assert.ok(!html.includes('<img onerror=bad>'));

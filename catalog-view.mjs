@@ -1,9 +1,10 @@
+import {estimatePayment} from './payment-estimate.mjs';
 export const CATEGORIES=['Condo','Single-family','Townhouse / attached'];
 export function isActive(h){return h.eligible===true&&h.status==='Active';}
 export const bikeMiles=h=>h.bike?.protectedMiles??h.bike?.mappedPathMiles??null;
 export function bikeNearby(h){return Number.isFinite(bikeMiles(h))&&bikeMiles(h)<=0.25;}
 export function localCrime(h){return h.crime?.scope==='500m radius'&&Number.isFinite(h.crime.total);}
-export function selectHomes(homes,records,{filter='all',query='',availability='all',bike=false,crime=false,sort='rail'}={}){
+export function selectHomes(homes,records,{filter='all',query='',availability='all',bike=false,crime=false,sort='rail',financing}={}){
   const likes=new Map();for(const r of records)if(r.liked){if(!likes.has(r.homeId))likes.set(r.homeId,new Set());likes.get(r.homeId).add(r.member);}
   const terms=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   const xs=homes.filter(h=>{
@@ -12,6 +13,7 @@ export function selectHomes(homes,records,{filter='all',query='',availability='a
     // Liked views always retain saved homes, even if no longer active.
     if(!special&&availability==='active'&&!isActive(h))return false;
     if(availability==='original'&&!h.legacy)return false;
+    if(availability==='new-search'&&(!h.searchBatch||!isActive(h)))return false;
     if(filter==='newer'&&!(h.year>=2000))return false;
     if(filter==='schools'&&!(h.school>=4))return false;
     if(filter==='liked'&&!fans.size)return false;
@@ -25,7 +27,8 @@ export function selectHomes(homes,records,{filter='all',query='',availability='a
   const val=(h,key)=>Number.isFinite(h[key])?h[key]:Infinity;
   return xs.sort((a,b)=>{
     let delta=0;
-    if(sort==='price')delta=val(a,'price')-val(b,'price');
+    if(sort==='payment')delta=(estimatePayment(a,financing).total??Infinity)-(estimatePayment(b,financing).total??Infinity);
+    else if(sort==='price')delta=val(a,'price')-val(b,'price');
     else if(sort==='space')delta=(b.sqft??-1)-(a.sqft??-1);
     else if(sort==='bike')delta=(bikeMiles(a)??Infinity)-(bikeMiles(b)??Infinity);
     else if(sort==='carrying')delta=(Number.isFinite(a.hoa)&&Number.isFinite(a.tax)?a.hoa+a.tax:Infinity)-(Number.isFinite(b.hoa)&&Number.isFinite(b.tax)?b.hoa+b.tax:Infinity);

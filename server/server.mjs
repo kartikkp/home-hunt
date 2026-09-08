@@ -40,7 +40,7 @@ export function createApp({store,homes,token,passwordHash,origins=['https://kart
       if(!timingSafeEqual(digest(supplied),digest(token))&&!auth?.valid(supplied))return respond(res,401,{error:'Sign in with your shared password'});
       if(path==='/state'&&req.method==='GET')return respond(res,200,{schemaVersion:1,members:MEMBERS,records:(await store.all()).map(publicRecord),serverTime:new Date().toISOString()});
       if(path==='/profile'&&req.method==='GET') {
-        const records=await store.all();return respond(res,200,{schemaVersion:1,generatedAt:new Date().toISOString(),catalogDate:'2026-09-06',records,profile:buildProfile(homes,records),homes:homes.filter(h=>records.some(r=>r.homeId===h.id&&(r.liked||r.disliked)))});
+        const records=await store.all();return respond(res,200,{schemaVersion:1,generatedAt:new Date().toISOString(),catalogDate:homes.map(h=>h.refreshedAt).filter(Boolean).sort().at(-1),records,profile:buildProfile(homes,records),homes:homes.filter(h=>records.some(r=>r.homeId===h.id&&(r.liked||r.disliked)))});
       }
       const match=path.match(/^\/likes\/([a-z0-9]+)$/);
       if(match&&req.method==='PUT') {
