@@ -1,4 +1,4 @@
-import {estimatePayment} from './payment-estimate.mjs';
+import {estimatePayment} from './payment-estimate.mjs?v=20260907-search';
 export const CATEGORIES=['Condo','Single-family','Townhouse / attached'];
 export function isActive(h){return h.eligible===true&&h.status==='Active';}
 export const bikeMiles=h=>h.bike?.protectedMiles??h.bike?.mappedPathMiles??null;
