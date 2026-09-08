@@ -1,5 +1,5 @@
 import {buildProfile,MEMBERS,REASONS,DISLIKE_REASONS} from './taste-engine.mjs?v=20260907-search';
-import {selectHomes,isActive,localCrime} from './catalog-view.mjs?v=20260907-search';
+import {selectHomes,isActive,localCrime} from './catalog-view.mjs?v=20260908-sorts';
 import {photoMarkup,photoURLs,extraDetailsMarkup,feedbackMarkup} from './card-details.mjs?v=20260907-search';
 import {normalizeFinancing,paymentMarkup} from './payment-estimate.mjs?v=20260907-search';
 const HOMES=window.homeHuntCatalog;
@@ -14,7 +14,7 @@ let financing=normalizeFinancing(read(FINANCING_KEY,null));
 let saved=read(CACHE,{}),preferredMember=read(MEMBER_KEY,saved.member), member=MEMBERS.includes(preferredMember)?preferredMember:'Kartik';
 let records=Array.isArray(saved.records)?saved.records:[],pending=Array.isArray(saved.pending)?saved.pending:[],token=read(TOKEN,'');
 let filter='all',tasteView='household',syncing=false,lastSync=null,notice='',storageWarning=false,connectionInvalid=false;
-let visibleLimit=60,query='',availability='all',sort='rail',bike=false,crime=false;
+let visibleLimit=60,query='',availability='all',sort='rail-asc',bike=false,crime=false;
 let legacy=read('home-hunt-liked',[]);if(!Array.isArray(legacy))legacy=[];legacy=legacy.filter(id=>HOMES.some(h=>h.id===id));
 let importedLegacy=!!saved.importedLegacy;
 const openDetails=new Set();

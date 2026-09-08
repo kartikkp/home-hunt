@@ -24,15 +24,17 @@ export function selectHomes(homes,records,{filter='all',query='',availability='a
     const text=[h.name,h.area,h.station,...Object.values(h.schools||{})].join(' ').toLowerCase();
     return terms.every(t=>text.includes(t));
   });
-  const val=(h,key)=>Number.isFinite(h[key])?h[key]:Infinity;
+  const [metric,order]=sort.split('-');
+  // Preserve old callers: space meant largest first; other bare keys meant lowest first.
+  const direction=order==='desc'||(!order&&metric==='space')?-1:1;
+  const value=h=>metric==='payment'?estimatePayment(h,financing).total
+    :metric==='price'?h.price:metric==='space'?h.sqft:metric==='bike'?bikeMiles(h)
+    :metric==='carrying'?(Number.isFinite(h.hoa)&&Number.isFinite(h.tax)?h.hoa+h.tax:null):h.station_mi;
+  const values=new Map(xs.map(h=>[h,value(h)]));
   return xs.sort((a,b)=>{
-    let delta=0;
-    if(sort==='payment')delta=(estimatePayment(a,financing).total??Infinity)-(estimatePayment(b,financing).total??Infinity);
-    else if(sort==='price')delta=val(a,'price')-val(b,'price');
-    else if(sort==='space')delta=(b.sqft??-1)-(a.sqft??-1);
-    else if(sort==='bike')delta=(bikeMiles(a)??Infinity)-(bikeMiles(b)??Infinity);
-    else if(sort==='carrying')delta=(Number.isFinite(a.hoa)&&Number.isFinite(a.tax)?a.hoa+a.tax:Infinity)-(Number.isFinite(b.hoa)&&Number.isFinite(b.tax)?b.hoa+b.tax:Infinity);
-    else delta=val(a,'station_mi')-val(b,'station_mi');
-    return delta||a.id.localeCompare(b.id);
+    const av=values.get(a),bv=values.get(b),aKnown=Number.isFinite(av),bKnown=Number.isFinite(bv);
+    // Do not reverse unknowns to the top when reversing the numeric order.
+    if(aKnown!==bKnown)return aKnown?-1:1;
+    return (aKnown?direction*(av-bv):0)||a.id.localeCompare(b.id);
   });
 }
