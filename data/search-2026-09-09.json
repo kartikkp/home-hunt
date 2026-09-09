@@ -1,0 +1,5238 @@
+{
+  "searchDate": "2026-09-09",
+  "searchedAt": "2026-09-09T23:30:02.395Z",
+  "screened": 1306,
+  "searchPages": 50,
+  "detailChecks": 640,
+  "attempted": 641,
+  "errors": [
+    {
+      "id": "ok26651ba68531ef",
+      "url": "https://onekeymls.com/home-details/173-43-103-avenue-jamaica-south-ny-11433/abGZJU2N4C9",
+      "error": "Missing or mismatched identity"
+    }
+  ],
+  "skipped": [],
+  "added": 14,
+  "existingRechecked": 509,
+  "shortlist": 15,
+  "total": 555,
+  "active": 506,
+  "shortlistIds": [
+    "c01",
+    "ok308c8278eb91d0",
+    "ok6f24a50192e0a9",
+    "ok8762307afbfbdb",
+    "oke433ec593ec92e",
+    "ok7b466a5c8aab1a",
+    "okd6c230823966d3",
+    "okff6b7d2dcfb88d",
+    "oke525a7982e20a4",
+    "ok88868d8d3927b6",
+    "oka6fe7eb9777066",
+    "ok5c9cc37e141acb",
+    "okd2a055b0a73616",
+    "ok7e9dae025db1ff",
+    "ok0e6f388d637754"
+  ],
+  "refreshedIds": [
+    "c01",
+    "c02",
+    "c03",
+    "c04",
+    "h03",
+    "h04",
+    "h05",
+    "h06",
+    "h08",
+    "h10",
+    "h12",
+    "h13",
+    "h15",
+    "t12",
+    "okee931fc8109808",
+    "okb13c64cf6d3cef",
+    "ok1a541b3c35f229",
+    "ok3eb21dd989257e",
+    "oke05141fb67bbae",
+    "ok4c02fb9ffb44e6",
+    "oka7a778e0b1ec24",
+    "oke4681d0443c988",
+    "ok8105419c8ffd31",
+    "okba5db748259ea0",
+    "oke871761e355ca5",
+    "ok8ab33a6baa153e",
+    "ok637c05d018db09",
+    "okcf7845ba384a66",
+    "ok75c582fa3f9fd3",
+    "ok0e7de00da1c998",
+    "ok81c9ff859f5a69",
+    "ok7ca1cb775148c8",
+    "ok4031cbabdb554b",
+    "ok04371ed76a9474",
+    "oke2bf058a530f8c",
+    "okbefbb915076485",
+    "oka4bd16d83addc7",
+    "okb5c672ad97adbd",
+    "okd4eb941307225b",
+    "ok9cf0feeb08bd83",
+    "ok96152501f5c749",
+    "okd47a81087529ec",
+    "ok1ef3ca0232ebfc",
+    "ok37f1341667ca2d",
+    "okcf19c9c90a3faa",
+    "ok84e7160d7b8f1d",
+    "ok4e05bb0a31ace6",
+    "okf75cff9503f57b",
+    "okc3793899f3ef73",
+    "ok85de6466d699f3",
+    "ok2a7e136843fa80",
+    "ok59ac8c7f3a0277",
+    "okd77439da9c258f",
+    "okdacb718e9e6e00",
+    "ok9df45f5e08bc5f",
+    "okc4911c2f2654c4",
+    "ok1cc6f9decd3541",
+    "okc24a70b44a41bd",
+    "ok1bbc95638e8c72",
+    "ok64a9779710b1c5",
+    "ok96e2a45e6f9026",
+    "okf49653d5d6586a",
+    "okf521f142af3d85",
+    "ok7c2e842e18b116",
+    "ok95a221de5a7bd9",
+    "ok00ff3285f6de36",
+    "ok7ebd86cee05fda",
+    "okdc715dc2b4e6f5",
+    "okcb6899caa24533",
+    "okceb11d293adc6c",
+    "ok81131ba19ae758",
+    "okc9b63cd5afb75e",
+    "okb0988b8efa152a",
+    "ok5efcac4eed4ab4",
+    "okda2566d2428213",
+    "ok382f9abfcc87e2",
+    "ok2135fc6687cf51",
+    "ok9cd8a59f035754",
+    "ok7737ac5371ed26",
+    "ok0d2212906375cb",
+    "ok1a1298e0990a26",
+    "ok139a34f63c76c4",
+    "ok420a15709169e3",
+    "ok63911e519fb85d",
+    "ok16a26691edd5b9",
+    "oke8e1b41f246741",
+    "ok58cef632ba92c7",
+    "okcc1ca9bd51d09f",
+    "okcef671a90c0cc9",
+    "ok44fe2df4a58c41",
+    "ok4d4833265b8223",
+    "okac5b1c2d614c08",
+    "ok7d0ad2a8b860f3",
+    "okb4063a82fcc99e",
+    "ok2b513b7bc6d6e5",
+    "okd9c15f8bb15314",
+    "ok4558a2f2b396a6",
+    "ok404416d05a1119",
+    "ok263bc0dc275e68",
+    "ok74d23ff62bed61",
+    "ok539c35126cd48c",
+    "ok57f1c589e949bd",
+    "ok9f621a09769cf3",
+    "ok54430788f13623",
+    "okc365a4efe8fd14",
+    "oked8ad43629a4ca",
+    "ok3c29b45bc5df3f",
+    "ok9bd76968fe18f7",
+    "okdd4802ce62f83c",
+    "ok4e140ef8b5c459",
+    "ok697e5668c23397",
+    "ok254bec8dd7b33b",
+    "ok198a0dea09ff0a",
+    "oke64b6355642d89",
+    "ok6f410a4188a945",
+    "okbce8f1bd72e923",
+    "okdd7cc5d10d3189",
+    "okbc36d70aa9f63d",
+    "ok74b97fe0afc2ca",
+    "ok73d9f1068dddd5",
+    "ok442868b486c867",
+    "okd38917aa2cd265",
+    "okbf6fb0da60a304",
+    "okab26f1c825953a",
+    "ok7224d32bec4a49",
+    "ok739d09b3ab8fdd",
+    "ok42dfd2b104013d",
+    "ok03d175a7b5c060",
+    "okfca35f45162506",
+    "ok7c87dab403e711",
+    "ok968e8a3d72c6da",
+    "ok2325230718de89",
+    "ok6556dd9564c93c",
+    "ok7cf9e24fa557e6",
+    "okc443d098930f13",
+    "okcb25d67fad31b2",
+    "ok0c263d4754c46d",
+    "ok62098e5a2ef614",
+    "okfce8c9ef355207",
+    "ok5ca5db76580585",
+    "okc562adaebb2039",
+    "okc7310c41843227",
+    "oke753fe2738d757",
+    "ok957aaf56c4f4f4",
+    "oke073d3591da8b1",
+    "ok144257b59b9425",
+    "oke4e8f5af487309",
+    "oke169998f49af52",
+    "okc33dedb9c26b30",
+    "ok15eec679ad623a",
+    "ok1f1b1578db57d8",
+    "okea257cdd0987bf",
+    "ok56fcf2e3ca75fb",
+    "ok9714f7b60d8bfc",
+    "ok3d022f55ebd8b5",
+    "okf6478a1a777de9",
+    "okee0f62f2b457ea",
+    "ok061f05dd766d8c",
+    "ok049ce37cbe7da6",
+    "oke4776731a46201",
+    "ok17784122c2eb96",
+    "okcf40115d8bd374",
+    "ok763c6e93e60cfd",
+    "okd8dd1a2071605a",
+    "ok822b0b36a710c9",
+    "oka1528a005580b7",
+    "okdb0051b5390c8d",
+    "ok30891cf863bcef",
+    "oke199a1ad769785",
+    "ok3cfffa68b7b800",
+    "ok4d9aba923a944f",
+    "ok1f45b189877890",
+    "okc778318d85e88d",
+    "ok889d422147e75d",
+    "oke10a6640ff31d1",
+    "ok9f4128f1a154ef",
+    "ok48257c81370626",
+    "ok423125752ae751",
+    "ok755f09208e8d62",
+    "okc0a292c7ec7a9a",
+    "okfc9365b5a3949c",
+    "ok709252cfaebc00",
+    "ok7596a27687def1",
+    "ok84d97790381c4c",
+    "okbc360461c96bf0",
+    "ok38bb7b48e676c3",
+    "ok108b072be0973f",
+    "ok54cc88ed6b90c6",
+    "ok82d744c598952a",
+    "ok024f5961578e81",
+    "okdc2f6ae934a140",
+    "oke85e19c75aa988",
+    "okda2953e9b9d2b9",
+    "ok07928e453de04b",
+    "okc9db20648c1b19",
+    "ok88b97963d0dfd4",
+    "okefa37001ee2b47",
+    "ok7c39aed686440f",
+    "ok02035d49c3f09b",
+    "ok9fc49db88776df",
+    "oke0964cafbf9ca8",
+    "okf10636210937e9",
+    "ok633646485f462e",
+    "okca96a15b12eaa3",
+    "ok38c0c45ec1b44a",
+    "ok12ba58129bf3c4",
+    "okc5b061ce9d2e11",
+    "ok61e2b9df8eb8d2",
+    "ok2e16e1a25e9964",
+    "ok93278a177e821b",
+    "okfb5501a4e4bbae",
+    "ok1ce433b0db0d2b",
+    "okcc040e0bb6397f",
+    "okc38448cf5acac1",
+    "ok318ebb83a0fcdb",
+    "okcc798055caa5fd",
+    "okdad2662183c178",
+    "ok20a6e60d2fa028",
+    "ok1ca8d56ba20c15",
+    "oka33ef95aefb7a0",
+    "ok4ed1c4f5e20e6d",
+    "ok95cb40bdd7039d",
+    "ok59af444f3588d4",
+    "okff6a4a2b708ffd",
+    "ok449911d62db922",
+    "oke70614d2030ed6",
+    "ok53292f3768eb5c",
+    "oke059471e45fa5a",
+    "ok9a8923c065b725",
+    "oke69eea7b9235df",
+    "okba1d70b1040273",
+    "ok22f2c24882a792",
+    "oke9e26ff6355e64",
+    "ok3932e86f0dca9e",
+    "okd79f17f7a5e16b",
+    "okccccd8b098dbf9",
+    "ok9ae6615f70ab64",
+    "ok2ccc472047039f",
+    "oka3dd3511f83f64",
+    "ok13eb0be918a3bc",
+    "okba171133a4af61",
+    "ok929519295a8ced",
+    "ok4ab649c3b6e68b",
+    "ok1a4694ac2146c6",
+    "ok85ed71e12969be",
+    "ok9e735c4407fb68",
+    "ok507de550976fdf",
+    "okb407a20439eeef",
+    "ok365dbf1f711f59",
+    "okea8516b5254b15",
+    "okb210f25f9ce5f3",
+    "okdcbf17883ed90e",
+    "ok55889bbf93d30b",
+    "ok7f4422d2a84751",
+    "ok786ae0c3b0f627",
+    "ok8cfd0948ff1216",
+    "ok6a2770effd2b30",
+    "ok826848ad286719",
+    "ok9623b6f5ffc4a1",
+    "ok3a7c07ae521e80",
+    "ok0cba15fb840ea7",
+    "ok329f14de453d2e",
+    "ok2fb54b13054cd6",
+    "ok2d14ce7f2190de",
+    "ok9ff822bc4affc1",
+    "ok5137afefa49f1f",
+    "ok8d8ec91078a16d",
+    "ok72d9ea19d7f198",
+    "okd7dcd44b5bafd8",
+    "ok9d60aadce01aae",
+    "ok46afb874b119c5",
+    "ok510371a478454b",
+    "okcd712e05c6f553",
+    "ok8df91783621b33",
+    "ok9447b01c8f0212",
+    "okd1eb61a350fc38",
+    "oka2cca92ec810a3",
+    "okccfce6ccf6550f",
+    "okb469a24202bf9a",
+    "okd9050907de51c6",
+    "ok6673d28fa8d793",
+    "okc8b8922a511ba0",
+    "okaa8827467110ee",
+    "okbb1e04dd277e3e",
+    "okde3be495af5f4a",
+    "ok6321a578adeda9",
+    "ok847fc8ec012f3b",
+    "okda5939cecee621",
+    "ok421b46f68c6a38",
+    "okc2a07799329902",
+    "okf5da35cd38df9d",
+    "ok57a6cfbd887b2e",
+    "okdf393769ef795d",
+    "okaf1e646753fe1e",
+    "ok0772c9052bbe12",
+    "oka5f2af24f32bc7",
+    "ok2301cc40716e9a",
+    "ok4a50af8ee8c927",
+    "ok305a7dd9231199",
+    "okf6063fff3529ec",
+    "ok668177a5fdc141",
+    "okdd1d78ecc21226",
+    "ok09064f3e9cd64f",
+    "ok45eb7669b0f0c3",
+    "ok680645bde2b598",
+    "okae14e19fc24143",
+    "okec37b69d6c22a7",
+    "okafded2b4dc5a31",
+    "ok4d98f3087309e1",
+    "okcb8fee506904f7",
+    "okba8681c13a01cf",
+    "ok2eaaa3982ef68f",
+    "okde418acc1a876c",
+    "ok30624fb4db1afe",
+    "okbfa0dc23b4d03e",
+    "ok09af88a68ad87d",
+    "ok3ede6ae9410b1a",
+    "ok5d0e182027f8fc",
+    "ok35e0470b0b91e8",
+    "ok2d130d89d58ec1",
+    "ok350c893a9cd286",
+    "ok27c0a7f93b72a5",
+    "ok0f08938e685ccd",
+    "okb0cde747ada732",
+    "ok7e7e1bc60fdc18",
+    "ok0d0afe6aec4667",
+    "ok999f6d9ea3d59d",
+    "ok16d941502d8c09",
+    "ok7c0905c0a5293e",
+    "okee243c65061aa8",
+    "okb4f6d852d677c2",
+    "ok890d56017ccf81",
+    "oke362cb18777140",
+    "oke08ff6ce3492ab",
+    "ok09f98b984f0b19",
+    "ok7fc7fa954503c2",
+    "oka966db98b5fa34",
+    "okd05555a7116852",
+    "okf226aabf98094e",
+    "okb28f8969e4a395",
+    "okb9b4035c02625d",
+    "okce7f906bf07734",
+    "ok0184f846ba927e",
+    "okbecb72ac0aaeda",
+    "ok77aaf58d3aaea9",
+    "oka0addb703563b7",
+    "ok09e93b8d06ffad",
+    "okaf9420c511a9bb",
+    "ok0d22aa4ad6fec8",
+    "okaf99ff48d1b881",
+    "ok36f8341e82fae3",
+    "ok06185f3c858c6a",
+    "ok9ec75e711efeb9",
+    "ok7a2f3b606b15a7",
+    "okf3ad8d3239ae44",
+    "ok8dbd7149a242a2",
+    "ok1cf474a09cb20b",
+    "oke2d87a9bb7b2c2",
+    "ok0e1664e282fd15",
+    "okaa071d47f9dbc7",
+    "okcaef8293e55ecf",
+    "ok7ba1b60de146e9",
+    "oke7cc92f1fc2f63",
+    "okd5c07fcd34c682",
+    "ok424d7fc40ccdc0",
+    "ok0dc20939ce7dfb",
+    "ok14872a5376f3f4",
+    "okdabd5c67c3dd3c",
+    "ok3f4426ed222c78",
+    "okfad11fb16a7b9d",
+    "ok09b5899888fe01",
+    "ok62daba2b23298f",
+    "ok418eb21e6003fb",
+    "ok383e4048471f2b",
+    "ok0a2792dce73803",
+    "ok3dfdee1c127b48",
+    "ok522b94bf80a94b",
+    "ok5d6faa1ecf9c9c",
+    "ok6b4ab8a65d7828",
+    "ok91bba9050b1bb8",
+    "okbc77b4a81282ba",
+    "okafa27176f10269",
+    "ok60c4f843ac3dad",
+    "okdab305d1c60817",
+    "okb505252614665a",
+    "ok7208367bf1e32f",
+    "ok5963c4037abf64",
+    "ok84ec053b957268",
+    "ok9b40f0251c8f52",
+    "ok2bb4b80bf09a97",
+    "ok7eec3c8b68401c",
+    "okc72be509ca9935",
+    "ok0777a8fb67fefb",
+    "ok92d1805f3299aa",
+    "okdd5e54934d728a",
+    "ok123cc7ed91155f",
+    "oka8aa14979af750",
+    "okb05738e62bfcad",
+    "ok881e486f22239f",
+    "ok3be52ab895cb96",
+    "okb6e1170cf38bc3",
+    "okffeb1e9af5d414",
+    "ok8a9cef4c892200",
+    "okf651464ad7d4d3",
+    "ok377920493b8ee0",
+    "ok1874fa7ed360a6",
+    "ok60957e466204b2",
+    "ok96db4e30735ad0",
+    "ok3a357c80843881",
+    "okfce33a9777de8f",
+    "okd3ea9b84362843",
+    "ok26ad563cdf9c2e",
+    "ok373f1728fed00d",
+    "ok49d95109b2dd85",
+    "ok29b1c740b76517",
+    "ok556347bf098ae0",
+    "okcd943d15e3bd1d",
+    "ok4e598637d68559",
+    "okcae011a0a656e5",
+    "ok3ae04702c62b3d",
+    "okad9323c05b18ec",
+    "ok0428ec5d65ad52",
+    "ok88fc2c7ae8fb72",
+    "ok0e7e56cc34131c",
+    "ok8a616b428f55b1",
+    "okae20d84086d78d",
+    "ok906d410c21f829",
+    "ok165ee099b0108d",
+    "okd0e90896924908",
+    "ok272f990b806427",
+    "ok8b12ea3496b26c",
+    "ok4c2a798e26bf9a",
+    "okde4851ba877bd4",
+    "ok87588da57711a0",
+    "oka1e243b52dc706",
+    "okba5bd193957552",
+    "ok07a2b9c72e2ad3",
+    "okf51b78f08a351a",
+    "ok764907d8c374c9",
+    "ok8f963d4adad3bb",
+    "ok803109a04ef0b0",
+    "okcb7a15f84cbd6a",
+    "ok5d6d76172d7566",
+    "ok13acec05041cd9",
+    "ok010848a95acfdd",
+    "ok6c374580a24f9e",
+    "okac154846313e16",
+    "ok1b760cf3ab48f9",
+    "ok622968c9a8b4f7",
+    "ok76b4d7802649d9",
+    "ok1f233b51ab2e45",
+    "ok7cd7cd289395ce",
+    "okaea22bdabcbcc6",
+    "okfe755e4293400c",
+    "ok8465898ed2620e",
+    "ok0c96dd8043db9b",
+    "ok3b366da3861025",
+    "okdb513e84a92426",
+    "okb6f4b4b5963738",
+    "okfaaf379b793a6e",
+    "oke78f5ed8ae8e95",
+    "ok4a0ab9ffb92703",
+    "ok43c8fa94e04e07",
+    "okf0b246b84a7460",
+    "ok32786977215734",
+    "oka376028c18db65",
+    "ok10561d953c5bdd",
+    "ok95f8f6c2c628a5",
+    "ok73f1146097f863",
+    "ok72fe1a71bb8ec7",
+    "okb48eba005c7a83",
+    "ok688c5420028ac2",
+    "ok9d2a4d2b8d10d7",
+    "ok1faa8a2b101c4e",
+    "okad85d1fbf98f37",
+    "oka9cd3a1a3ddb11",
+    "okc5def3ed785349",
+    "okcb39a1c21c780d",
+    "okb9c26703a6bc55",
+    "ok56e40464a5262b",
+    "ok4e462174ca05f5",
+    "okead868232a4fa9",
+    "ok0bba3f460875f4",
+    "ok796dbd56b07d10",
+    "ok670120d16ba6a4",
+    "okd74fa027243905",
+    "ok570ea4e996583f",
+    "oka94a96c9da5bca",
+    "ok4c367f41922934",
+    "ok17039288aae1d5",
+    "ok7e4feb82b73adc",
+    "oke5413e13e03f36",
+    "ok6f6961ed77fafa",
+    "ok861ce64402b4f5",
+    "ok516b1aa16d5fd7",
+    "ok12eca8b6919e86",
+    "ok021d7ad86a4dd5",
+    "ok693d7219d04d26",
+    "ok070373d3d4e4c2",
+    "ok59deebf93eb6ea",
+    "okb795617de358dd",
+    "okcc4f7276b6ea58",
+    "ok805d2a1715763d",
+    "oke868e5b8ed1af4",
+    "okf11b473a1facc1",
+    "ok55f2af4d132692",
+    "okd9b5dd84937944",
+    "ok850dc29d1b1422",
+    "ok39bbf33ea1fdf7",
+    "ok308c8278eb91d0",
+    "ok6f24a50192e0a9",
+    "ok8762307afbfbdb",
+    "oke433ec593ec92e",
+    "ok7b466a5c8aab1a",
+    "okd6c230823966d3",
+    "okff6b7d2dcfb88d",
+    "oke525a7982e20a4",
+    "ok88868d8d3927b6",
+    "oka6fe7eb9777066",
+    "ok5c9cc37e141acb",
+    "okd2a055b0a73616",
+    "ok7e9dae025db1ff",
+    "ok0e6f388d637754"
+  ],
+  "pages": [
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11101",
+      "returned": 30,
+      "total": 132,
+      "accessedAt": "2026-09-09T23:30:00.314Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11102",
+      "returned": 30,
+      "total": 62,
+      "accessedAt": "2026-09-09T23:30:00.328Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11103",
+      "returned": 30,
+      "total": 54,
+      "accessedAt": "2026-09-09T23:30:00.334Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11104",
+      "returned": 30,
+      "total": 56,
+      "accessedAt": "2026-09-09T23:30:00.338Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11105",
+      "returned": 30,
+      "total": 66,
+      "accessedAt": "2026-09-09T23:30:00.347Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11106",
+      "returned": 30,
+      "total": 78,
+      "accessedAt": "2026-09-09T23:30:00.351Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11109",
+      "returned": 9,
+      "total": 9,
+      "accessedAt": "2026-09-09T23:30:00.354Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11374",
+      "returned": 30,
+      "total": 321,
+      "accessedAt": "2026-09-09T23:30:00.357Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11375",
+      "returned": 30,
+      "total": 514,
+      "accessedAt": "2026-09-09T23:30:00.366Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11354",
+      "returned": 30,
+      "total": 673,
+      "accessedAt": "2026-09-09T23:30:00.370Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11355",
+      "returned": 30,
+      "total": 421,
+      "accessedAt": "2026-09-09T23:30:00.374Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11360",
+      "returned": 30,
+      "total": 183,
+      "accessedAt": "2026-09-09T23:30:00.378Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11377",
+      "returned": 30,
+      "total": 314,
+      "accessedAt": "2026-09-09T23:30:00.387Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11372",
+      "returned": 30,
+      "total": 243,
+      "accessedAt": "2026-09-09T23:30:00.390Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11373",
+      "returned": 30,
+      "total": 253,
+      "accessedAt": "2026-09-09T23:30:00.394Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11378",
+      "returned": 30,
+      "total": 101,
+      "accessedAt": "2026-09-09T23:30:00.399Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11379",
+      "returned": 30,
+      "total": 116,
+      "accessedAt": "2026-09-09T23:30:00.408Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11358",
+      "returned": 30,
+      "total": 151,
+      "accessedAt": "2026-09-09T23:30:00.412Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11361",
+      "returned": 30,
+      "total": 146,
+      "accessedAt": "2026-09-09T23:30:00.416Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11362",
+      "returned": 30,
+      "total": 123,
+      "accessedAt": "2026-09-09T23:30:00.420Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11364",
+      "returned": 30,
+      "total": 214,
+      "accessedAt": "2026-09-09T23:30:00.429Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11365",
+      "returned": 30,
+      "total": 120,
+      "accessedAt": "2026-09-09T23:30:00.433Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10023",
+      "returned": 27,
+      "total": 27,
+      "accessedAt": "2026-09-09T23:30:00.437Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10024",
+      "returned": 24,
+      "total": 24,
+      "accessedAt": "2026-09-09T23:30:00.441Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10025",
+      "returned": 30,
+      "total": 36,
+      "accessedAt": "2026-09-09T23:30:00.449Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10026",
+      "returned": 23,
+      "total": 23,
+      "accessedAt": "2026-09-09T23:30:00.452Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10016",
+      "returned": 30,
+      "total": 57,
+      "accessedAt": "2026-09-09T23:30:00.456Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10065",
+      "returned": 14,
+      "total": 14,
+      "accessedAt": "2026-09-09T23:30:00.459Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10075",
+      "returned": 7,
+      "total": 7,
+      "accessedAt": "2026-09-09T23:30:00.465Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10021",
+      "returned": 24,
+      "total": 24,
+      "accessedAt": "2026-09-09T23:30:00.468Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10019",
+      "returned": 30,
+      "total": 38,
+      "accessedAt": "2026-09-09T23:30:00.472Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10011",
+      "returned": 19,
+      "total": 19,
+      "accessedAt": "2026-09-09T23:30:00.475Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10010",
+      "returned": 11,
+      "total": 11,
+      "accessedAt": "2026-09-09T23:30:00.483Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10012",
+      "returned": 13,
+      "total": 13,
+      "accessedAt": "2026-09-09T23:30:00.485Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10013",
+      "returned": 25,
+      "total": 25,
+      "accessedAt": "2026-09-09T23:30:00.488Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10014",
+      "returned": 16,
+      "total": 16,
+      "accessedAt": "2026-09-09T23:30:00.491Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10017",
+      "returned": 17,
+      "total": 17,
+      "accessedAt": "2026-09-09T23:30:00.499Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10018",
+      "returned": 30,
+      "total": 53,
+      "accessedAt": "2026-09-09T23:30:00.502Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/10038",
+      "returned": 15,
+      "total": 15,
+      "accessedAt": "2026-09-09T23:30:00.507Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11001",
+      "returned": 30,
+      "total": 101,
+      "accessedAt": "2026-09-09T23:30:00.512Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11040",
+      "returned": 30,
+      "total": 150,
+      "accessedAt": "2026-09-09T23:30:00.521Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11501",
+      "returned": 30,
+      "total": 71,
+      "accessedAt": "2026-09-09T23:30:00.526Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11530",
+      "returned": 30,
+      "total": 89,
+      "accessedAt": "2026-09-09T23:30:00.530Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11590",
+      "returned": 30,
+      "total": 152,
+      "accessedAt": "2026-09-09T23:30:00.534Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11801",
+      "returned": 30,
+      "total": 155,
+      "accessedAt": "2026-09-09T23:30:00.543Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11201",
+      "returned": 30,
+      "total": 52,
+      "accessedAt": "2026-09-09T23:30:00.547Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11211",
+      "returned": 30,
+      "total": 46,
+      "accessedAt": "2026-09-09T23:30:00.551Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11222",
+      "returned": 30,
+      "total": 44,
+      "accessedAt": "2026-09-09T23:30:00.555Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11215",
+      "returned": 26,
+      "total": 26,
+      "accessedAt": "2026-09-09T23:30:00.562Z"
+    },
+    {
+      "url": "https://www.onekeymls.com/homes-for-sale/11238",
+      "returned": 19,
+      "total": 19,
+      "accessedAt": "2026-09-09T23:30:00.566Z"
+    }
+  ],
+  "changes": [
+    {
+      "id": "c01",
+      "name": "4135 67th St Unit 4A",
+      "fields": {
+        "status": {
+          "before": "Not reverified",
+          "after": "Active"
+        },
+        "hoa": {
+          "before": 840,
+          "after": 820
+        },
+        "tax": {
+          "before": 1128,
+          "after": 1127.5
+        }
+      }
+    },
+    {
+      "id": "c02",
+      "name": "168 E 111th St Unit 2A",
+      "fields": {
+        "tax": {
+          "before": 1354,
+          "after": 1353.75
+        }
+      }
+    },
+    {
+      "id": "c04",
+      "name": "168 E 111th St Unit 2D",
+      "fields": {
+        "tax": {
+          "before": 1314,
+          "after": 1314.3333333333333
+        }
+      }
+    },
+    {
+      "id": "h04",
+      "name": "11 Verbena Ct",
+      "fields": {
+        "tax": {
+          "before": 1054,
+          "after": 1053.7208333333333
+        }
+      }
+    },
+    {
+      "id": "h05",
+      "name": "177 Jerome Ave",
+      "fields": {
+        "status": {
+          "before": "Coming Soon",
+          "after": "Active"
+        },
+        "tax": {
+          "before": 950,
+          "after": 950.1666666666666
+        }
+      }
+    },
+    {
+      "id": "h06",
+      "name": "465 Washington Pl",
+      "fields": {
+        "tax": {
+          "before": 856,
+          "after": 856.3333333333334
+        }
+      }
+    },
+    {
+      "id": "h08",
+      "name": "425 Marcellus Rd",
+      "fields": {
+        "tax": {
+          "before": 809,
+          "after": 808.5
+        }
+      }
+    },
+    {
+      "id": "h10",
+      "name": "108 Marcus Ave",
+      "fields": {
+        "tax": {
+          "before": 947,
+          "after": 947.1758333333333
+        }
+      }
+    },
+    {
+      "id": "h12",
+      "name": "494 Sally Rd",
+      "fields": {
+        "tax": {
+          "before": 871,
+          "after": 870.9166666666666
+        }
+      }
+    },
+    {
+      "id": "h13",
+      "name": "190 Albertson Pl",
+      "fields": {
+        "tax": {
+          "before": 785,
+          "after": 785.1658333333334
+        }
+      }
+    },
+    {
+      "id": "h15",
+      "name": "35 Meeting Ln",
+      "fields": {
+        "tax": {
+          "before": 717,
+          "after": 716.6666666666666
+        }
+      }
+    },
+    {
+      "id": "t12",
+      "name": "1593 Independence Ave",
+      "fields": {
+        "tax": {
+          "before": 768,
+          "after": 767.8333333333334
+        }
+      }
+    },
+    {
+      "id": "okee931fc8109808",
+      "name": "3286 41st St Unit 3F",
+      "fields": {
+        "tax": {
+          "before": 660,
+          "after": 660.4833333333333
+        }
+      }
+    },
+    {
+      "id": "okb13c64cf6d3cef",
+      "name": "401 95th St Unit G3",
+      "fields": {
+        "tax": {
+          "before": 341,
+          "after": 341.3066666666667
+        }
+      }
+    },
+    {
+      "id": "ok1a541b3c35f229",
+      "name": "8425 Elmhurst Ave Unit 1V",
+      "fields": {
+        "price": {
+          "before": 685000,
+          "after": 659000
+        },
+        "tax": {
+          "before": 315,
+          "after": 314.75
+        }
+      }
+    },
+    {
+      "id": "oke05141fb67bbae",
+      "name": "220 Manhattan Ave Unit 2N",
+      "fields": {
+        "tax": {
+          "before": 1062,
+          "after": 1062.25
+        }
+      }
+    },
+    {
+      "id": "ok4c02fb9ffb44e6",
+      "name": "300 W 137th St Unit 300D",
+      "fields": {
+        "tax": {
+          "before": 83,
+          "after": 83.33333333333333
+        }
+      }
+    },
+    {
+      "id": "oka7a778e0b1ec24",
+      "name": "812 Riverside Dr Unit 42",
+      "fields": {
+        "tax": {
+          "before": 662,
+          "after": 661.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok8105419c8ffd31",
+      "name": "3916 Prince St Unit 8E",
+      "fields": {
+        "tax": {
+          "before": 61,
+          "after": 60.583333333333336
+        }
+      }
+    },
+    {
+      "id": "okba5db748259ea0",
+      "name": "121 Marina Pointe Dr Unit 121",
+      "fields": {
+        "tax": {
+          "before": 380,
+          "after": 379.71000000000004
+        }
+      }
+    },
+    {
+      "id": "oke871761e355ca5",
+      "name": "4260 Broadway Unit 202",
+      "fields": {
+        "tax": {
+          "before": 615,
+          "after": 615.3766666666667
+        }
+      }
+    },
+    {
+      "id": "ok8ab33a6baa153e",
+      "name": "2617 E 17th St Unit 4D",
+      "fields": {
+        "price": {
+          "before": 948000,
+          "after": 899000
+        },
+        "tax": {
+          "before": 634,
+          "after": 633.8333333333334
+        }
+      }
+    },
+    {
+      "id": "ok637c05d018db09",
+      "name": "88-20 Parson Blvd Unit 5H",
+      "fields": {
+        "tax": {
+          "before": 792,
+          "after": 791.6666666666666
+        }
+      }
+    },
+    {
+      "id": "okcf7845ba384a66",
+      "name": "88-20 Parsons Unit 6D",
+      "fields": {
+        "tax": {
+          "before": 633,
+          "after": 633.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok75c582fa3f9fd3",
+      "name": "300 W 138th St Unit 2579A",
+      "fields": {
+        "tax": {
+          "before": 656,
+          "after": 655.6666666666666
+        }
+      }
+    },
+    {
+      "id": "ok0e7de00da1c998",
+      "name": "339 Avenue P Unit 6B",
+      "fields": {
+        "tax": {
+          "before": 880,
+          "after": 879.8166666666666
+        }
+      }
+    },
+    {
+      "id": "ok81c9ff859f5a69",
+      "name": "4038 194th St Unit 3B",
+      "fields": {
+        "tax": {
+          "before": 917,
+          "after": 917.25
+        }
+      }
+    },
+    {
+      "id": "ok7ca1cb775148c8",
+      "name": "4035 Ithaca St Unit 4G",
+      "fields": {
+        "tax": {
+          "before": 534,
+          "after": 534.09
+        }
+      }
+    },
+    {
+      "id": "ok4031cbabdb554b",
+      "name": "818 60th St Unit 6B",
+      "fields": {
+        "tax": {
+          "before": 934,
+          "after": 933.5
+        }
+      }
+    },
+    {
+      "id": "ok04371ed76a9474",
+      "name": "8616 21st Ave Unit 3H",
+      "fields": {
+        "tax": {
+          "before": 12,
+          "after": 11.833333333333334
+        }
+      }
+    },
+    {
+      "id": "okb5c672ad97adbd",
+      "name": "3520 Leverich St Unit 209",
+      "fields": {
+        "tax": {
+          "before": 523,
+          "after": 523.4166666666666
+        }
+      }
+    },
+    {
+      "id": "okd47a81087529ec",
+      "name": "9745 63rd Dr Unit 7A",
+      "fields": {
+        "tax": {
+          "before": 42,
+          "after": 42.28
+        }
+      }
+    },
+    {
+      "id": "ok1ef3ca0232ebfc",
+      "name": "1738 Union St Unit 2A",
+      "fields": {
+        "tax": {
+          "before": 148,
+          "after": 147.57666666666668
+        }
+      }
+    },
+    {
+      "id": "ok37f1341667ca2d",
+      "name": "72 Clove Rd Unit 76-2",
+      "fields": {
+        "tax": {
+          "before": 559,
+          "after": 559.25
+        }
+      }
+    },
+    {
+      "id": "okcf19c9c90a3faa",
+      "name": "1810 3rd Ave Unit 8C",
+      "fields": {
+        "tax": {
+          "before": 826,
+          "after": 826.0633333333334
+        }
+      }
+    },
+    {
+      "id": "ok84e7160d7b8f1d",
+      "name": "6405 Woodside Ave Unit 4E",
+      "fields": {
+        "tax": {
+          "before": 392,
+          "after": 391.5
+        }
+      }
+    },
+    {
+      "id": "okf75cff9503f57b",
+      "name": "2370 62nd St Unit 3",
+      "fields": {
+        "tax": {
+          "before": 1172,
+          "after": 1172.1966666666667
+        }
+      }
+    },
+    {
+      "id": "okc3793899f3ef73",
+      "name": "1414 W 4th St Unit Ph5",
+      "fields": {
+        "tax": {
+          "before": 1088,
+          "after": 1088.4166666666667
+        }
+      }
+    },
+    {
+      "id": "ok85de6466d699f3",
+      "name": "756 Macdonough St Unit E1",
+      "fields": {
+        "tax": {
+          "before": 413,
+          "after": 412.84999999999997
+        }
+      }
+    },
+    {
+      "id": "ok59ac8c7f3a0277",
+      "name": "4312 214th Pl Unit 3E",
+      "fields": {
+        "tax": {
+          "before": 231,
+          "after": 230.58333333333334
+        }
+      }
+    },
+    {
+      "id": "okc24a70b44a41bd",
+      "name": "1769 E 13th St Unit 2B",
+      "fields": {
+        "tax": {
+          "before": 214,
+          "after": 213.61
+        }
+      }
+    },
+    {
+      "id": "ok1bbc95638e8c72",
+      "name": "17528 89th Ave Unit C",
+      "fields": {
+        "tax": {
+          "before": 478,
+          "after": 478.27
+        }
+      }
+    },
+    {
+      "id": "ok64a9779710b1c5",
+      "name": "313 W 143rd Street Unit 3C",
+      "fields": {
+        "tax": {
+          "before": 206,
+          "after": 205.77333333333334
+        }
+      }
+    },
+    {
+      "id": "ok96e2a45e6f9026",
+      "name": "7601 113th St Unit 6D",
+      "fields": {
+        "tax": {
+          "before": 512,
+          "after": 511.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okf49653d5d6586a",
+      "name": "643 5th Ave Unit 6D",
+      "fields": {
+        "tax": {
+          "before": 562,
+          "after": 561.6666666666666
+        }
+      }
+    },
+    {
+      "id": "okf521f142af3d85",
+      "name": "17524 89th Ave Unit C",
+      "fields": {
+        "tax": {
+          "before": 480,
+          "after": 479.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok7c2e842e18b116",
+      "name": "456 W 167th Street Unit 4D",
+      "fields": {
+        "price": {
+          "before": 499000,
+          "after": 465000
+        },
+        "tax": {
+          "before": 925,
+          "after": 924.7800000000001
+        }
+      }
+    },
+    {
+      "id": "ok95a221de5a7bd9",
+      "name": "8515 120th St Unit 3A",
+      "fields": {
+        "tax": {
+          "before": 50,
+          "after": 50.01333333333333
+        }
+      }
+    },
+    {
+      "id": "ok00ff3285f6de36",
+      "name": "1448 Bedford Ave Unit 4A",
+      "fields": {
+        "tax": {
+          "before": 558,
+          "after": 557.6733333333333
+        }
+      }
+    },
+    {
+      "id": "ok7ebd86cee05fda",
+      "name": "92 Canal St Unit 6C",
+      "fields": {
+        "tax": {
+          "before": 795,
+          "after": 795.4166666666666
+        }
+      }
+    },
+    {
+      "id": "okdc715dc2b4e6f5",
+      "name": "13230 Sanford Ave Unit 3B",
+      "fields": {
+        "tax": {
+          "before": 567,
+          "after": 566.6666666666666
+        }
+      }
+    },
+    {
+      "id": "ok81131ba19ae758",
+      "name": "8322 24th Avenue Unit 2A",
+      "fields": {
+        "tax": {
+          "before": 804,
+          "after": 803.8333333333334
+        }
+      }
+    },
+    {
+      "id": "okc9b63cd5afb75e",
+      "name": "8322 24th Avenue Unit 2C",
+      "fields": {
+        "tax": {
+          "before": 808,
+          "after": 807.75
+        }
+      }
+    },
+    {
+      "id": "okb0988b8efa152a",
+      "name": "200 E 32nd St Unit 28C",
+      "fields": {
+        "tax": {
+          "before": 1629,
+          "after": 1629.0966666666666
+        }
+      }
+    },
+    {
+      "id": "ok5efcac4eed4ab4",
+      "name": "65 Oceana Dr E Unit 9A",
+      "fields": {
+        "tax": {
+          "before": 667,
+          "after": 666.6666666666666
+        }
+      }
+    },
+    {
+      "id": "ok9cd8a59f035754",
+      "name": "12428 Queens Blvd Unit 9A",
+      "fields": {
+        "price": {
+          "before": 599000,
+          "after": 589000
+        },
+        "tax": {
+          "before": 823,
+          "after": 823.25
+        }
+      }
+    },
+    {
+      "id": "ok0d2212906375cb",
+      "name": "3368 Shore Parkway Unit 2B",
+      "fields": {
+        "tax": {
+          "before": 692,
+          "after": 691.6666666666666
+        }
+      }
+    },
+    {
+      "id": "ok139a34f63c76c4",
+      "name": "1238 63rd St Unit D224",
+      "fields": {
+        "tax": {
+          "before": 554,
+          "after": 553.7466666666667
+        }
+      }
+    },
+    {
+      "id": "ok420a15709169e3",
+      "name": "1238 63rd St Unit D342",
+      "fields": {
+        "tax": {
+          "before": 530,
+          "after": 529.8766666666667
+        }
+      }
+    },
+    {
+      "id": "ok63911e519fb85d",
+      "name": "87 Winthrop St Unit 2A",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        }
+      }
+    },
+    {
+      "id": "oke8e1b41f246741",
+      "name": "3641 169th St Unit 3C",
+      "fields": {
+        "price": {
+          "before": 580000,
+          "after": 568000
+        },
+        "tax": {
+          "before": 505,
+          "after": 505.25
+        }
+      }
+    },
+    {
+      "id": "ok58cef632ba92c7",
+      "name": "14116 84th Dr Unit 4B",
+      "fields": {
+        "tax": {
+          "before": 735,
+          "after": 735.3333333333334
+        }
+      }
+    },
+    {
+      "id": "okcef671a90c0cc9",
+      "name": "437 W 43rd Street Unit 1",
+      "fields": {
+        "tax": {
+          "before": 1205,
+          "after": 1205.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok4d4833265b8223",
+      "name": "14809 Northern Blvd Unit 5M",
+      "fields": {
+        "tax": {
+          "before": 832,
+          "after": 564.4166666666666
+        }
+      }
+    },
+    {
+      "id": "okac5b1c2d614c08",
+      "name": "14809 Northern Blvd Unit 5J",
+      "fields": {
+        "tax": {
+          "before": 776,
+          "after": 526.1666666666666
+        }
+      }
+    },
+    {
+      "id": "okb4063a82fcc99e",
+      "name": "15007 95th St Unit 3",
+      "fields": {
+        "tax": {
+          "before": 334,
+          "after": 334.38
+        }
+      }
+    },
+    {
+      "id": "ok2b513b7bc6d6e5",
+      "name": "23 E 128th St Unit 2F",
+      "fields": {
+        "tax": {
+          "before": 17,
+          "after": 16.93
+        }
+      }
+    },
+    {
+      "id": "okd9c15f8bb15314",
+      "name": "63-36 99 Sreet Unit 8C",
+      "fields": {
+        "tax": {
+          "before": 713,
+          "after": 713.4166666666666
+        }
+      }
+    },
+    {
+      "id": "ok404416d05a1119",
+      "name": "478 Bainbridge St Unit 1A",
+      "fields": {
+        "tax": {
+          "before": 933,
+          "after": 933.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok57f1c589e949bd",
+      "name": "319 E 105th St Unit 2D",
+      "fields": {
+        "tax": {
+          "before": 55,
+          "after": 55.26333333333333
+        }
+      }
+    },
+    {
+      "id": "ok9f621a09769cf3",
+      "name": "319 E 105th St Unit 4C",
+      "fields": {
+        "tax": {
+          "before": 56,
+          "after": 56.25
+        }
+      }
+    },
+    {
+      "id": "ok54430788f13623",
+      "name": "11624 Grosvenor Ln Unit 7C",
+      "fields": {
+        "tax": {
+          "before": 742,
+          "after": 741.6666666666666
+        }
+      }
+    },
+    {
+      "id": "oked8ad43629a4ca",
+      "name": "7617 46th Ave Unit 2C",
+      "fields": {
+        "tax": {
+          "before": 14,
+          "after": 13.916666666666666
+        }
+      }
+    },
+    {
+      "id": "ok3c29b45bc5df3f",
+      "name": "13105 40th Rd Unit 15M",
+      "fields": {
+        "tax": {
+          "before": 1042,
+          "after": 1042.0833333333333
+        }
+      }
+    },
+    {
+      "id": "okdd4802ce62f83c",
+      "name": "3435 Guider Ave Unit 5A",
+      "fields": {
+        "tax": {
+          "before": 163,
+          "after": 162.58333333333334
+        }
+      }
+    },
+    {
+      "id": "ok254bec8dd7b33b",
+      "name": "175 Maple Ave Unit 2M",
+      "fields": {
+        "tax": {
+          "before": 639,
+          "after": 638.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok198a0dea09ff0a",
+      "name": "250 E 30th St Apt 5A",
+      "fields": {
+        "price": {
+          "before": 995000,
+          "after": null
+        },
+        "status": {
+          "before": "Active",
+          "after": null
+        },
+        "hoa": {
+          "before": 1825,
+          "after": null
+        },
+        "tax": {
+          "before": 1871.1666666666667,
+          "after": 1914.2791666666665
+        }
+      }
+    },
+    {
+      "id": "oke64b6355642d89",
+      "name": "185 Battery Ave Unit 2A",
+      "fields": {
+        "tax": {
+          "before": 346,
+          "after": 346.1666666666667
+        }
+      }
+    },
+    {
+      "id": "ok6f410a4188a945",
+      "name": "88 Cuttermill Rd Unit 322",
+      "fields": {
+        "tax": {
+          "before": 755,
+          "after": 755.0833333333334
+        }
+      }
+    },
+    {
+      "id": "okbce8f1bd72e923",
+      "name": "171 Great Neck Rd Unit 3H",
+      "fields": {
+        "tax": {
+          "before": 708,
+          "after": 708.3333333333334
+        }
+      }
+    },
+    {
+      "id": "okdd7cc5d10d3189",
+      "name": "14427 Sanford Ave Unit 5K",
+      "fields": {
+        "tax": {
+          "before": 1117,
+          "after": 1117.25
+        }
+      }
+    },
+    {
+      "id": "okbc36d70aa9f63d",
+      "name": "14326 41st Ave Unit 9A",
+      "fields": {
+        "tax": {
+          "before": 656,
+          "after": 655.8333333333334
+        }
+      }
+    },
+    {
+      "id": "ok74b97fe0afc2ca",
+      "name": "1830 Bath Ave Unit 102",
+      "fields": {
+        "tax": {
+          "before": 811,
+          "after": 810.8466666666667
+        }
+      }
+    },
+    {
+      "id": "okd38917aa2cd265",
+      "name": "9206 50th Ave Unit 1A",
+      "fields": {
+        "tax": {
+          "before": 354,
+          "after": 354.4166666666667
+        }
+      }
+    },
+    {
+      "id": "okbf6fb0da60a304",
+      "name": "4260 Colden St Unit 4A",
+      "fields": {
+        "tax": {
+          "before": 413,
+          "after": 413.0833333333333
+        }
+      }
+    },
+    {
+      "id": "okab26f1c825953a",
+      "name": "9123 Corona Ave Unit 6C",
+      "fields": {
+        "tax": {
+          "before": 851,
+          "after": 850.57
+        }
+      }
+    },
+    {
+      "id": "ok7224d32bec4a49",
+      "name": "9123 Corona Ave Unit 4F",
+      "fields": {
+        "tax": {
+          "before": 1040,
+          "after": 1039.59
+        }
+      }
+    },
+    {
+      "id": "ok739d09b3ab8fdd",
+      "name": "9123 Corona Ave Unit 3F",
+      "fields": {
+        "tax": {
+          "before": 1032,
+          "after": 1031.7133333333334
+        }
+      }
+    },
+    {
+      "id": "ok42dfd2b104013d",
+      "name": "9123 Corona Ave Unit 2E",
+      "fields": {
+        "tax": {
+          "before": 957,
+          "after": 956.8933333333333
+        }
+      }
+    },
+    {
+      "id": "ok03d175a7b5c060",
+      "name": "8807 Bay 16th St Unit 3A",
+      "fields": {
+        "tax": {
+          "before": 477,
+          "after": 476.81333333333333
+        }
+      }
+    },
+    {
+      "id": "okfca35f45162506",
+      "name": "13604 Cherry Ave Unit 4E",
+      "fields": {
+        "tax": {
+          "before": 548,
+          "after": 548.1666666666666
+        }
+      }
+    },
+    {
+      "id": "ok968e8a3d72c6da",
+      "name": "4 E 54th St Unit 2G",
+      "fields": {
+        "price": {
+          "before": 699999,
+          "after": 649999
+        },
+        "tax": {
+          "before": 446,
+          "after": 446.1666666666667
+        }
+      }
+    },
+    {
+      "id": "ok2325230718de89",
+      "name": "540 W 49th St Unit 406N",
+      "fields": {
+        "tax": {
+          "before": 159,
+          "after": 158.5
+        }
+      }
+    },
+    {
+      "id": "ok7cf9e24fa557e6",
+      "name": "88 E Valley Stream Blvd Unit 6",
+      "fields": {
+        "tax": {
+          "before": 850,
+          "after": 849.8333333333334
+        }
+      }
+    },
+    {
+      "id": "okc443d098930f13",
+      "name": "7026 Queens Blvd Unit 5A",
+      "fields": {
+        "tax": {
+          "before": 36,
+          "after": 36.25
+        }
+      }
+    },
+    {
+      "id": "okcb25d67fad31b2",
+      "name": "14022 Beech Ave",
+      "fields": {
+        "tax": {
+          "before": 647,
+          "after": 647.4166666666666
+        }
+      }
+    },
+    {
+      "id": "ok62098e5a2ef614",
+      "name": "2517 Voorhies Ave Unit 1C",
+      "fields": {
+        "tax": {
+          "before": 66,
+          "after": 65.97666666666667
+        }
+      }
+    },
+    {
+      "id": "okfce8c9ef355207",
+      "name": "6296 Woodhaven Blvd Unit 5O",
+      "fields": {
+        "tax": {
+          "before": 129,
+          "after": 129.16666666666666
+        }
+      }
+    },
+    {
+      "id": "ok5ca5db76580585",
+      "name": "6296 Woodhaven Blvd Unit 6I",
+      "fields": {
+        "tax": {
+          "before": 110,
+          "after": 109.67
+        }
+      }
+    },
+    {
+      "id": "okc562adaebb2039",
+      "name": "14930 88th St Unit 2E",
+      "fields": {
+        "tax": {
+          "before": 300,
+          "after": 299.54333333333335
+        }
+      }
+    },
+    {
+      "id": "okc7310c41843227",
+      "name": "1364 E 92nd St Unit 101",
+      "fields": {
+        "tax": {
+          "before": 457,
+          "after": 457.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok957aaf56c4f4f4",
+      "name": "6911 Shore Rd Unit 1C",
+      "fields": {
+        "tax": {
+          "before": 1023,
+          "after": 1022.6666666666666
+        }
+      }
+    },
+    {
+      "id": "oke073d3591da8b1",
+      "name": "348 Trotting Ln",
+      "fields": {
+        "price": {
+          "before": 889000,
+          "after": 879000
+        },
+        "tax": {
+          "before": 983,
+          "after": 982.8333333333334
+        }
+      }
+    },
+    {
+      "id": "oke4e8f5af487309",
+      "name": "20106 Rocky Hill Rd Unit 6g2",
+      "fields": {
+        "tax": {
+          "before": 295,
+          "after": 294.75
+        }
+      }
+    },
+    {
+      "id": "okc33dedb9c26b30",
+      "name": "15038 Union Tpke Unit 6F",
+      "fields": {
+        "price": {
+          "before": 669000,
+          "after": 649000
+        },
+        "tax": {
+          "before": 318,
+          "after": 317.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okea257cdd0987bf",
+      "name": "15815 Union Tpke Unit 402N",
+      "fields": {
+        "tax": {
+          "before": 7,
+          "after": 6.736666666666667
+        }
+      }
+    },
+    {
+      "id": "ok56fcf2e3ca75fb",
+      "name": "15314 83rd St Unit 5D-U",
+      "fields": {
+        "tax": {
+          "before": 245,
+          "after": 244.83333333333334
+        }
+      }
+    },
+    {
+      "id": "ok9714f7b60d8bfc",
+      "name": "15816 79th Ave",
+      "fields": {
+        "tax": {
+          "before": 9,
+          "after": 9.416666666666666
+        }
+      }
+    },
+    {
+      "id": "ok3d022f55ebd8b5",
+      "name": "7611 Ditmars Blvd Unit 2",
+      "fields": {
+        "tax": {
+          "before": 347,
+          "after": 346.75
+        }
+      }
+    },
+    {
+      "id": "okf6478a1a777de9",
+      "name": "6337 Douglaston Pkwy",
+      "fields": {
+        "tax": {
+          "before": 538,
+          "after": 537.6666666666666
+        }
+      }
+    },
+    {
+      "id": "okee0f62f2b457ea",
+      "name": "7177 159th St Unit 4D",
+      "fields": {
+        "tax": {
+          "before": 434,
+          "after": 433.75
+        }
+      }
+    },
+    {
+      "id": "ok061f05dd766d8c",
+      "name": "7128 163rd St Unit 2A",
+      "fields": {
+        "tax": {
+          "before": 617,
+          "after": 616.6666666666666
+        }
+      }
+    },
+    {
+      "id": "oke4776731a46201",
+      "name": "16306 71st Ave Unit 1323",
+      "fields": {
+        "tax": {
+          "before": 995,
+          "after": 995.1666666666666
+        }
+      }
+    },
+    {
+      "id": "okcf40115d8bd374",
+      "name": "421 Autumn Dr",
+      "fields": {
+        "tax": {
+          "before": 708,
+          "after": 707.5
+        }
+      }
+    },
+    {
+      "id": "ok763c6e93e60cfd",
+      "name": "13832 242nd St",
+      "fields": {
+        "tax": {
+          "before": 531,
+          "after": 530.63
+        }
+      }
+    },
+    {
+      "id": "okd8dd1a2071605a",
+      "name": "10314 89th St",
+      "fields": {
+        "tax": {
+          "before": 417,
+          "after": 416.53666666666663
+        }
+      }
+    },
+    {
+      "id": "ok822b0b36a710c9",
+      "name": "48 Saint Marks Pl",
+      "fields": {
+        "price": {
+          "before": 899000,
+          "after": 849000
+        },
+        "tax": {
+          "before": 1228,
+          "after": 1228.1666666666667
+        }
+      }
+    },
+    {
+      "id": "oka1528a005580b7",
+      "name": "9906 67th Ave",
+      "fields": {
+        "tax": {
+          "before": 618,
+          "after": 617.82
+        }
+      }
+    },
+    {
+      "id": "okdb0051b5390c8d",
+      "name": "165 Linmouth Rd",
+      "fields": {
+        "tax": {
+          "before": 1421,
+          "after": 1420.8333333333333
+        }
+      }
+    },
+    {
+      "id": "ok30891cf863bcef",
+      "name": "255 Cochran Pl",
+      "fields": {
+        "tax": {
+          "before": 602,
+          "after": 791.6666666666666
+        }
+      }
+    },
+    {
+      "id": "ok3cfffa68b7b800",
+      "name": "4151 54th St",
+      "fields": {
+        "tax": {
+          "before": 513,
+          "after": 513.22
+        }
+      }
+    },
+    {
+      "id": "ok4d9aba923a944f",
+      "name": "655 Hendrix St",
+      "fields": {
+        "tax": {
+          "before": 488,
+          "after": 487.80333333333334
+        }
+      }
+    },
+    {
+      "id": "ok1f45b189877890",
+      "name": "8564 104th St",
+      "fields": {
+        "tax": {
+          "before": 571,
+          "after": 571.4766666666667
+        }
+      }
+    },
+    {
+      "id": "okc778318d85e88d",
+      "name": "8616 102nd Ave",
+      "fields": {
+        "tax": {
+          "before": 339,
+          "after": 338.8333333333333
+        }
+      }
+    },
+    {
+      "id": "ok889d422147e75d",
+      "name": "19423 Station Rd",
+      "fields": {
+        "tax": {
+          "before": 534,
+          "after": 533.5833333333334
+        }
+      }
+    },
+    {
+      "id": "oke10a6640ff31d1",
+      "name": "10130 224th St",
+      "fields": {
+        "tax": {
+          "before": 497,
+          "after": 497.1666666666667
+        }
+      }
+    },
+    {
+      "id": "ok9f4128f1a154ef",
+      "name": "3968 59th St",
+      "fields": {
+        "tax": {
+          "before": 622,
+          "after": 622.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok48257c81370626",
+      "name": "8636 96th St",
+      "fields": {
+        "tax": {
+          "before": 550,
+          "after": 550.25
+        }
+      }
+    },
+    {
+      "id": "ok423125752ae751",
+      "name": "102-10A 160th Ave",
+      "fields": {
+        "tax": {
+          "before": 140,
+          "after": 140.48
+        }
+      }
+    },
+    {
+      "id": "ok755f09208e8d62",
+      "name": "15 Stratford Ave",
+      "fields": {
+        "tax": {
+          "before": 949,
+          "after": 949.1666666666666
+        }
+      }
+    },
+    {
+      "id": "okc0a292c7ec7a9a",
+      "name": "169 Warwick St",
+      "fields": {
+        "tax": {
+          "before": 320,
+          "after": 319.51666666666665
+        }
+      }
+    },
+    {
+      "id": "okfc9365b5a3949c",
+      "name": "16 Elton Rd",
+      "fields": {
+        "tax": {
+          "before": 989,
+          "after": 988.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok7596a27687def1",
+      "name": "65 Stewart Ave",
+      "fields": {
+        "tax": {
+          "before": 945,
+          "after": 944.75
+        }
+      }
+    },
+    {
+      "id": "ok84d97790381c4c",
+      "name": "1637 W 2nd St",
+      "fields": {
+        "tax": {
+          "before": 645,
+          "after": 644.6666666666666
+        }
+      }
+    },
+    {
+      "id": "okbc360461c96bf0",
+      "name": "529 Powell St",
+      "fields": {
+        "tax": {
+          "before": 362,
+          "after": 361.8533333333333
+        }
+      }
+    },
+    {
+      "id": "ok38bb7b48e676c3",
+      "name": "706 Partridge Ave",
+      "fields": {
+        "price": {
+          "before": 850000,
+          "after": 848000
+        },
+        "tax": {
+          "before": 940,
+          "after": 940.1233333333333
+        }
+      }
+    },
+    {
+      "id": "ok54cc88ed6b90c6",
+      "name": "134 Logan St",
+      "fields": {
+        "tax": {
+          "before": 361,
+          "after": 361.05333333333334
+        }
+      }
+    },
+    {
+      "id": "ok82d744c598952a",
+      "name": "9431 239th St",
+      "fields": {
+        "tax": {
+          "before": 451,
+          "after": 450.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok024f5961578e81",
+      "name": "234 Dahill Rd",
+      "fields": {
+        "tax": {
+          "before": 369,
+          "after": 369.3
+        }
+      }
+    },
+    {
+      "id": "okdc2f6ae934a140",
+      "name": "10212 85th Rd",
+      "fields": {
+        "tax": {
+          "before": 185,
+          "after": 184.91666666666666
+        }
+      }
+    },
+    {
+      "id": "oke85e19c75aa988",
+      "name": "9440 Springfield Blvd",
+      "fields": {
+        "tax": {
+          "before": 602,
+          "after": 602.2233333333334
+        }
+      }
+    },
+    {
+      "id": "ok07928e453de04b",
+      "name": "10238 85th Rd",
+      "fields": {
+        "tax": {
+          "before": 545,
+          "after": 545.3166666666667
+        }
+      }
+    },
+    {
+      "id": "ok88b97963d0dfd4",
+      "name": "58 Alexine Ave",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Hold"
+        },
+        "tax": {
+          "before": 1314,
+          "after": 1314.1666666666667
+        }
+      }
+    },
+    {
+      "id": "okefa37001ee2b47",
+      "name": "8615 88th Ave",
+      "fields": {
+        "tax": {
+          "before": 413,
+          "after": 412.8766666666667
+        }
+      }
+    },
+    {
+      "id": "ok7c39aed686440f",
+      "name": "89 Carstairs Rd",
+      "fields": {
+        "tax": {
+          "before": 997,
+          "after": 997.2433333333333
+        }
+      }
+    },
+    {
+      "id": "ok02035d49c3f09b",
+      "name": "5 James Street",
+      "fields": {
+        "tax": {
+          "before": 826,
+          "after": 826.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok9fc49db88776df",
+      "name": "10723 86th St",
+      "fields": {
+        "tax": {
+          "before": 450,
+          "after": 450.1166666666666
+        }
+      }
+    },
+    {
+      "id": "oke0964cafbf9ca8",
+      "name": "11 1st Pl",
+      "fields": {
+        "tax": {
+          "before": 893,
+          "after": 892.9200000000001
+        }
+      }
+    },
+    {
+      "id": "okf10636210937e9",
+      "name": "2 Wilson St",
+      "fields": {
+        "tax": {
+          "before": 1666,
+          "after": 1665.5
+        }
+      }
+    },
+    {
+      "id": "ok633646485f462e",
+      "name": "99 Norwood Ave",
+      "fields": {
+        "tax": {
+          "before": 1285,
+          "after": 1285.25
+        }
+      }
+    },
+    {
+      "id": "ok38c0c45ec1b44a",
+      "name": "8050 88th Rd",
+      "fields": {
+        "tax": {
+          "before": 468,
+          "after": 468.18666666666667
+        }
+      }
+    },
+    {
+      "id": "okc5b061ce9d2e11",
+      "name": "11504 180th St",
+      "fields": {
+        "tax": {
+          "before": 365,
+          "after": 364.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok2e16e1a25e9964",
+      "name": "97 Broadmoor Ln",
+      "fields": {
+        "tax": {
+          "before": 821,
+          "after": 820.8333333333334
+        }
+      }
+    },
+    {
+      "id": "ok93278a177e821b",
+      "name": "570 Christopher Ave",
+      "fields": {
+        "tax": {
+          "before": 327,
+          "after": 327.4066666666667
+        }
+      }
+    },
+    {
+      "id": "okfb5501a4e4bbae",
+      "name": "7711 97th Ave",
+      "fields": {
+        "tax": {
+          "before": 388,
+          "after": 387.82
+        }
+      }
+    },
+    {
+      "id": "ok1ce433b0db0d2b",
+      "name": "10729 118th St",
+      "fields": {
+        "tax": {
+          "before": 424,
+          "after": 423.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okcc040e0bb6397f",
+      "name": "21907 101st Ave",
+      "fields": {
+        "tax": {
+          "before": 439,
+          "after": 438.73
+        }
+      }
+    },
+    {
+      "id": "okc38448cf5acac1",
+      "name": "10711 114th St",
+      "fields": {
+        "tax": {
+          "before": 512,
+          "after": 511.9166666666667
+        }
+      }
+    },
+    {
+      "id": "ok318ebb83a0fcdb",
+      "name": "9415 Farragut Rd",
+      "fields": {
+        "tax": {
+          "before": 508,
+          "after": 507.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okcc798055caa5fd",
+      "name": "9006 107th Ave",
+      "fields": {
+        "tax": {
+          "before": 629,
+          "after": 629.4333333333333
+        }
+      }
+    },
+    {
+      "id": "okdad2662183c178",
+      "name": "769 Iris Pl",
+      "fields": {
+        "tax": {
+          "before": 719,
+          "after": 719.4808333333334
+        }
+      }
+    },
+    {
+      "id": "ok20a6e60d2fa028",
+      "name": "194 Woodfield Rd",
+      "fields": {
+        "tax": {
+          "before": 991,
+          "after": 991.0333333333333
+        }
+      }
+    },
+    {
+      "id": "ok1ca8d56ba20c15",
+      "name": "530 Washington Ave",
+      "fields": {
+        "tax": {
+          "before": 824,
+          "after": 824.3333333333334
+        }
+      }
+    },
+    {
+      "id": "oka33ef95aefb7a0",
+      "name": "54 Denton Ave",
+      "fields": {
+        "tax": {
+          "before": 1165,
+          "after": 1165.4166666666667
+        }
+      }
+    },
+    {
+      "id": "ok4ed1c4f5e20e6d",
+      "name": "10749 117th St",
+      "fields": {
+        "price": {
+          "before": 819999,
+          "after": null
+        },
+        "status": {
+          "before": "Active",
+          "after": null
+        },
+        "hoa": {
+          "before": 0,
+          "after": null
+        },
+        "tax": {
+          "before": 468,
+          "after": 502.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok95cb40bdd7039d",
+      "name": "532 Washington Ave",
+      "fields": {
+        "tax": {
+          "before": 740,
+          "after": 739.8333333333334
+        }
+      }
+    },
+    {
+      "id": "okff6a4a2b708ffd",
+      "name": "51 Hill St",
+      "fields": {
+        "tax": {
+          "before": 183,
+          "after": 182.5533333333333
+        }
+      }
+    },
+    {
+      "id": "ok449911d62db922",
+      "name": "333 Ocean Ave",
+      "fields": {
+        "tax": {
+          "before": 1271,
+          "after": 1270.5833333333333
+        }
+      }
+    },
+    {
+      "id": "oke70614d2030ed6",
+      "name": "10762 106th St",
+      "fields": {
+        "tax": {
+          "before": 498,
+          "after": 497.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok53292f3768eb5c",
+      "name": "13631 243rd St",
+      "fields": {
+        "tax": {
+          "before": 591,
+          "after": 591.4166666666666
+        }
+      }
+    },
+    {
+      "id": "oke059471e45fa5a",
+      "name": "22130 103rd Ave",
+      "fields": {
+        "tax": {
+          "before": 454,
+          "after": 454.25
+        }
+      }
+    },
+    {
+      "id": "ok9a8923c065b725",
+      "name": "74 Linmouth Rd",
+      "fields": {
+        "tax": {
+          "before": 989,
+          "after": 989.1666666666666
+        }
+      }
+    },
+    {
+      "id": "oke69eea7b9235df",
+      "name": "8540 79th St",
+      "fields": {
+        "tax": {
+          "before": 512,
+          "after": 511.5
+        }
+      }
+    },
+    {
+      "id": "ok22f2c24882a792",
+      "name": "22015 101st Ave",
+      "fields": {
+        "tax": {
+          "before": 425,
+          "after": 425.25666666666666
+        }
+      }
+    },
+    {
+      "id": "oke9e26ff6355e64",
+      "name": "159 Church St",
+      "fields": {
+        "tax": {
+          "before": 871,
+          "after": 871.1374999999999
+        }
+      }
+    },
+    {
+      "id": "ok3932e86f0dca9e",
+      "name": "326 Curtis Ave",
+      "fields": {
+        "tax": {
+          "before": 979,
+          "after": 979.0833333333334
+        }
+      }
+    },
+    {
+      "id": "okd79f17f7a5e16b",
+      "name": "34 Archer Rd",
+      "fields": {
+        "tax": {
+          "before": 1075,
+          "after": 1074.5833333333333
+        }
+      }
+    },
+    {
+      "id": "okccccd8b098dbf9",
+      "name": "530 Elm St",
+      "fields": {
+        "tax": {
+          "before": 1397,
+          "after": 1396.8341666666665
+        }
+      }
+    },
+    {
+      "id": "ok9ae6615f70ab64",
+      "name": "13764 Westgate St",
+      "fields": {
+        "tax": {
+          "before": 469,
+          "after": 469.25
+        }
+      }
+    },
+    {
+      "id": "ok2ccc472047039f",
+      "name": "16041 99th St",
+      "fields": {
+        "tax": {
+          "before": 462,
+          "after": 461.6033333333333
+        }
+      }
+    },
+    {
+      "id": "oka3dd3511f83f64",
+      "name": "8933 96th St",
+      "fields": {
+        "tax": {
+          "before": 488,
+          "after": 488.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok13eb0be918a3bc",
+      "name": "121 Bay 20th St",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        },
+        "tax": {
+          "before": 818,
+          "after": 817.9933333333333
+        }
+      }
+    },
+    {
+      "id": "okba171133a4af61",
+      "name": "10933 97th St",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Hold"
+        },
+        "tax": {
+          "before": 444,
+          "after": 443.5833333333333
+        }
+      }
+    },
+    {
+      "id": "ok929519295a8ced",
+      "name": "682 Georgia Ave",
+      "fields": {
+        "tax": {
+          "before": 274,
+          "after": 273.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok4ab649c3b6e68b",
+      "name": "8915 86th St",
+      "fields": {
+        "tax": {
+          "before": 439,
+          "after": 438.9533333333333
+        }
+      }
+    },
+    {
+      "id": "ok85ed71e12969be",
+      "name": "8933 91st St",
+      "fields": {
+        "tax": {
+          "before": 408,
+          "after": 408.2966666666667
+        }
+      }
+    },
+    {
+      "id": "ok9e735c4407fb68",
+      "name": "75 Peninsula Blvd",
+      "fields": {
+        "tax": {
+          "before": 891,
+          "after": 891.0533333333333
+        }
+      }
+    },
+    {
+      "id": "ok507de550976fdf",
+      "name": "25 Archer Rd",
+      "fields": {
+        "tax": {
+          "before": 1339,
+          "after": 1339.4166666666667
+        }
+      }
+    },
+    {
+      "id": "okb407a20439eeef",
+      "name": "11481 178th Street",
+      "fields": {
+        "tax": {
+          "before": 431,
+          "after": 431.3866666666667
+        }
+      }
+    },
+    {
+      "id": "ok365dbf1f711f59",
+      "name": "8514 Sutter Ave",
+      "fields": {
+        "tax": {
+          "before": 309,
+          "after": 309.41
+        }
+      }
+    },
+    {
+      "id": "okea8516b5254b15",
+      "name": "82 Forbell St",
+      "fields": {
+        "tax": {
+          "before": 446,
+          "after": 446.3
+        }
+      }
+    },
+    {
+      "id": "okb210f25f9ce5f3",
+      "name": "163 Elm St",
+      "fields": {
+        "tax": {
+          "before": 1074,
+          "after": 1073.7691666666667
+        }
+      }
+    },
+    {
+      "id": "ok55889bbf93d30b",
+      "name": "511 Evergreen Ave Unit 2D",
+      "fields": {
+        "tax": {
+          "before": 1114,
+          "after": 1114.4166666666667
+        }
+      }
+    },
+    {
+      "id": "ok7f4422d2a84751",
+      "name": "7703 95th Ave",
+      "fields": {
+        "tax": {
+          "before": 446,
+          "after": 445.77
+        }
+      }
+    },
+    {
+      "id": "ok786ae0c3b0f627",
+      "name": "18 Yale Pl",
+      "fields": {
+        "tax": {
+          "before": 1194,
+          "after": 1193.5833333333333
+        }
+      }
+    },
+    {
+      "id": "ok8cfd0948ff1216",
+      "name": "713 Wren Ct",
+      "fields": {
+        "tax": {
+          "before": 965,
+          "after": 965.3475
+        }
+      }
+    },
+    {
+      "id": "ok6a2770effd2b30",
+      "name": "34 Reyam Rd",
+      "fields": {
+        "tax": {
+          "before": 1849,
+          "after": 1848.6683333333333
+        }
+      }
+    },
+    {
+      "id": "ok826848ad286719",
+      "name": "1086 Blake Ave",
+      "fields": {
+        "tax": {
+          "before": 372,
+          "after": 372.19
+        }
+      }
+    },
+    {
+      "id": "ok9623b6f5ffc4a1",
+      "name": "598 Shepherd Ave",
+      "fields": {
+        "tax": {
+          "before": 357,
+          "after": 357.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok3a7c07ae521e80",
+      "name": "230 Sunnyside Ave",
+      "fields": {
+        "tax": {
+          "before": 421,
+          "after": 420.56
+        }
+      }
+    },
+    {
+      "id": "ok0cba15fb840ea7",
+      "name": "22911 141st Ave",
+      "fields": {
+        "tax": {
+          "before": 510,
+          "after": 509.76
+        }
+      }
+    },
+    {
+      "id": "ok329f14de453d2e",
+      "name": "196 Brighton 10th St",
+      "fields": {
+        "tax": {
+          "before": 441,
+          "after": 441.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok2fb54b13054cd6",
+      "name": "23 Westminster Rd",
+      "fields": {
+        "tax": {
+          "before": 1689,
+          "after": 1688.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok2d14ce7f2190de",
+      "name": "960 E 101st St",
+      "fields": {
+        "tax": {
+          "before": 476,
+          "after": 475.6066666666666
+        }
+      }
+    },
+    {
+      "id": "ok9ff822bc4affc1",
+      "name": "13611 Brookville Blvd",
+      "fields": {
+        "tax": {
+          "before": 173,
+          "after": 173.08333333333334
+        }
+      }
+    },
+    {
+      "id": "ok5137afefa49f1f",
+      "name": "1169 Brooklyn Ave",
+      "fields": {
+        "tax": {
+          "before": 232,
+          "after": 232.13
+        }
+      }
+    },
+    {
+      "id": "ok8d8ec91078a16d",
+      "name": "9214 168th Pl",
+      "fields": {
+        "tax": {
+          "before": 394,
+          "after": 393.84999999999997
+        }
+      }
+    },
+    {
+      "id": "ok72d9ea19d7f198",
+      "name": "101 Argyle Rd",
+      "fields": {
+        "tax": {
+          "before": 1349,
+          "after": 1349.4166666666667
+        }
+      }
+    },
+    {
+      "id": "okd7dcd44b5bafd8",
+      "name": "528 Maple St",
+      "fields": {
+        "tax": {
+          "before": 792,
+          "after": 791.5075
+        }
+      }
+    },
+    {
+      "id": "ok9d60aadce01aae",
+      "name": "650 Eagle Ave",
+      "fields": {
+        "tax": {
+          "before": 1058,
+          "after": 1058.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok46afb874b119c5",
+      "name": "9116 91st Ave",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Hold"
+        },
+        "tax": {
+          "before": 414,
+          "after": 413.6433333333334
+        }
+      }
+    },
+    {
+      "id": "ok510371a478454b",
+      "name": "4318 195th St",
+      "fields": {
+        "tax": {
+          "before": 640,
+          "after": 639.7033333333333
+        }
+      }
+    },
+    {
+      "id": "okcd712e05c6f553",
+      "name": "22 Shine Pl",
+      "fields": {
+        "tax": {
+          "before": 858,
+          "after": 858.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok8df91783621b33",
+      "name": "10006 133rd Ave",
+      "fields": {
+        "tax": {
+          "before": 210,
+          "after": 210.16666666666666
+        }
+      }
+    },
+    {
+      "id": "ok9447b01c8f0212",
+      "name": "4 Crosby Ave",
+      "fields": {
+        "tax": {
+          "before": 335,
+          "after": 334.7033333333333
+        }
+      }
+    },
+    {
+      "id": "okd1eb61a350fc38",
+      "name": "13715 170th St",
+      "fields": {
+        "tax": {
+          "before": 449,
+          "after": 448.68333333333334
+        }
+      }
+    },
+    {
+      "id": "oka2cca92ec810a3",
+      "name": "64 Avondale St",
+      "fields": {
+        "tax": {
+          "before": 846,
+          "after": 846.1633333333333
+        }
+      }
+    },
+    {
+      "id": "okb469a24202bf9a",
+      "name": "9012 183rd St",
+      "fields": {
+        "tax": {
+          "before": 464,
+          "after": 463.74333333333334
+        }
+      }
+    },
+    {
+      "id": "ok6673d28fa8d793",
+      "name": "10049 198th St",
+      "fields": {
+        "tax": {
+          "before": 496,
+          "after": 495.5833333333333
+        }
+      }
+    },
+    {
+      "id": "okc8b8922a511ba0",
+      "name": "8481 127th Street",
+      "fields": {
+        "tax": {
+          "before": 97,
+          "after": 96.94
+        }
+      }
+    },
+    {
+      "id": "okaa8827467110ee",
+      "name": "8492A Austin St",
+      "fields": {
+        "tax": {
+          "before": 557,
+          "after": 557.3333333333334
+        }
+      }
+    },
+    {
+      "id": "okbb1e04dd277e3e",
+      "name": "205 Stuart Rd",
+      "fields": {
+        "tax": {
+          "before": 1521,
+          "after": 1520.8333333333333
+        }
+      }
+    },
+    {
+      "id": "okde3be495af5f4a",
+      "name": "28 Cammerer Ave",
+      "fields": {
+        "tax": {
+          "before": 1098,
+          "after": 1097.5
+        }
+      }
+    },
+    {
+      "id": "ok6321a578adeda9",
+      "name": "21825 104th Ave",
+      "fields": {
+        "tax": {
+          "before": 494,
+          "after": 493.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok847fc8ec012f3b",
+      "name": "44 Bell Street",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        }
+      }
+    },
+    {
+      "id": "okda5939cecee621",
+      "name": "10306 220th St",
+      "fields": {
+        "tax": {
+          "before": 445,
+          "after": 444.75
+        }
+      }
+    },
+    {
+      "id": "ok421b46f68c6a38",
+      "name": "13306 96th St",
+      "fields": {
+        "tax": {
+          "before": 405,
+          "after": 404.78999999999996
+        }
+      }
+    },
+    {
+      "id": "okc2a07799329902",
+      "name": "4320 Utopia Pkwy",
+      "fields": {
+        "price": {
+          "before": 1180000,
+          "after": 1158000
+        }
+      }
+    },
+    {
+      "id": "okf5da35cd38df9d",
+      "name": "9558 113th St",
+      "fields": {
+        "tax": {
+          "before": 490,
+          "after": 490.43666666666667
+        }
+      }
+    },
+    {
+      "id": "ok57a6cfbd887b2e",
+      "name": "17 Wood Ln",
+      "fields": {
+        "tax": {
+          "before": 844,
+          "after": 843.75
+        }
+      }
+    },
+    {
+      "id": "okaf1e646753fe1e",
+      "name": "164 Gordon Rd",
+      "fields": {
+        "tax": {
+          "before": 1028,
+          "after": 1027.7466666666667
+        }
+      }
+    },
+    {
+      "id": "ok0772c9052bbe12",
+      "name": "21 Hampton Ave",
+      "fields": {
+        "tax": {
+          "before": 932,
+          "after": 931.5833333333334
+        }
+      }
+    },
+    {
+      "id": "oka5f2af24f32bc7",
+      "name": "18514 144th Avenue",
+      "fields": {
+        "tax": {
+          "before": 618,
+          "after": 617.75
+        }
+      }
+    },
+    {
+      "id": "ok2301cc40716e9a",
+      "name": "9344 Vanderveer St",
+      "fields": {
+        "tax": {
+          "before": 515,
+          "after": 514.5766666666667
+        }
+      }
+    },
+    {
+      "id": "ok4a50af8ee8c927",
+      "name": "20 Voorhees Pl",
+      "fields": {
+        "tax": {
+          "before": 1236,
+          "after": 1236.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok305a7dd9231199",
+      "name": "131 Oceanview Rd",
+      "fields": {
+        "tax": {
+          "before": 1266,
+          "after": 1266.3333333333333
+        }
+      }
+    },
+    {
+      "id": "okf6063fff3529ec",
+      "name": "9446 214th Pl",
+      "fields": {
+        "price": {
+          "before": 899000,
+          "after": 879000
+        },
+        "tax": {
+          "before": 151,
+          "after": 151.37333333333333
+        }
+      }
+    },
+    {
+      "id": "ok668177a5fdc141",
+      "name": "17921 143rd Ave",
+      "fields": {
+        "price": {
+          "before": 719888,
+          "after": 710000
+        }
+      }
+    },
+    {
+      "id": "okdd1d78ecc21226",
+      "name": "9513 85th St",
+      "fields": {
+        "tax": {
+          "before": 450,
+          "after": 449.75
+        }
+      }
+    },
+    {
+      "id": "ok09064f3e9cd64f",
+      "name": "9255 215th Pl",
+      "fields": {
+        "price": {
+          "before": 695000,
+          "after": 669000
+        },
+        "tax": {
+          "before": 484,
+          "after": 483.8333333333333
+        }
+      }
+    },
+    {
+      "id": "ok45eb7669b0f0c3",
+      "name": "6911 62nd Dr",
+      "fields": {
+        "tax": {
+          "before": 392,
+          "after": 392.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok680645bde2b598",
+      "name": "1 Hudson Ct",
+      "fields": {
+        "tax": {
+          "before": 881,
+          "after": 880.6533333333333
+        }
+      }
+    },
+    {
+      "id": "okae14e19fc24143",
+      "name": "21 Randall Ave",
+      "fields": {
+        "tax": {
+          "before": 1103,
+          "after": 1102.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okec37b69d6c22a7",
+      "name": "79 Spruce Ln",
+      "fields": {
+        "tax": {
+          "before": 1108,
+          "after": 1107.8333333333333
+        }
+      }
+    },
+    {
+      "id": "okafded2b4dc5a31",
+      "name": "8718 95th Ave",
+      "fields": {
+        "tax": {
+          "before": 401,
+          "after": 400.9166666666667
+        }
+      }
+    },
+    {
+      "id": "ok4d98f3087309e1",
+      "name": "95-27 116th Street",
+      "fields": {
+        "tax": {
+          "before": 478,
+          "after": 477.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okba8681c13a01cf",
+      "name": "889 E 37th St",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Closed"
+        },
+        "tax": {
+          "before": 548,
+          "after": 548.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok2eaaa3982ef68f",
+      "name": "14103 Hoover Ave",
+      "fields": {
+        "tax": {
+          "before": 799,
+          "after": 799.1666666666666
+        }
+      }
+    },
+    {
+      "id": "okde418acc1a876c",
+      "name": "214 E 38th St",
+      "fields": {
+        "tax": {
+          "before": 476,
+          "after": 475.8
+        }
+      }
+    },
+    {
+      "id": "ok30624fb4db1afe",
+      "name": "16128 98th St",
+      "fields": {
+        "tax": {
+          "before": 483,
+          "after": 482.5833333333333
+        }
+      }
+    },
+    {
+      "id": "okbfa0dc23b4d03e",
+      "name": "8777 254th St",
+      "fields": {
+        "tax": {
+          "before": 546,
+          "after": 545.8333333333334
+        }
+      }
+    },
+    {
+      "id": "ok09af88a68ad87d",
+      "name": "15915 95th St",
+      "fields": {
+        "tax": {
+          "before": 480,
+          "after": 479.8633333333333
+        }
+      }
+    },
+    {
+      "id": "ok3ede6ae9410b1a",
+      "name": "2033 28th St",
+      "fields": {
+        "tax": {
+          "before": 627,
+          "after": 626.5333333333333
+        }
+      }
+    },
+    {
+      "id": "ok5d0e182027f8fc",
+      "name": "18618 140th Ave",
+      "fields": {
+        "tax": {
+          "before": 214,
+          "after": 214.35
+        }
+      }
+    },
+    {
+      "id": "ok35e0470b0b91e8",
+      "name": "13817 102nd Ave",
+      "fields": {
+        "tax": {
+          "before": 377,
+          "after": 376.75
+        }
+      }
+    },
+    {
+      "id": "ok350c893a9cd286",
+      "name": "21516 46th Ave",
+      "fields": {
+        "price": {
+          "before": 929000,
+          "after": 898000
+        },
+        "tax": {
+          "before": 557,
+          "after": 557.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok27c0a7f93b72a5",
+      "name": "30 W End Ave Unit 6",
+      "fields": {
+        "tax": {
+          "before": 451,
+          "after": 450.75
+        }
+      }
+    },
+    {
+      "id": "ok0f08938e685ccd",
+      "name": "9153 96th St",
+      "fields": {
+        "tax": {
+          "before": 446,
+          "after": 445.77
+        }
+      }
+    },
+    {
+      "id": "okb0cde747ada732",
+      "name": "806 New Jersey Ave",
+      "fields": {
+        "tax": {
+          "before": 236,
+          "after": 235.58333333333334
+        }
+      }
+    },
+    {
+      "id": "ok0d0afe6aec4667",
+      "name": "11948 190th St",
+      "fields": {
+        "tax": {
+          "before": 492,
+          "after": 492.0933333333333
+        }
+      }
+    },
+    {
+      "id": "ok999f6d9ea3d59d",
+      "name": "101 Remsen Ave",
+      "fields": {
+        "tax": {
+          "before": 490,
+          "after": 489.5
+        }
+      }
+    },
+    {
+      "id": "ok16d941502d8c09",
+      "name": "198 Canterbury",
+      "fields": {
+        "tax": {
+          "before": 1296,
+          "after": 1296.25
+        }
+      }
+    },
+    {
+      "id": "ok7c0905c0a5293e",
+      "name": "382 Old Country Rd",
+      "fields": {
+        "tax": {
+          "before": 1038,
+          "after": 1037.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okee243c65061aa8",
+      "name": "19129 109th Rd",
+      "fields": {
+        "tax": {
+          "before": 491,
+          "after": 491.11999999999995
+        }
+      }
+    },
+    {
+      "id": "okb4f6d852d677c2",
+      "name": "9526 108th Street",
+      "fields": {
+        "tax": {
+          "before": 454,
+          "after": 453.5833333333333
+        }
+      }
+    },
+    {
+      "id": "ok890d56017ccf81",
+      "name": "44 Pine Ln",
+      "fields": {
+        "tax": {
+          "before": 971,
+          "after": 971.0833333333334
+        }
+      }
+    },
+    {
+      "id": "oke362cb18777140",
+      "name": "3323 200th St",
+      "fields": {
+        "tax": {
+          "before": 469,
+          "after": 469.1666666666667
+        }
+      }
+    },
+    {
+      "id": "oke08ff6ce3492ab",
+      "name": "13550 234th St",
+      "fields": {
+        "tax": {
+          "before": 484,
+          "after": 483.61999999999995
+        }
+      }
+    },
+    {
+      "id": "ok09f98b984f0b19",
+      "name": "10753 124th St",
+      "fields": {
+        "tax": {
+          "before": 483,
+          "after": 483.4166666666667
+        }
+      }
+    },
+    {
+      "id": "oka966db98b5fa34",
+      "name": "10515 220th St",
+      "fields": {
+        "tax": {
+          "before": 478,
+          "after": 478.3333333333333
+        }
+      }
+    },
+    {
+      "id": "okd05555a7116852",
+      "name": "3610 217th St",
+      "fields": {
+        "tax": {
+          "before": 727,
+          "after": 727.3066666666667
+        }
+      }
+    },
+    {
+      "id": "okf226aabf98094e",
+      "name": "871 Rockaway Ave",
+      "fields": {
+        "tax": {
+          "before": 1498,
+          "after": 1497.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okb28f8969e4a395",
+      "name": "543 E 38th St",
+      "fields": {
+        "tax": {
+          "before": 520,
+          "after": 520.1433333333333
+        }
+      }
+    },
+    {
+      "id": "okb9b4035c02625d",
+      "name": "16 Netz Pl",
+      "fields": {
+        "tax": {
+          "before": 906,
+          "after": 906.3941666666666
+        }
+      }
+    },
+    {
+      "id": "okce7f906bf07734",
+      "name": "10641 160th St",
+      "fields": {
+        "tax": {
+          "before": 450,
+          "after": 449.5
+        }
+      }
+    },
+    {
+      "id": "ok0184f846ba927e",
+      "name": "7215 Juniper Valley Rd",
+      "fields": {
+        "price": {
+          "before": 979000,
+          "after": 899000
+        }
+      }
+    },
+    {
+      "id": "okbecb72ac0aaeda",
+      "name": "336 W Valley Stream Blvd",
+      "fields": {
+        "tax": {
+          "before": 1045,
+          "after": 1044.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok77aaf58d3aaea9",
+      "name": "36 Hawthorne St",
+      "fields": {
+        "tax": {
+          "before": 1253,
+          "after": 1253.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok09e93b8d06ffad",
+      "name": "19027 109th Rd",
+      "fields": {
+        "tax": {
+          "before": 333,
+          "after": 332.54
+        }
+      }
+    },
+    {
+      "id": "okaf9420c511a9bb",
+      "name": "17 Oxford St",
+      "fields": {
+        "tax": {
+          "before": 998,
+          "after": 997.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok0d22aa4ad6fec8",
+      "name": "19013 109th Rd",
+      "fields": {
+        "tax": {
+          "before": 391,
+          "after": 390.75
+        }
+      }
+    },
+    {
+      "id": "okaf99ff48d1b881",
+      "name": "6424 Pleasantview St",
+      "fields": {
+        "tax": {
+          "before": 364,
+          "after": 363.99333333333334
+        }
+      }
+    },
+    {
+      "id": "ok36f8341e82fae3",
+      "name": "48 Flower St",
+      "fields": {
+        "tax": {
+          "before": 828,
+          "after": 827.8241666666667
+        }
+      }
+    },
+    {
+      "id": "ok06185f3c858c6a",
+      "name": "9227 Springfield Blvd",
+      "fields": {
+        "tax": {
+          "before": 482,
+          "after": 482.17
+        }
+      }
+    },
+    {
+      "id": "ok9ec75e711efeb9",
+      "name": "154 Argyle Rd",
+      "fields": {
+        "price": {
+          "before": 975000,
+          "after": 899000
+        },
+        "tax": {
+          "before": 1287,
+          "after": 1286.9166666666667
+        }
+      }
+    },
+    {
+      "id": "ok7a2f3b606b15a7",
+      "name": "214 Park Ave",
+      "fields": {
+        "tax": {
+          "before": 977,
+          "after": 977.235
+        }
+      }
+    },
+    {
+      "id": "ok8dbd7149a242a2",
+      "name": "26 Van Nostrand Ct",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Hold"
+        },
+        "tax": {
+          "before": 556,
+          "after": 555.9966666666667
+        }
+      }
+    },
+    {
+      "id": "ok1cf474a09cb20b",
+      "name": "14039 169th St",
+      "fields": {
+        "tax": {
+          "before": 352,
+          "after": 351.5
+        }
+      }
+    },
+    {
+      "id": "oke2d87a9bb7b2c2",
+      "name": "8815 Commonwealth Blvd",
+      "fields": {
+        "tax": {
+          "before": 586,
+          "after": 585.8933333333333
+        }
+      }
+    },
+    {
+      "id": "okaa071d47f9dbc7",
+      "name": "108 N Forest Ave",
+      "fields": {
+        "tax": {
+          "before": 1248,
+          "after": 1248.3333333333333
+        }
+      }
+    },
+    {
+      "id": "okcaef8293e55ecf",
+      "name": "12028 178th St",
+      "fields": {
+        "tax": {
+          "before": 484,
+          "after": 484.0133333333333
+        }
+      }
+    },
+    {
+      "id": "ok7ba1b60de146e9",
+      "name": "10707 157th St",
+      "fields": {
+        "tax": {
+          "before": 228,
+          "after": 228.24
+        }
+      }
+    },
+    {
+      "id": "oke7cc92f1fc2f63",
+      "name": "24437 89th Ave",
+      "fields": {
+        "tax": {
+          "before": 452,
+          "after": 451.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok424d7fc40ccdc0",
+      "name": "43 Elm St",
+      "fields": {
+        "tax": {
+          "before": 1511,
+          "after": 1510.8333333333333
+        }
+      }
+    },
+    {
+      "id": "ok0dc20939ce7dfb",
+      "name": "8941 240th St",
+      "fields": {
+        "tax": {
+          "before": 672,
+          "after": 672.0833333333334
+        }
+      }
+    },
+    {
+      "id": "ok14872a5376f3f4",
+      "name": "1049 Owasco Rd",
+      "fields": {
+        "tax": {
+          "before": 1431,
+          "after": 1431.25
+        }
+      }
+    },
+    {
+      "id": "okdabd5c67c3dd3c",
+      "name": "35 Mulford Pl",
+      "fields": {
+        "tax": {
+          "before": 1883,
+          "after": 1883.2366666666667
+        }
+      }
+    },
+    {
+      "id": "ok3f4426ed222c78",
+      "name": "14 Ivy Pl",
+      "fields": {
+        "tax": {
+          "before": 727,
+          "after": 727.2041666666668
+        }
+      }
+    },
+    {
+      "id": "okfad11fb16a7b9d",
+      "name": "1822 Kent St",
+      "fields": {
+        "tax": {
+          "before": 1173,
+          "after": 1173.25
+        }
+      }
+    },
+    {
+      "id": "ok09b5899888fe01",
+      "name": "10469 Springfield Blvd",
+      "fields": {
+        "tax": {
+          "before": 613,
+          "after": 612.5
+        }
+      }
+    },
+    {
+      "id": "ok62daba2b23298f",
+      "name": "17045 83rd Ave",
+      "fields": {
+        "tax": {
+          "before": 636,
+          "after": 636.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok418eb21e6003fb",
+      "name": "179-49 Selover Road",
+      "fields": {
+        "tax": {
+          "before": 357,
+          "after": 356.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok383e4048471f2b",
+      "name": "8726 249th St",
+      "fields": {
+        "tax": {
+          "before": 290,
+          "after": 289.73333333333335
+        }
+      }
+    },
+    {
+      "id": "ok0a2792dce73803",
+      "name": "10404 202nd St",
+      "fields": {
+        "tax": {
+          "before": 575,
+          "after": 574.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok3dfdee1c127b48",
+      "name": "9319 201st St",
+      "fields": {
+        "tax": {
+          "before": 512,
+          "after": 512.0833333333334
+        }
+      }
+    },
+    {
+      "id": "ok5d6faa1ecf9c9c",
+      "name": "710 Premier Blvd",
+      "fields": {
+        "tax": {
+          "before": 1222,
+          "after": 1222.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok6b4ab8a65d7828",
+      "name": "7431 64th St",
+      "fields": {
+        "tax": {
+          "before": 538,
+          "after": 537.5
+        }
+      }
+    },
+    {
+      "id": "ok91bba9050b1bb8",
+      "name": "8502 Dumont Ave",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        },
+        "tax": {
+          "before": 457,
+          "after": 457.1666666666667
+        }
+      }
+    },
+    {
+      "id": "okbc77b4a81282ba",
+      "name": "16 Devon St",
+      "fields": {
+        "tax": {
+          "before": 1146,
+          "after": 1145.5833333333333
+        }
+      }
+    },
+    {
+      "id": "ok60c4f843ac3dad",
+      "name": "48 Poplar St",
+      "fields": {
+        "tax": {
+          "before": 1085,
+          "after": 1085.0833333333333
+        }
+      }
+    },
+    {
+      "id": "okdab305d1c60817",
+      "name": "12714 102nd Road",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Hold"
+        },
+        "tax": {
+          "before": 536,
+          "after": 535.5
+        }
+      }
+    },
+    {
+      "id": "okb505252614665a",
+      "name": "6110 84th St",
+      "fields": {
+        "tax": {
+          "before": 648,
+          "after": 648.0833333333334
+        }
+      }
+    },
+    {
+      "id": "ok7208367bf1e32f",
+      "name": "24311 134th Ave",
+      "fields": {
+        "price": {
+          "before": 749000,
+          "after": 729000
+        },
+        "tax": {
+          "before": 511,
+          "after": 511.43666666666667
+        }
+      }
+    },
+    {
+      "id": "ok5963c4037abf64",
+      "name": "6327 72nd St",
+      "fields": {
+        "tax": {
+          "before": 802,
+          "after": 801.8333333333334
+        }
+      }
+    },
+    {
+      "id": "ok84ec053b957268",
+      "name": "586 Harless Pl",
+      "fields": {
+        "tax": {
+          "before": 1418,
+          "after": 1418.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok9b40f0251c8f52",
+      "name": "3620 221st St",
+      "fields": {
+        "tax": {
+          "before": 1000,
+          "after": 999.5
+        }
+      }
+    },
+    {
+      "id": "ok2bb4b80bf09a97",
+      "name": "16960 144th Road",
+      "fields": {
+        "tax": {
+          "before": 376,
+          "after": 376.20666666666665
+        }
+      }
+    },
+    {
+      "id": "ok7eec3c8b68401c",
+      "name": "54 Catherine St",
+      "fields": {
+        "tax": {
+          "before": 1288,
+          "after": 1287.8333333333333
+        }
+      }
+    },
+    {
+      "id": "okc72be509ca9935",
+      "name": "96 Capitol Ave",
+      "fields": {
+        "tax": {
+          "before": 849,
+          "after": 848.75
+        }
+      }
+    },
+    {
+      "id": "ok0777a8fb67fefb",
+      "name": "9726 133rd Street",
+      "fields": {
+        "tax": {
+          "before": 446,
+          "after": 446.1566666666667
+        }
+      }
+    },
+    {
+      "id": "ok92d1805f3299aa",
+      "name": "158 Wilson Ave",
+      "fields": {
+        "price": {
+          "before": 1049000,
+          "after": 999000
+        },
+        "tax": {
+          "before": 920,
+          "after": 919.9166666666666
+        }
+      }
+    },
+    {
+      "id": "okdd5e54934d728a",
+      "name": "1356 Albany Ave",
+      "fields": {
+        "tax": {
+          "before": 222,
+          "after": 221.88666666666666
+        }
+      }
+    },
+    {
+      "id": "ok123cc7ed91155f",
+      "name": "105 N Corona Ave",
+      "fields": {
+        "tax": {
+          "before": 1792,
+          "after": 1792.3333333333333
+        }
+      }
+    },
+    {
+      "id": "oka8aa14979af750",
+      "name": "24361 Mayda Rd",
+      "fields": {
+        "tax": {
+          "before": 445,
+          "after": 445.25
+        }
+      }
+    },
+    {
+      "id": "okb05738e62bfcad",
+      "name": "149 Arlington St",
+      "fields": {
+        "price": {
+          "before": 849000,
+          "after": 829000
+        },
+        "tax": {
+          "before": 1269,
+          "after": 1269.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok881e486f22239f",
+      "name": "13248 114th St",
+      "fields": {
+        "tax": {
+          "before": 490,
+          "after": 490.4166666666667
+        }
+      }
+    },
+    {
+      "id": "ok3be52ab895cb96",
+      "name": "1118 E 101st St",
+      "fields": {
+        "price": {
+          "before": 799000,
+          "after": null
+        },
+        "status": {
+          "before": "Active",
+          "after": null
+        },
+        "hoa": {
+          "before": 0,
+          "after": null
+        },
+        "tax": {
+          "before": 425,
+          "after": 446.7483333333333
+        }
+      }
+    },
+    {
+      "id": "okb6e1170cf38bc3",
+      "name": "162 Princeton St",
+      "fields": {
+        "tax": {
+          "before": 613,
+          "after": 612.7291666666666
+        }
+      }
+    },
+    {
+      "id": "okffeb1e9af5d414",
+      "name": "18806 Mangin Ave",
+      "fields": {
+        "tax": {
+          "before": 387,
+          "after": 387.28
+        }
+      }
+    },
+    {
+      "id": "ok8a9cef4c892200",
+      "name": "9221 Winchester Blvd",
+      "fields": {
+        "tax": {
+          "before": 546,
+          "after": 546.25
+        }
+      }
+    },
+    {
+      "id": "okf651464ad7d4d3",
+      "name": "52 Syracuse St",
+      "fields": {
+        "tax": {
+          "before": 987,
+          "after": 986.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok377920493b8ee0",
+      "name": "10 York St",
+      "fields": {
+        "tax": {
+          "before": 954,
+          "after": 953.98
+        }
+      }
+    },
+    {
+      "id": "ok1874fa7ed360a6",
+      "name": "175 Latham Rd",
+      "fields": {
+        "tax": {
+          "before": 883,
+          "after": 883.3108333333333
+        }
+      }
+    },
+    {
+      "id": "ok60957e466204b2",
+      "name": "9122 Springfield Blvd",
+      "fields": {
+        "tax": {
+          "before": 514,
+          "after": 513.8433333333334
+        }
+      }
+    },
+    {
+      "id": "ok96db4e30735ad0",
+      "name": "3239 202nd St",
+      "fields": {
+        "tax": {
+          "before": 390,
+          "after": 390.17
+        }
+      }
+    },
+    {
+      "id": "okfce33a9777de8f",
+      "name": "136 Elm St",
+      "fields": {
+        "tax": {
+          "before": 3,
+          "after": 3.4924999999999997
+        }
+      }
+    },
+    {
+      "id": "okd3ea9b84362843",
+      "name": "32 Everett",
+      "fields": {
+        "tax": {
+          "before": 1272,
+          "after": 1271.5833333333333
+        }
+      }
+    },
+    {
+      "id": "ok26ad563cdf9c2e",
+      "name": "17343 103rd Rd",
+      "fields": {
+        "tax": {
+          "before": 284,
+          "after": 283.75
+        }
+      }
+    },
+    {
+      "id": "ok373f1728fed00d",
+      "name": "10916 221st St",
+      "fields": {
+        "tax": {
+          "before": 501,
+          "after": 500.5
+        }
+      }
+    },
+    {
+      "id": "ok49d95109b2dd85",
+      "name": "485 Barbara Ln",
+      "fields": {
+        "tax": {
+          "before": 804,
+          "after": 804.0141666666667
+        }
+      }
+    },
+    {
+      "id": "ok29b1c740b76517",
+      "name": "11219 176th St",
+      "fields": {
+        "tax": {
+          "before": 624,
+          "after": 624.2733333333333
+        }
+      }
+    },
+    {
+      "id": "ok556347bf098ae0",
+      "name": "10743 128th Street",
+      "fields": {
+        "tax": {
+          "before": 484,
+          "after": 483.61999999999995
+        }
+      }
+    },
+    {
+      "id": "okcd943d15e3bd1d",
+      "name": "3233 202nd St",
+      "fields": {
+        "tax": {
+          "before": 452,
+          "after": 452.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok4e598637d68559",
+      "name": "1711 Rockaway Pkwy",
+      "fields": {
+        "tax": {
+          "before": 397,
+          "after": 397.1666666666667
+        }
+      }
+    },
+    {
+      "id": "okcae011a0a656e5",
+      "name": "1363 Albany Ave",
+      "fields": {
+        "tax": {
+          "before": 502,
+          "after": 501.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok3ae04702c62b3d",
+      "name": "98 Albertson Pl",
+      "fields": {
+        "tax": {
+          "before": 947,
+          "after": 946.5
+        }
+      }
+    },
+    {
+      "id": "okad9323c05b18ec",
+      "name": "10920 221st St",
+      "fields": {
+        "tax": {
+          "before": 406,
+          "after": 405.9166666666667
+        }
+      }
+    },
+    {
+      "id": "ok0428ec5d65ad52",
+      "name": "322 Wortman Ave",
+      "fields": {
+        "tax": {
+          "before": 409,
+          "after": 408.7966666666667
+        }
+      }
+    },
+    {
+      "id": "ok88fc2c7ae8fb72",
+      "name": "415 Leonard Blvd",
+      "fields": {
+        "price": {
+          "before": 949000,
+          "after": 899000
+        },
+        "tax": {
+          "before": 859,
+          "after": 858.5833333333334
+        }
+      }
+    },
+    {
+      "id": "ok0e7e56cc34131c",
+      "name": "108 Woods Ave",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        },
+        "tax": {
+          "before": 1203,
+          "after": 1203.4166666666667
+        }
+      }
+    },
+    {
+      "id": "ok8a616b428f55b1",
+      "name": "11545 172nd St",
+      "fields": {
+        "price": {
+          "before": 770000,
+          "after": 760000
+        },
+        "tax": {
+          "before": 454,
+          "after": 453.67
+        }
+      }
+    },
+    {
+      "id": "okae20d84086d78d",
+      "name": "17 Piccadilly Downs",
+      "fields": {
+        "tax": {
+          "before": 1270,
+          "after": 1270.1666666666667
+        }
+      }
+    },
+    {
+      "id": "ok906d410c21f829",
+      "name": "42 Satterie Ave",
+      "fields": {
+        "price": {
+          "before": 838000,
+          "after": 828000
+        },
+        "tax": {
+          "before": 124,
+          "after": 123.75
+        }
+      }
+    },
+    {
+      "id": "ok165ee099b0108d",
+      "name": "12265 Nellis St",
+      "fields": {
+        "tax": {
+          "before": 430,
+          "after": 430.16333333333336
+        }
+      }
+    },
+    {
+      "id": "ok272f990b806427",
+      "name": "22420 92nd Ave",
+      "fields": {
+        "tax": {
+          "before": 544,
+          "after": 544.1666666666666
+        }
+      }
+    },
+    {
+      "id": "ok8b12ea3496b26c",
+      "name": "4511 Bedford Ave",
+      "fields": {
+        "tax": {
+          "before": 357,
+          "after": 357.0466666666667
+        }
+      }
+    },
+    {
+      "id": "ok4c2a798e26bf9a",
+      "name": "15 Prospect Pl",
+      "fields": {
+        "tax": {
+          "before": 604,
+          "after": 604.335
+        }
+      }
+    },
+    {
+      "id": "okde4851ba877bd4",
+      "name": "20420 45th Dr",
+      "fields": {
+        "tax": {
+          "before": 523,
+          "after": 523.3333333333334
+        }
+      }
+    },
+    {
+      "id": "ok87588da57711a0",
+      "name": "8617 253rd St",
+      "fields": {
+        "tax": {
+          "before": 628,
+          "after": 628.0233333333333
+        }
+      }
+    },
+    {
+      "id": "oka1e243b52dc706",
+      "name": "13531 117th St",
+      "fields": {
+        "tax": {
+          "before": 461,
+          "after": 461.41
+        }
+      }
+    },
+    {
+      "id": "ok07a2b9c72e2ad3",
+      "name": "11042 198th St",
+      "fields": {
+        "tax": {
+          "before": 492,
+          "after": 492.4266666666667
+        }
+      }
+    },
+    {
+      "id": "okf51b78f08a351a",
+      "name": "239 Hungry Harbor Road",
+      "fields": {
+        "tax": {
+          "before": 1718,
+          "after": 1718.0833333333333
+        }
+      }
+    },
+    {
+      "id": "ok764907d8c374c9",
+      "name": "12516 Hawtree Creek Rd",
+      "fields": {
+        "tax": {
+          "before": 192,
+          "after": 191.66666666666666
+        }
+      }
+    },
+    {
+      "id": "ok8f963d4adad3bb",
+      "name": "14618 229th St",
+      "fields": {
+        "tax": {
+          "before": 565,
+          "after": 564.5
+        }
+      }
+    },
+    {
+      "id": "okcb7a15f84cbd6a",
+      "name": "9230 212th Pl",
+      "fields": {
+        "tax": {
+          "before": 467,
+          "after": 467.2266666666667
+        }
+      }
+    },
+    {
+      "id": "ok5d6d76172d7566",
+      "name": "33 N Montgomery St",
+      "fields": {
+        "tax": {
+          "before": 1083,
+          "after": 1083.3333333333333
+        }
+      }
+    },
+    {
+      "id": "ok13acec05041cd9",
+      "name": "179 Locust St",
+      "fields": {
+        "price": {
+          "before": 1095000,
+          "after": 1078000
+        }
+      }
+    },
+    {
+      "id": "ok6c374580a24f9e",
+      "name": "560 Linden Blvd",
+      "fields": {
+        "tax": {
+          "before": 364,
+          "after": 363.99333333333334
+        }
+      }
+    },
+    {
+      "id": "okac154846313e16",
+      "name": "8622 251st St",
+      "fields": {
+        "tax": {
+          "before": 707,
+          "after": 706.8133333333334
+        }
+      }
+    },
+    {
+      "id": "ok1b760cf3ab48f9",
+      "name": "8214 60th Rd",
+      "fields": {
+        "tax": {
+          "before": 583,
+          "after": 583.3433333333334
+        }
+      }
+    },
+    {
+      "id": "ok622968c9a8b4f7",
+      "name": "9960 164th Rd",
+      "fields": {
+        "tax": {
+          "before": 124,
+          "after": 123.5
+        }
+      }
+    },
+    {
+      "id": "ok76b4d7802649d9",
+      "name": "50 E Saint Marks Pl",
+      "fields": {
+        "tax": {
+          "before": 747,
+          "after": 746.59
+        }
+      }
+    },
+    {
+      "id": "ok1f233b51ab2e45",
+      "name": "9030 Vanderveer St",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        },
+        "tax": {
+          "before": 252,
+          "after": 251.66333333333333
+        }
+      }
+    },
+    {
+      "id": "ok7cd7cd289395ce",
+      "name": "5 Cambridge St",
+      "fields": {
+        "tax": {
+          "before": 1397,
+          "after": 1396.9166666666667
+        }
+      }
+    },
+    {
+      "id": "okaea22bdabcbcc6",
+      "name": "533 Marcellus Rd",
+      "fields": {
+        "tax": {
+          "before": 1161,
+          "after": 1161.4166666666667
+        }
+      }
+    },
+    {
+      "id": "okfe755e4293400c",
+      "name": "18704 Williamson Ave",
+      "fields": {
+        "tax": {
+          "before": 383,
+          "after": 383.2033333333333
+        }
+      }
+    },
+    {
+      "id": "ok8465898ed2620e",
+      "name": "209 N Grove St",
+      "fields": {
+        "tax": {
+          "before": 1255,
+          "after": 1254.75
+        }
+      }
+    },
+    {
+      "id": "ok0c96dd8043db9b",
+      "name": "6812 60th Rd",
+      "fields": {
+        "tax": {
+          "before": 523,
+          "after": 522.9499999999999
+        }
+      }
+    },
+    {
+      "id": "ok3b366da3861025",
+      "name": "9210 212th Pl",
+      "fields": {
+        "tax": {
+          "before": 497,
+          "after": 497.47333333333336
+        }
+      }
+    },
+    {
+      "id": "okdb513e84a92426",
+      "name": "1216 E 28th St",
+      "fields": {
+        "tax": {
+          "before": 876,
+          "after": 876.0833333333334
+        }
+      }
+    },
+    {
+      "id": "okb6f4b4b5963738",
+      "name": "17 Sapir St",
+      "fields": {
+        "tax": {
+          "before": 998,
+          "after": 998.3333333333334
+        }
+      }
+    },
+    {
+      "id": "okfaaf379b793a6e",
+      "name": "9109 Avenue A",
+      "fields": {
+        "tax": {
+          "before": 500,
+          "after": 499.9166666666667
+        }
+      }
+    },
+    {
+      "id": "oke78f5ed8ae8e95",
+      "name": "2612 E 28th St",
+      "fields": {
+        "tax": {
+          "before": 621,
+          "after": 621.0833333333334
+        }
+      }
+    },
+    {
+      "id": "ok4a0ab9ffb92703",
+      "name": "15011 Arlington Ter",
+      "fields": {
+        "tax": {
+          "before": 385,
+          "after": 385.27666666666664
+        }
+      }
+    },
+    {
+      "id": "ok43c8fa94e04e07",
+      "name": "4641 161st St",
+      "fields": {
+        "tax": {
+          "before": 372,
+          "after": 371.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okf0b246b84a7460",
+      "name": "10514 Van Wyck Expy",
+      "fields": {
+        "price": {
+          "before": 769000,
+          "after": 650000
+        },
+        "status": {
+          "before": "Active",
+          "after": "Closed"
+        },
+        "tax": {
+          "before": 598,
+          "after": 578.6491666666667
+        }
+      }
+    },
+    {
+      "id": "ok32786977215734",
+      "name": "57 Raymond St",
+      "fields": {
+        "tax": {
+          "before": 1090,
+          "after": 1090.25
+        }
+      }
+    },
+    {
+      "id": "oka376028c18db65",
+      "name": "20237 46th Ave",
+      "fields": {
+        "tax": {
+          "before": 557,
+          "after": 556.6666666666666
+        }
+      }
+    },
+    {
+      "id": "ok10561d953c5bdd",
+      "name": "19811 116th Ave",
+      "fields": {
+        "price": {
+          "before": 745000,
+          "after": 740000
+        },
+        "tax": {
+          "before": 476,
+          "after": 476.22333333333336
+        }
+      }
+    },
+    {
+      "id": "ok95f8f6c2c628a5",
+      "name": "7321 Cook Ave",
+      "fields": {
+        "tax": {
+          "before": 256,
+          "after": 255.85666666666668
+        }
+      }
+    },
+    {
+      "id": "ok72fe1a71bb8ec7",
+      "name": "24930 147th Rd",
+      "fields": {
+        "tax": {
+          "before": 579,
+          "after": 578.78
+        }
+      }
+    },
+    {
+      "id": "okb48eba005c7a83",
+      "name": "455 E 43rd St",
+      "fields": {
+        "tax": {
+          "before": 562,
+          "after": 561.6866666666666
+        }
+      }
+    },
+    {
+      "id": "ok688c5420028ac2",
+      "name": "6953 73rd Pl",
+      "fields": {
+        "tax": {
+          "before": 468,
+          "after": 468.18666666666667
+        }
+      }
+    },
+    {
+      "id": "ok9d2a4d2b8d10d7",
+      "name": "224 New Hyde Park Rd",
+      "fields": {
+        "tax": {
+          "before": 1041,
+          "after": 1040.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok1faa8a2b101c4e",
+      "name": "13446 229th St",
+      "fields": {
+        "tax": {
+          "before": 461,
+          "after": 460.6666666666667
+        }
+      }
+    },
+    {
+      "id": "okad85d1fbf98f37",
+      "name": "343 Sylvan Ln",
+      "fields": {
+        "tax": {
+          "before": 893,
+          "after": 893.0608333333333
+        }
+      }
+    },
+    {
+      "id": "oka9cd3a1a3ddb11",
+      "name": "4734 206th St",
+      "fields": {
+        "tax": {
+          "before": 289,
+          "after": 289.00666666666666
+        }
+      }
+    },
+    {
+      "id": "okc5def3ed785349",
+      "name": "167 Lakeview Ave",
+      "fields": {
+        "tax": {
+          "before": 1182,
+          "after": 1181.75
+        }
+      }
+    },
+    {
+      "id": "okb9c26703a6bc55",
+      "name": "9005 Springfield Blvd",
+      "fields": {
+        "tax": {
+          "before": 207,
+          "after": 206.98666666666668
+        }
+      }
+    },
+    {
+      "id": "ok56e40464a5262b",
+      "name": "448 Lewis Pl",
+      "fields": {
+        "status": {
+          "before": "Active",
+          "after": "Pending"
+        },
+        "tax": {
+          "before": 1026,
+          "after": 1025.6666666666667
+        }
+      }
+    },
+    {
+      "id": "ok4e462174ca05f5",
+      "name": "6145 82nd St",
+      "fields": {
+        "tax": {
+          "before": 665,
+          "after": 665.4166666666666
+        }
+      }
+    },
+    {
+      "id": "ok0bba3f460875f4",
+      "name": "10309 32nd Ave",
+      "fields": {
+        "price": {
+          "before": 824555,
+          "after": 823777
+        },
+        "tax": {
+          "before": 335,
+          "after": 334.7033333333333
+        }
+      }
+    },
+    {
+      "id": "ok796dbd56b07d10",
+      "name": "15 West Blvd",
+      "fields": {
+        "tax": {
+          "before": 1080,
+          "after": 1080.1908333333333
+        }
+      }
+    },
+    {
+      "id": "ok570ea4e996583f",
+      "name": "4634 Iris Ln",
+      "fields": {
+        "tax": {
+          "before": 1151,
+          "after": 1150.8333333333333
+        }
+      }
+    },
+    {
+      "id": "oka94a96c9da5bca",
+      "name": "989 Schenck Ave",
+      "fields": {
+        "tax": {
+          "before": 429,
+          "after": 428.8333333333333
+        }
+      }
+    },
+    {
+      "id": "ok4c367f41922934",
+      "name": "5031 68th St",
+      "fields": {
+        "tax": {
+          "before": 789,
+          "after": 789.2033333333334
+        }
+      }
+    },
+    {
+      "id": "ok17039288aae1d5",
+      "name": "6316 76th St",
+      "fields": {
+        "tax": {
+          "before": 751,
+          "after": 750.75
+        }
+      }
+    },
+    {
+      "id": "ok7e4feb82b73adc",
+      "name": "248 Kensington Rd S",
+      "fields": {
+        "tax": {
+          "before": 875,
+          "after": 874.6825
+        }
+      }
+    },
+    {
+      "id": "oke5413e13e03f36",
+      "name": "6423 84th St",
+      "fields": {
+        "tax": {
+          "before": 590,
+          "after": 589.75
+        }
+      }
+    },
+    {
+      "id": "ok6f6961ed77fafa",
+      "name": "9053 Francis Lewis Blvd",
+      "fields": {
+        "tax": {
+          "before": 444,
+          "after": 443.98333333333335
+        }
+      }
+    },
+    {
+      "id": "ok861ce64402b4f5",
+      "name": "6361 76th St",
+      "fields": {
+        "tax": {
+          "before": 693,
+          "after": 692.8333333333334
+        }
+      }
+    },
+    {
+      "id": "ok12eca8b6919e86",
+      "name": "11133 173rd St",
+      "fields": {
+        "price": {
+          "before": 680000,
+          "after": 669999
+        },
+        "tax": {
+          "before": 399,
+          "after": 398.75
+        }
+      }
+    },
+    {
+      "id": "ok021d7ad86a4dd5",
+      "name": "4404 Clarendon Rd",
+      "fields": {
+        "tax": {
+          "before": 507,
+          "after": 507.19666666666666
+        }
+      }
+    },
+    {
+      "id": "ok693d7219d04d26",
+      "name": "8905 Moline St",
+      "fields": {
+        "tax": {
+          "before": 555,
+          "after": 554.58
+        }
+      }
+    },
+    {
+      "id": "ok070373d3d4e4c2",
+      "name": "6016 69th Ln",
+      "fields": {
+        "tax": {
+          "before": 47770,
+          "after": 47770.333333333336
+        }
+      }
+    },
+    {
+      "id": "ok59deebf93eb6ea",
+      "name": "144 Buckingham Pl",
+      "fields": {
+        "tax": {
+          "before": 1195,
+          "after": 1194.5
+        }
+      }
+    },
+    {
+      "id": "okb795617de358dd",
+      "name": "1517 Falmouth Ave",
+      "fields": {
+        "tax": {
+          "before": 1040,
+          "after": 1039.6533333333334
+        }
+      }
+    }
+  ],
+  "method": "50 public ZIP first-result pages; all 509 previously OneKey-linked records attempted, plus new candidates. 640 source detail pages parsed. Curated additions prioritize reported condition, manageable costs and usable space; new to this catalogue is not necessarily newly listed. All prior IDs retained. Land ownership and rental rules remain unverified unless explicitly documented; no legal clearance inferred. Crime and bike snapshot dates are unchanged; new Nassau bike indicators remain unknown. No household data published.",
+  "photoCount": 520,
+  "detailHomeCount": 535,
+  "detailFields": 10439,
+  "categories": {
+    "Condo": 167,
+    "Single-family": 263,
+    "Townhouse / attached": 76
+  }
+}

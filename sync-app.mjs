@@ -1,6 +1,6 @@
 import {buildProfile,MEMBERS,REASONS,DISLIKE_REASONS} from './taste-engine.mjs?v=20260907-search';
 import {selectHomes,isActive,localCrime} from './catalog-view.mjs?v=20260908-sorts';
-import {photoMarkup,photoURLs,extraDetailsMarkup,feedbackMarkup} from './card-details.mjs?v=20260907-search';
+import {photoMarkup,photoURLs,extraDetailsMarkup,feedbackMarkup} from './card-details.mjs?v=20260909-refresh';
 import {normalizeFinancing,paymentMarkup} from './payment-estimate.mjs?v=20260907-search';
 const HOMES=window.homeHuntCatalog;
 const API='https://kartikkp.synology.me/home-hunt-api';

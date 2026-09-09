@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {photoURLs,photoMarkup,extraDetailsMarkup,feedbackMarkup} from '../../card-details.mjs';
 import {buildProfile} from '../../taste-engine.mjs';
 const homes=JSON.parse(await readFile(new URL('../homes.json',import.meta.url),'utf8'));
-const summary=JSON.parse(await readFile(new URL('../../data/search-2026-09-07.json',import.meta.url),'utf8'));
+const summary=JSON.parse(await readFile(new URL('../../data/search-2026-09-09.json',import.meta.url),'utf8'));
 test('source-linked image previews and detailed cards preserve unknowns and escape untrusted text',()=>{
   assert.equal(homes.filter(h=>photoURLs(h).length).length,summary.photoCount);
   assert.equal(homes.filter(h=>Object.keys(h.details||{}).length).length,summary.detailHomeCount);

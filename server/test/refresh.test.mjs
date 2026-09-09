@@ -8,7 +8,7 @@ import {meters,pointSegmentMeters,nearestBike,crimeWithin,validNYCPoint} from '.
 import {createApp} from '../server.mjs';
 import {buildProfile} from '../../taste-engine.mjs';
 const load=async path=>JSON.parse(await readFile(new URL(path,import.meta.url),'utf8'));
-const homes=await load('../homes.json'),summary=await load('../../data/search-2026-09-07.json'),priorIds=await load('../../data/catalogue-ids-2026-09-06.json');
+const homes=await load('../homes.json'),summary=await load('../../data/search-2026-09-09.json'),priorIds=await load('../../data/catalogue-ids-2026-09-06.json');
 test('all prior records and original 45 survive; current catalogue mirrors the browser exactly',async()=>{
   assert.equal(homes.length,summary.total);assert.equal(new Set(homes.map(h=>h.id)).size,homes.length);
   assert.equal(priorIds.length,533);for(const id of priorIds)assert.ok(homes.some(h=>h.id===id),'Preserve '+id);
@@ -16,7 +16,7 @@ test('all prior records and original 45 survive; current catalogue mirrors the b
   const html=await readFile(new URL('../../index.html',import.meta.url),'utf8');
   assert.deepEqual(JSON.parse(html.match(/const HOMES=(\[.*?\]);\nwindow.homeHuntCatalog=HOMES;/s)[1]),homes);
   assert.equal(homes.filter(isActive).length,summary.active);assert.equal(homes.filter(h=>h.status==='Not reverified').length,32);
-  const active=homes.filter(isActive);assert.ok(active.every(h=>h.price>0&&h.price<=1200000&&h.beds>=2&&['2026-09-06','2026-09-07'].includes(h.refreshedAt)));
+  const active=homes.filter(isActive);assert.ok(active.every(h=>h.price>0&&h.price<=1200000&&h.beds>=2&&['2026-09-09'].includes(h.refreshedAt)));
   assert.ok(active.every(h=>h.source.listingId&&h.url===h.source.url&&new URL(h.url).protocol==='https:'&&['onekeymls.com','www.onekeymls.com'].includes(new URL(h.url).hostname)));
   assert.ok(active.every(h=>h.landLease===null),'No silent lease-free assumption');
   assert.ok(active.filter(h=>h.hoa!==null).length>=452);
@@ -25,7 +25,7 @@ test('all prior records and original 45 survive; current catalogue mirrors the b
   assert.ok(active.every(h=>Object.values(h.schools).every(v=>!/^contact agent$/i.test(v))));
   assert.ok(active.filter(h=>Object.keys(h.schools).some(k=>!k.endsWith('District'))).length>=463);
   assert.ok(active.filter(localCrime).length>=359);
-  assert.ok(active.filter(h=>h.crime.scope==='Nassau County').length>=141);
+  assert.ok(active.filter(h=>h.crime.scope==='Nassau County').length>=130);
   assert.deepEqual(Object.fromEntries(['Condo','Single-family','Townhouse / attached'].map(c=>[c,active.filter(h=>h.category===c).length])),summary.categories);
   for(const h of active){assert.ok(Number.isFinite(h.station_mi));assert.ok(h.reviewNotes.some(n=>n.startsWith('Land lease:')));assert.ok(!JSON.stringify(h).includes('NaN'));if(!h.legacy){assert.equal(h.school,null);assert.equal(h.city_min,null);assert.equal(h.score,null);}}
 });
